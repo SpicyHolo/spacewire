@@ -2,7 +2,17 @@
 pin_name1 <= spwstream:inst.spw_do
 CLK => spwstream:inst.clk
 CLK => spwstream:inst1.clk
+SpWT_linkstart => spwstream:inst.linkstart
+SpWR_linkstart => spwstream:inst1.linkstart
 pin_name2 <= spwstream:inst.spw_so
+SpWT_started <= spwstream:inst.started
+SpWT_connecting <= spwstream:inst.connecting
+SpWT_running <= spwstream:inst.running
+SpWT_txrdy <= spwstream:inst.txrdy
+SpWR_txrdy <= spwstream:inst1.txrdy
+SpWR_running <= spwstream:inst1.running
+SpWR_connecting <= spwstream:inst1.connecting
+SpWR_started <= spwstream:inst1.started
 
 
 |spacewire|spwstream:inst
