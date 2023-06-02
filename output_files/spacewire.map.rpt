@@ -1,5 +1,5 @@
 Analysis & Synthesis report for spacewire
-Fri Jun  2 17:39:05 2023
+Fri Jun  2 18:10:07 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -13,26 +13,29 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |spacewire|spwstream:inst1|spwlink:link_inst|r.state
-  9. State Machine - |spacewire|spwstream:inst|spwlink:link_inst|r.state
- 10. Registers Removed During Synthesis
- 11. Removed Registers Triggering Further Register Optimizations
- 12. General Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Parameter Settings for User Entity Instance: spwstream:inst
- 15. Parameter Settings for User Entity Instance: spwstream:inst|spwlink:link_inst
- 16. Parameter Settings for User Entity Instance: spwstream:inst|spwrecv:recv_inst
- 17. Parameter Settings for User Entity Instance: spwstream:inst|spwram:rxmem
- 18. Parameter Settings for User Entity Instance: spwstream:inst|spwram:txmem
- 19. Parameter Settings for User Entity Instance: spwstream:inst1
- 20. Parameter Settings for User Entity Instance: spwstream:inst1|spwlink:link_inst
- 21. Parameter Settings for User Entity Instance: spwstream:inst1|spwrecv:recv_inst
- 22. Parameter Settings for User Entity Instance: spwstream:inst1|spwram:rxmem
- 23. Parameter Settings for User Entity Instance: spwstream:inst1|spwram:txmem
- 24. Port Connectivity Checks: "spwstream:inst|spwram:txmem"
- 25. Port Connectivity Checks: "spwstream:inst|spwram:rxmem"
- 26. Elapsed Time Per Partition
- 27. Analysis & Synthesis Messages
+  8. Analysis & Synthesis IP Cores Summary
+  9. State Machine - |spacewire|spwstream:inst1|spwlink:link_inst|r.state
+ 10. State Machine - |spacewire|spwstream:inst|spwlink:link_inst|r.state
+ 11. Registers Removed During Synthesis
+ 12. Removed Registers Triggering Further Register Optimizations
+ 13. General Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Parameter Settings for User Entity Instance: spwstream:inst
+ 16. Parameter Settings for User Entity Instance: spwstream:inst|spwlink:link_inst
+ 17. Parameter Settings for User Entity Instance: spwstream:inst|spwrecv:recv_inst
+ 18. Parameter Settings for User Entity Instance: spwstream:inst|spwram:rxmem
+ 19. Parameter Settings for User Entity Instance: spwstream:inst|spwram:txmem
+ 20. Parameter Settings for User Entity Instance: spwstream:inst1
+ 21. Parameter Settings for User Entity Instance: spwstream:inst1|spwlink:link_inst
+ 22. Parameter Settings for User Entity Instance: spwstream:inst1|spwrecv:recv_inst
+ 23. Parameter Settings for User Entity Instance: spwstream:inst1|spwram:rxmem
+ 24. Parameter Settings for User Entity Instance: spwstream:inst1|spwram:txmem
+ 25. Parameter Settings for User Entity Instance: lpm_constant0:inst5|lpm_constant:LPM_CONSTANT_component
+ 26. Parameter Settings for User Entity Instance: lpm_constant0:inst4|lpm_constant:LPM_CONSTANT_component
+ 27. Port Connectivity Checks: "spwstream:inst|spwram:txmem"
+ 28. Port Connectivity Checks: "spwstream:inst|spwram:rxmem"
+ 29. Elapsed Time Per Partition
+ 30. Analysis & Synthesis Messages
 
 
 
@@ -58,7 +61,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jun  2 17:39:05 2023           ;
+; Analysis & Synthesis Status        ; Successful - Fri Jun  2 18:10:07 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; spacewire                                       ;
 ; Top-level Entity Name              ; spacewire                                       ;
@@ -67,7 +70,7 @@ applicable agreement for further details.
 ;     Total combinational functions  ; 0                                               ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 1                                               ;
+; Total pins                         ; 3                                               ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -173,49 +176,51 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                    ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                          ; Library ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------+---------+
-; spwpkg.vhd                       ; yes             ; User VHDL File                     ; /home/holo/Desktop/spacewire/spwpkg.vhd               ;         ;
-; spwlink.vhd                      ; yes             ; User VHDL File                     ; /home/holo/Desktop/spacewire/spwlink.vhd              ;         ;
-; spwrecvfront_generic.vhd         ; yes             ; User VHDL File                     ; /home/holo/Desktop/spacewire/spwrecvfront_generic.vhd ;         ;
-; spwxmit.vhd                      ; yes             ; User VHDL File                     ; /home/holo/Desktop/spacewire/spwxmit.vhd              ;         ;
-; spwram.vhd                       ; yes             ; User VHDL File                     ; /home/holo/Desktop/spacewire/spwram.vhd               ;         ;
-; spwstream.vhd                    ; yes             ; User VHDL File                     ; /home/holo/Desktop/spacewire/spwstream.vhd            ;         ;
-; spwrecv.vhd                      ; yes             ; User VHDL File                     ; /home/holo/Desktop/spacewire/spwrecv.vhd              ;         ;
-; spacewire.bdf                    ; yes             ; User Block Diagram/Schematic File  ; /home/holo/Desktop/spacewire/spacewire.bdf            ;         ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                         ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                               ; Library ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------+---------+
+; spwpkg.vhd                       ; yes             ; User VHDL File                     ; /home/holo/spacewire/spwpkg.vhd                                            ;         ;
+; spwlink.vhd                      ; yes             ; User VHDL File                     ; /home/holo/spacewire/spwlink.vhd                                           ;         ;
+; spwrecvfront_generic.vhd         ; yes             ; User VHDL File                     ; /home/holo/spacewire/spwrecvfront_generic.vhd                              ;         ;
+; spwxmit.vhd                      ; yes             ; User VHDL File                     ; /home/holo/spacewire/spwxmit.vhd                                           ;         ;
+; spwram.vhd                       ; yes             ; User VHDL File                     ; /home/holo/spacewire/spwram.vhd                                            ;         ;
+; spwstream.vhd                    ; yes             ; User VHDL File                     ; /home/holo/spacewire/spwstream.vhd                                         ;         ;
+; spwrecv.vhd                      ; yes             ; User VHDL File                     ; /home/holo/spacewire/spwrecv.vhd                                           ;         ;
+; spacewire.bdf                    ; yes             ; User Block Diagram/Schematic File  ; /home/holo/spacewire/spacewire.bdf                                         ;         ;
+; lpm_constant0.vhd                ; yes             ; User Wizard-Generated File         ; /home/holo/spacewire/lpm_constant0.vhd                                     ;         ;
+; lpm_constant.tdf                 ; yes             ; Megafunction                       ; /home/holo/altera/13.0sp1/quartus/libraries/megafunctions/lpm_constant.tdf ;         ;
++----------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-;                                             ;       ;
-; Total combinational functions               ; 0     ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 1     ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out node                        ; CLK   ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 1     ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
++----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                    ;
++---------------------------------------------+------------------+
+; Resource                                    ; Usage            ;
++---------------------------------------------+------------------+
+;                                             ;                  ;
+; Total combinational functions               ; 0                ;
+; Logic element usage by number of LUT inputs ;                  ;
+;     -- 4 input functions                    ; 0                ;
+;     -- 3 input functions                    ; 0                ;
+;     -- <=2 input functions                  ; 0                ;
+;                                             ;                  ;
+; Logic elements by mode                      ;                  ;
+;     -- normal mode                          ; 0                ;
+;     -- arithmetic mode                      ; 0                ;
+;                                             ;                  ;
+; Total registers                             ; 0                ;
+;     -- Dedicated logic registers            ; 0                ;
+;     -- I/O registers                        ; 0                ;
+;                                             ;                  ;
+; I/O pins                                    ; 3                ;
+; Embedded Multiplier 9-bit elements          ; 0                ;
+; Maximum fan-out node                        ; pin_name1~output ;
+; Maximum fan-out                             ; 1                ;
+; Total fan-out                               ; 3                ;
+; Average fan-out                             ; 0.50             ;
++---------------------------------------------+------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -223,9 +228,19 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |spacewire                 ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 1    ; 0            ; |spacewire          ; work         ;
+; |spacewire                 ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 3    ; 0            ; |spacewire          ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                   ;
++--------+--------------+---------+--------------+--------------+--------------------------------+----------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                ; IP Include File                        ;
++--------+--------------+---------+--------------+--------------+--------------------------------+----------------------------------------+
+; Altera ; LPM_CONSTANT ; 13.0    ; N/A          ; N/A          ; |spacewire|lpm_constant0:inst4 ; /home/holo/spacewire/lpm_constant0.vhd ;
+; Altera ; LPM_CONSTANT ; 13.0    ; N/A          ; N/A          ; |spacewire|lpm_constant0:inst5 ; /home/holo/spacewire/lpm_constant0.vhd ;
++--------+--------------+---------+--------------+--------------+--------------------------------+----------------------------------------+
 
 
 Encoding Type:  One-Hot
@@ -258,384 +273,378 @@ Encoding Type:  One-Hot
 +----------------------+---------------+----------------------+-------------------+-----------------+---------------------+----------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                      ;
-+----------------------------------------------------------------------------------------+------------------------------------------------+
-; Register name                                                                          ; Reason for Removal                             ;
-+----------------------------------------------------------------------------------------+------------------------------------------------+
-; spwstream:inst1|r.rxfifo_rvalid                                                        ; Lost fanout                                    ;
-; spwstream:inst1|r.txfull                                                               ; Lost fanout                                    ;
-; spwstream:inst|r.rxfifo_rvalid                                                         ; Lost fanout                                    ;
-; spwstream:inst|r.txfull                                                                ; Lost fanout                                    ;
-; spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwsi1    ; Stuck at GND due to stuck port data_in         ;
-; spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwdi1    ; Stuck at GND due to stuck port data_in         ;
-; spwstream:inst1|spwram:txmem|rdata[8]                                                  ; Stuck at GND due to stuck port data_in         ;
-; spwstream:inst|spwram:txmem|rdata[0..8]                                                ; Stuck at GND due to stuck port data_in         ;
-; spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwsi2    ; Stuck at GND due to stuck port data_in         ;
-; spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwdi2    ; Stuck at GND due to stuck port data_in         ;
-; spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_inbit     ; Stuck at GND due to stuck port data_in         ;
-; spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwsi3    ; Stuck at GND due to stuck port data_in         ;
-; spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_inbvalid  ; Stuck at GND due to stuck port data_in         ;
-; spwstream:inst|spwrecv:recv_inst|r.rxchar                                              ; Stuck at GND due to stuck port data_in         ;
-; spwstream:inst|spwrecv:recv_inst|r.tick_out                                            ; Stuck at GND due to stuck port data_in         ;
-; spwstream:inst|spwrecv:recv_inst|r.gotfct                                              ; Stuck at GND due to stuck port data_in         ;
-; spwstream:inst|spwrecv:recv_inst|r.control                                             ; Stuck at GND due to stuck port clock_enable    ;
-; spwstream:inst|spwrecv:recv_inst|r.parity                                              ; Stuck at GND due to stuck port clock_enable    ;
-; spwstream:inst|spwrecv:recv_inst|r.rxflag                                              ; Lost fanout                                    ;
-; spwstream:inst|spwrecv:recv_inst|r.escaped                                             ; Lost fanout                                    ;
-; spwstream:inst|spwrecv:recv_inst|r.bitcnt[0..9]                                        ; Lost fanout                                    ;
-; spwstream:inst|spwrecv:recv_inst|r.bitshift[0..8]                                      ; Lost fanout                                    ;
-; spwstream:inst|r.rxpacket                                                              ; Stuck at GND due to stuck port data_in         ;
-; spwstream:inst|spwrecv:recv_inst|r.errpar                                              ; Stuck at GND due to stuck port data_in         ;
-; spwstream:inst|spwrecv:recv_inst|r.erresc                                              ; Stuck at GND due to stuck port data_in         ;
-; spwstream:inst|spwrecv:recv_inst|r.null_seen                                           ; Stuck at GND due to stuck port data_in         ;
-; spwstream:inst|spwrecv:recv_inst|r.bit_seen                                            ; Stuck at GND due to stuck port data_in         ;
-; spwstream:inst|spwlink:link_inst|r.rx_credit[0..2]                                     ; Stuck at GND due to stuck port data_in         ;
-; spwstream:inst|spwlink:link_inst|r.errcred                                             ; Stuck at GND due to stuck port data_in         ;
-; spwstream:inst|spwrecv:recv_inst|r.disccnt[0..7]                                       ; Lost fanout                                    ;
-; spwstream:inst|r.txfifo_waddr[2]                                                       ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst1|r.txfifo_waddr[9]                                                      ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst|r.txfifo_waddr[0]                                                       ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst|r.rxfifo_raddr[9]                                                       ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst|r.txfifo_waddr[9]                                                       ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst1|r.rxfifo_raddr[6,7]                                                    ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst|r.rxfifo_raddr[7]                                                       ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[3]                             ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst1|r.rxfifo_raddr[9]                                                      ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst|r.rxfifo_raddr[4]                                                       ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst|r.txfifo_waddr[1]                                                       ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[1,2]                           ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst1|r.rxfifo_raddr[1,8]                                                    ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst|r.rxfifo_raddr[3]                                                       ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst1|r.txfifo_waddr[3,6]                                                    ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst|r.txfifo_waddr[4]                                                       ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst1|r.txfifo_waddr[4,5]                                                    ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst|r.txfifo_waddr[5]                                                       ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst1|r.rxfifo_raddr[10]                                                     ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst|r.txfifo_waddr[3]                                                       ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst1|r.txfifo_waddr[2]                                                      ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst1|r.rxfifo_raddr[0]                                                      ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst|r.rxfifo_raddr[5]                                                       ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst|r.txfifo_waddr[7,8]                                                     ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst1|r.txfifo_waddr[1]                                                      ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[6]                             ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst|r.txfifo_waddr[10]                                                      ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst1|r.rxfifo_raddr[3]                                                      ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[4,5]                           ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst1|r.txfifo_waddr[8]                                                      ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst|r.rxfifo_raddr[2,10]                                                    ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst1|r.txfifo_waddr[0]                                                      ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst|r.rxfifo_raddr[1]                                                       ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[0]                             ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst1|r.txfifo_waddr[7]                                                      ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[7]                             ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst|r.txfifo_waddr[6]                                                       ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst1|r.rxfifo_raddr[4]                                                      ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst|r.rxfifo_raddr[0,6,8]                                                   ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst1|r.rxfifo_raddr[2,5]                                                    ; Merged with spwstream:inst1|r.txfifo_waddr[10] ;
-; spwstream:inst1|r.txfifo_waddr[10]                                                     ; Stuck at GND due to stuck port data_in         ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.pend_tick                               ; Stuck at GND due to stuck port data_in         ;
-; spwstream:inst|r.rxeep                                                                 ; Stuck at GND due to stuck port data_in         ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.pend_tick                                ; Stuck at GND due to stuck port data_in         ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[5..12]                          ; Stuck at GND due to stuck port data_in         ;
-; spwstream:inst|r.rxfifo_waddr[0..10]                                                   ; Stuck at GND due to stuck port data_in         ;
-; spwstream:inst|r.rxfull                                                                ; Stuck at GND due to stuck port data_in         ;
-; spwstream:inst|r.rxroom[3]                                                             ; Merged with spwstream:inst|r.rxroom[4]         ;
-; spwstream:inst|r.rxroom[4]                                                             ; Merged with spwstream:inst|r.rxroom[5]         ;
-; spwstream:inst|r.rxroom[0]                                                             ; Merged with spwstream:inst|r.rxroom[1]         ;
-; spwstream:inst|r.rxroom[1]                                                             ; Merged with spwstream:inst|r.rxroom[2]         ;
-; spwstream:inst|r.rxroom[2]                                                             ; Merged with spwstream:inst|r.rxroom[5]         ;
-; spwstream:inst1|spwrecv:recv_inst|r.gotfct                                             ; Lost fanout                                    ;
-; spwstream:inst1|spwrecv:recv_inst|r.bit_seen                                           ; Lost fanout                                    ;
-; spwstream:inst1|spwrecv:recv_inst|r.disccnt[0..7]                                      ; Lost fanout                                    ;
-; spwstream:inst1|spwrecv:recv_inst|r.errpar                                             ; Lost fanout                                    ;
-; spwstream:inst1|spwrecv:recv_inst|r.erresc                                             ; Lost fanout                                    ;
-; spwstream:inst1|spwlink:link_inst|r.timerdone                                          ; Lost fanout                                    ;
-; spwstream:inst1|spwlink:link_inst|r.timercnt[0..10]                                    ; Lost fanout                                    ;
-; spwstream:inst1|spwrecv:recv_inst|r.rxchar                                             ; Lost fanout                                    ;
-; spwstream:inst1|spwrecv:recv_inst|r.tick_out                                           ; Lost fanout                                    ;
-; spwstream:inst1|spwrecv:recv_inst|r.null_seen                                          ; Lost fanout                                    ;
-; spwstream:inst1|spwlink:link_inst|r.errcred                                            ; Lost fanout                                    ;
-; spwstream:inst|spwlink:link_inst|r.timercnt[0..10]                                     ; Lost fanout                                    ;
-; spwstream:inst|spwlink:link_inst|r.timerdone                                           ; Lost fanout                                    ;
-; spwstream:inst1|spwrecv:recv_inst|r.escaped                                            ; Lost fanout                                    ;
-; spwstream:inst1|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_inbvalid ; Lost fanout                                    ;
-; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[0]                                          ; Lost fanout                                    ;
-; spwstream:inst1|spwrecv:recv_inst|r.parity                                             ; Lost fanout                                    ;
-; spwstream:inst1|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_inbit    ; Lost fanout                                    ;
-; spwstream:inst1|spwrecv:recv_inst|r.control                                            ; Lost fanout                                    ;
-; spwstream:inst1|spwrecv:recv_inst|r.bitshift[0..8]                                     ; Lost fanout                                    ;
-; spwstream:inst1|spwlink:link_inst|r.tx_credit[0..5]                                    ; Lost fanout                                    ;
-; spwstream:inst1|spwlink:link_inst|r.rx_credit[0..5]                                    ; Lost fanout                                    ;
-; spwstream:inst1|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwsi3   ; Lost fanout                                    ;
-; spwstream:inst1|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwsi2   ; Lost fanout                                    ;
-; spwstream:inst1|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwdi2   ; Lost fanout                                    ;
-; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[1]                                          ; Lost fanout                                    ;
-; spwstream:inst1|r.txfifo_rvalid                                                        ; Lost fanout                                    ;
-; spwstream:inst1|r.txdiscard                                                            ; Lost fanout                                    ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclken                                 ; Lost fanout                                    ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitcnt[0..3]                            ; Lost fanout                                    ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.allow_char                              ; Lost fanout                                    ;
-; spwstream:inst1|spwlink:link_inst|r.xmit_fct_in                                        ; Lost fanout                                    ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.allow_fct                               ; Lost fanout                                    ;
-; spwstream:inst1|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwsi1   ; Lost fanout                                    ;
-; spwstream:inst1|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwdi1   ; Lost fanout                                    ;
-; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[2]                                          ; Lost fanout                                    ;
-; spwstream:inst1|r.txfifo_raddr[0..10]                                                  ; Lost fanout                                    ;
-; spwstream:inst1|r.txpacket                                                             ; Lost fanout                                    ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[0..7]                          ; Lost fanout                                    ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.sent_fct                                ; Lost fanout                                    ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.sent_null                               ; Lost fanout                                    ;
-; spwstream:inst1|r.rxroom[0..5]                                                         ; Lost fanout                                    ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|spw_so                                     ; Lost fanout                                    ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|spw_do                                     ; Lost fanout                                    ;
-; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[3]                                          ; Lost fanout                                    ;
-; spwstream:inst1|r.rxfifo_waddr[0..10]                                                  ; Lost fanout                                    ;
-; spwstream:inst1|r.rxeep                                                                ; Lost fanout                                    ;
-; spwstream:inst1|r.rxfull                                                               ; Lost fanout                                    ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.out_strobe                               ; Lost fanout                                    ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.out_data                                 ; Lost fanout                                    ;
-; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[4]                                          ; Lost fanout                                    ;
-; spwstream:inst1|r.rxpacket                                                             ; Lost fanout                                    ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.txclken                                  ; Lost fanout                                    ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[0]                              ; Lost fanout                                    ;
-; spwstream:inst|r.txfifo_rvalid                                                         ; Lost fanout                                    ;
-; spwstream:inst|r.txdiscard                                                             ; Lost fanout                                    ;
-; spwstream:inst|spwlink:link_inst|r.tx_credit[0..5]                                     ; Lost fanout                                    ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.allow_char                               ; Lost fanout                                    ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.parity                                   ; Lost fanout                                    ;
-; spwstream:inst|spwlink:link_inst|r.xmit_fct_in                                         ; Lost fanout                                    ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.allow_fct                                ; Lost fanout                                    ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitcnt[0..3]                             ; Lost fanout                                    ;
-; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[5]                                          ; Lost fanout                                    ;
-; spwstream:inst1|spwrecv:recv_inst|r.rxflag                                             ; Lost fanout                                    ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[0..7]                           ; Lost fanout                                    ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[1]                              ; Lost fanout                                    ;
-; spwstream:inst|r.txfifo_raddr[0..10]                                                   ; Lost fanout                                    ;
-; spwstream:inst|r.txpacket                                                              ; Lost fanout                                    ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.sent_fct                                 ; Lost fanout                                    ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.sent_null                                ; Lost fanout                                    ;
-; spwstream:inst|r.rxroom[5]                                                             ; Lost fanout                                    ;
-; spwstream:inst|spwlink:link_inst|r.rx_credit[3..5]                                     ; Lost fanout                                    ;
-; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[6]                                          ; Lost fanout                                    ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[2]                              ; Lost fanout                                    ;
-; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[7]                                          ; Lost fanout                                    ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[3]                              ; Lost fanout                                    ;
-; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[8]                                          ; Lost fanout                                    ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[4]                              ; Lost fanout                                    ;
-; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[9]                                          ; Lost fanout                                    ;
-; spwstream:inst1|spwlink:link_inst|r.state.S_ErrorReset                                 ; Lost fanout                                    ;
-; spwstream:inst1|spwlink:link_inst|r.state.S_ErrorWait                                  ; Lost fanout                                    ;
-; spwstream:inst1|spwlink:link_inst|r.state.S_Ready                                      ; Lost fanout                                    ;
-; spwstream:inst1|spwlink:link_inst|r.state.S_Started                                    ; Lost fanout                                    ;
-; spwstream:inst1|spwlink:link_inst|r.state.S_Connecting                                 ; Lost fanout                                    ;
-; spwstream:inst1|spwlink:link_inst|r.state.S_Run                                        ; Lost fanout                                    ;
-; spwstream:inst|spwlink:link_inst|r.state.S_ErrorReset                                  ; Lost fanout                                    ;
-; spwstream:inst|spwlink:link_inst|r.state.S_ErrorWait                                   ; Lost fanout                                    ;
-; spwstream:inst|spwlink:link_inst|r.state.S_Ready                                       ; Lost fanout                                    ;
-; spwstream:inst|spwlink:link_inst|r.state.S_Started                                     ; Lost fanout                                    ;
-; spwstream:inst|spwlink:link_inst|r.state.S_Connecting                                  ; Lost fanout                                    ;
-; spwstream:inst|spwlink:link_inst|r.state.S_Run                                         ; Lost fanout                                    ;
-; Total Number of Removed Registers = 342                                                ;                                                ;
-+----------------------------------------------------------------------------------------+------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                              ;
++----------------------------------------------------------------------------------------+------------------------------------------------------------------------+
+; Register name                                                                          ; Reason for Removal                                                     ;
++----------------------------------------------------------------------------------------+------------------------------------------------------------------------+
+; spwstream:inst1|r.rxfifo_rvalid                                                        ; Lost fanout                                                            ;
+; spwstream:inst1|r.txfull                                                               ; Lost fanout                                                            ;
+; spwstream:inst|r.rxfifo_rvalid                                                         ; Lost fanout                                                            ;
+; spwstream:inst|r.txfull                                                                ; Lost fanout                                                            ;
+; spwstream:inst1|spwram:txmem|rdata[0..8]                                               ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwram:txmem|rdata[0..8]                                                ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|r.rxfifo_raddr[5]                                                       ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst1|r.txfifo_waddr[9]                                                      ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst1|r.rxfifo_raddr[7,8]                                                    ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst|r.rxfifo_raddr[3,8]                                                     ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[3,5]                           ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst1|r.txfifo_waddr[8]                                                      ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst|r.rxfifo_raddr[0]                                                       ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst|r.txfifo_waddr[5]                                                       ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[6]                            ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst1|r.rxfifo_raddr[0,6]                                                    ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[6]                             ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[3]                            ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst1|r.txfifo_waddr[7]                                                      ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[7]                            ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[1]                             ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst|r.txfifo_waddr[4]                                                       ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst|r.rxfifo_raddr[7,10]                                                    ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst|r.txfifo_waddr[0]                                                       ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[1,2,5]                        ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst|r.txfifo_waddr[1,7]                                                     ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[2]                             ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst1|r.txfifo_waddr[6]                                                      ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[0]                             ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst|r.rxfifo_raddr[1]                                                       ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[7]                             ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst|r.rxfifo_raddr[9]                                                       ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst1|r.txfifo_waddr[5]                                                      ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst1|r.rxfifo_raddr[10]                                                     ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[4]                            ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst|r.txfifo_waddr[8]                                                       ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst1|r.txfifo_waddr[4]                                                      ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst|r.txfifo_waddr[3]                                                       ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst|r.rxfifo_raddr[2]                                                       ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst|r.txfifo_waddr[2,10]                                                    ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst1|r.txfifo_waddr[2]                                                      ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst|r.txfifo_waddr[6]                                                       ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst|r.rxfifo_raddr[4]                                                       ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst1|r.rxfifo_raddr[5]                                                      ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst1|r.txfifo_waddr[0]                                                      ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst|r.txfifo_waddr[9]                                                       ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[4]                             ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst1|r.rxfifo_raddr[1,2,9]                                                  ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.pend_time[0]                            ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst1|r.txfifo_waddr[3]                                                      ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst|r.rxfifo_raddr[6]                                                       ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst1|r.rxfifo_raddr[3]                                                      ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst1|r.txfifo_waddr[1]                                                      ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst1|r.rxfifo_raddr[4]                                                      ; Merged with spwstream:inst1|r.txfifo_waddr[10]                         ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[0]                              ; Merged with spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[0] ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[1]                              ; Merged with spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[1] ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[2]                              ; Merged with spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[2] ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[3]                              ; Merged with spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[3] ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[4]                              ; Merged with spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[4] ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[5]                              ; Merged with spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[5] ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[6]                              ; Merged with spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[6] ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[7]                              ; Merged with spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[7] ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.txclken                                  ; Merged with spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclken     ;
+; spwstream:inst1|r.txfifo_waddr[10]                                                     ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.pend_tick                               ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[12]                            ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.pend_tick                                ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[12]                             ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[11]                            ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[11]                             ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[10]                            ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[10]                             ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[9]                             ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[9]                              ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[8]                             ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[8]                              ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[7]                             ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[7]                              ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[6]                             ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[6]                              ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[5]                             ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[5]                              ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwlink:link_inst|r.state.S_Started                                     ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwlink:link_inst|r.state.S_Started                                    ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwlink:link_inst|r.state.S_Connecting                                  ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwlink:link_inst|r.state.S_Connecting                                 ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwlink:link_inst|r.state.S_Run                                         ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[2]                              ; Stuck at GND due to stuck port clock_enable                            ;
+; spwstream:inst1|spwlink:link_inst|r.state.S_Run                                        ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[2]                             ; Stuck at GND due to stuck port clock_enable                            ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[0]                              ; Stuck at GND due to stuck port clock_enable                            ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.allow_char                               ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.parity                                   ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.allow_fct                                ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitcnt[0..3]                             ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[1]                              ; Stuck at GND due to stuck port clock_enable                            ;
+; spwstream:inst|r.txpacket                                                              ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.sent_fct                                 ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.sent_null                                ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[3]                              ; Stuck at GND due to stuck port clock_enable                            ;
+; spwstream:inst|r.rxpacket                                                              ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[4]                              ; Stuck at GND due to stuck port clock_enable                            ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[0]                             ; Stuck at GND due to stuck port clock_enable                            ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.allow_char                              ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.parity                                  ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.allow_fct                               ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitcnt[0..3]                            ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[1]                             ; Stuck at GND due to stuck port clock_enable                            ;
+; spwstream:inst1|r.txpacket                                                             ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.sent_fct                                ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.sent_null                               ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[3]                             ; Stuck at GND due to stuck port clock_enable                            ;
+; spwstream:inst1|r.rxpacket                                                             ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[4]                             ; Stuck at GND due to stuck port clock_enable                            ;
+; spwstream:inst|r.txdiscard                                                             ; Stuck at GND due to stuck port clock_enable                            ;
+; spwstream:inst1|r.txdiscard                                                            ; Stuck at GND due to stuck port clock_enable                            ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.out_strobe                               ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|r.txfifo_raddr[0..10]                                                   ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|r.rxeep                                                                 ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.out_strobe                              ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|r.txfifo_raddr[0..10]                                                  ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|r.rxeep                                                                ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|spw_so                                     ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|r.txfifo_rvalid                                                         ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|spw_so                                    ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|r.txfifo_rvalid                                                        ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwsi1   ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwsi1    ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwsi2   ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwsi2    ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwsi3   ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwsi3    ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.out_data                                 ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|r.rxfifo_waddr[0..10]                                                   ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.out_data                                ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|r.rxfifo_waddr[0..10]                                                  ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|spw_do                                     ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|r.rxfull                                                                ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|spw_do                                    ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|r.rxfull                                                               ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwdi1   ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwdi1    ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwdi2   ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwdi2    ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_inbit    ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_inbit     ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_inbvalid ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwrecv:recv_inst|r.parity                                             ; Stuck at GND due to stuck port clock_enable                            ;
+; spwstream:inst1|spwrecv:recv_inst|r.control                                            ; Stuck at GND due to stuck port clock_enable                            ;
+; spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_inbvalid  ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwrecv:recv_inst|r.parity                                              ; Stuck at GND due to stuck port clock_enable                            ;
+; spwstream:inst|spwrecv:recv_inst|r.control                                             ; Stuck at GND due to stuck port clock_enable                            ;
+; spwstream:inst1|spwrecv:recv_inst|r.gotfct                                             ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwrecv:recv_inst|r.rxchar                                             ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwrecv:recv_inst|r.tick_out                                           ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[3,9]                                        ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwrecv:recv_inst|r.gotfct                                              ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwrecv:recv_inst|r.rxchar                                              ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwrecv:recv_inst|r.tick_out                                            ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwrecv:recv_inst|r.bitcnt[3]                                           ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[2]                                          ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwrecv:recv_inst|r.bitcnt[9]                                           ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[8]                                          ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwrecv:recv_inst|r.bitcnt[2]                                           ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[1]                                          ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwrecv:recv_inst|r.bitcnt[8]                                           ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[7]                                          ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwrecv:recv_inst|r.bitcnt[1]                                           ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[0]                                          ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwrecv:recv_inst|r.bitcnt[7]                                           ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[6]                                          ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwrecv:recv_inst|r.bitcnt[0,6]                                         ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[5]                                          ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwrecv:recv_inst|r.bitcnt[5]                                           ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[4]                                          ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwrecv:recv_inst|r.bitcnt[4]                                           ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwlink:link_inst|r.tx_credit[3..5]                                     ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwrecv:recv_inst|r.errpar                                              ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwrecv:recv_inst|r.erresc                                              ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwrecv:recv_inst|r.null_seen                                           ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwlink:link_inst|r.errcred                                             ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwlink:link_inst|r.rx_credit[3..5]                                     ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwrecv:recv_inst|r.escaped                                             ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst|spwrecv:recv_inst|r.rxflag                                              ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwlink:link_inst|r.tx_credit[3..5]                                    ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwrecv:recv_inst|r.errpar                                             ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwrecv:recv_inst|r.erresc                                             ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwrecv:recv_inst|r.null_seen                                          ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwlink:link_inst|r.errcred                                            ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwlink:link_inst|r.rx_credit[3..5]                                    ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwrecv:recv_inst|r.escaped                                            ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwrecv:recv_inst|r.rxflag                                             ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|r.rxroom[0]                                                            ; Merged with spwstream:inst1|r.rxroom[1]                                ;
+; spwstream:inst1|r.rxroom[1]                                                            ; Merged with spwstream:inst1|r.rxroom[2]                                ;
+; spwstream:inst1|r.rxroom[2]                                                            ; Merged with spwstream:inst1|r.rxroom[3]                                ;
+; spwstream:inst1|r.rxroom[3]                                                            ; Merged with spwstream:inst1|r.rxroom[4]                                ;
+; spwstream:inst1|r.rxroom[4]                                                            ; Merged with spwstream:inst1|r.rxroom[5]                                ;
+; spwstream:inst1|r.rxroom[5]                                                            ; Merged with spwstream:inst|r.rxroom[0]                                 ;
+; spwstream:inst|r.rxroom[0]                                                             ; Merged with spwstream:inst|r.rxroom[1]                                 ;
+; spwstream:inst|r.rxroom[1]                                                             ; Merged with spwstream:inst|r.rxroom[2]                                 ;
+; spwstream:inst|r.rxroom[2]                                                             ; Merged with spwstream:inst|r.rxroom[3]                                 ;
+; spwstream:inst|r.rxroom[3]                                                             ; Merged with spwstream:inst|r.rxroom[4]                                 ;
+; spwstream:inst|r.rxroom[4]                                                             ; Merged with spwstream:inst|r.rxroom[5]                                 ;
+; spwstream:inst|spwrecv:recv_inst|r.bitshift[8]                                         ; Merged with spwstream:inst|spwrecv:recv_inst|r.bit_seen                ;
+; spwstream:inst1|spwrecv:recv_inst|r.bitshift[8]                                        ; Merged with spwstream:inst1|spwrecv:recv_inst|r.bit_seen               ;
+; spwstream:inst|spwlink:link_inst|r.tx_credit[0..2]                                     ; Stuck at GND due to stuck port data_in                                 ;
+; spwstream:inst1|spwlink:link_inst|r.tx_credit[0..2]                                    ; Stuck at GND due to stuck port data_in                                 ;
+; Total Number of Removed Registers = 294                                                ;                                                                        ;
++----------------------------------------------------------------------------------------+------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                                                               ;
-+-------------------------------------------------------------------------------------+---------------------------+-----------------------------------------------------------------------------------------+
-; Register name                                                                       ; Reason for Removal        ; Registers Removed due to This Register                                                  ;
-+-------------------------------------------------------------------------------------+---------------------------+-----------------------------------------------------------------------------------------+
-; spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_inbit  ; Stuck at GND              ; spwstream:inst|spwrecv:recv_inst|r.rxchar,                                              ;
-;                                                                                     ; due to stuck port data_in ; spwstream:inst|spwrecv:recv_inst|r.tick_out,                                            ;
-;                                                                                     ;                           ; spwstream:inst|spwrecv:recv_inst|r.gotfct,                                              ;
-;                                                                                     ;                           ; spwstream:inst|spwrecv:recv_inst|r.parity,                                              ;
-;                                                                                     ;                           ; spwstream:inst|spwrecv:recv_inst|r.bitcnt[0],                                           ;
-;                                                                                     ;                           ; spwstream:inst|spwrecv:recv_inst|r.bitcnt[4],                                           ;
-;                                                                                     ;                           ; spwstream:inst|spwrecv:recv_inst|r.bitshift[4],                                         ;
-;                                                                                     ;                           ; spwstream:inst|spwrecv:recv_inst|r.bitshift[6],                                         ;
-;                                                                                     ;                           ; spwstream:inst|spwrecv:recv_inst|r.bitshift[7],                                         ;
-;                                                                                     ;                           ; spwstream:inst|spwrecv:recv_inst|r.bitshift[8], spwstream:inst|r.rxpacket,              ;
-;                                                                                     ;                           ; spwstream:inst|spwrecv:recv_inst|r.errpar,                                              ;
-;                                                                                     ;                           ; spwstream:inst|spwrecv:recv_inst|r.erresc,                                              ;
-;                                                                                     ;                           ; spwstream:inst|spwlink:link_inst|r.rx_credit[2],                                        ;
-;                                                                                     ;                           ; spwstream:inst|spwlink:link_inst|r.rx_credit[1],                                        ;
-;                                                                                     ;                           ; spwstream:inst|spwlink:link_inst|r.rx_credit[0],                                        ;
-;                                                                                     ;                           ; spwstream:inst|spwlink:link_inst|r.errcred, spwstream:inst|r.rxeep,                     ;
-;                                                                                     ;                           ; spwstream:inst|r.rxfifo_waddr[0], spwstream:inst|r.rxfifo_waddr[1],                     ;
-;                                                                                     ;                           ; spwstream:inst|r.rxfifo_waddr[2], spwstream:inst|r.rxfifo_waddr[3],                     ;
-;                                                                                     ;                           ; spwstream:inst|r.rxfifo_waddr[4], spwstream:inst|r.rxfifo_waddr[5],                     ;
-;                                                                                     ;                           ; spwstream:inst|r.rxfifo_waddr[6], spwstream:inst|r.rxfifo_waddr[7],                     ;
-;                                                                                     ;                           ; spwstream:inst|r.rxfifo_waddr[8], spwstream:inst|r.rxfifo_waddr[9],                     ;
-;                                                                                     ;                           ; spwstream:inst|r.rxfifo_waddr[10], spwstream:inst|spwlink:link_inst|r.timerdone,        ;
-;                                                                                     ;                           ; spwstream:inst|r.rxroom[5], spwstream:inst|spwlink:link_inst|r.rx_credit[5]             ;
-; spwstream:inst1|spwram:txmem|rdata[8]                                               ; Stuck at GND              ; spwstream:inst1|r.txfifo_rvalid,                                                        ;
-;                                                                                     ; due to stuck port data_in ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclken,                                 ;
-;                                                                                     ;                           ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.allow_char,                              ;
-;                                                                                     ;                           ; spwstream:inst1|spwlink:link_inst|r.xmit_fct_in,                                        ;
-;                                                                                     ;                           ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.allow_fct,                               ;
-;                                                                                     ;                           ; spwstream:inst1|r.txfifo_raddr[5], spwstream:inst1|r.txfifo_raddr[10],                  ;
-;                                                                                     ;                           ; spwstream:inst1|r.txfifo_raddr[6], spwstream:inst1|r.txfifo_raddr[4],                   ;
-;                                                                                     ;                           ; spwstream:inst1|r.txfifo_raddr[3], spwstream:inst1|r.txfifo_raddr[2],                   ;
-;                                                                                     ;                           ; spwstream:inst1|r.txfifo_raddr[1], spwstream:inst1|r.txfifo_raddr[0],                   ;
-;                                                                                     ;                           ; spwstream:inst1|r.txpacket,                                                             ;
-;                                                                                     ;                           ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[0],                             ;
-;                                                                                     ;                           ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[1],                             ;
-;                                                                                     ;                           ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[2],                             ;
-;                                                                                     ;                           ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[3],                             ;
-;                                                                                     ;                           ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[4],                             ;
-;                                                                                     ;                           ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[5],                             ;
-;                                                                                     ;                           ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[6],                             ;
-;                                                                                     ;                           ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[7],                             ;
-;                                                                                     ;                           ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.sent_fct,                                ;
-;                                                                                     ;                           ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.sent_null,                               ;
-;                                                                                     ;                           ; spwstream:inst1|r.rxroom[5], spwstream:inst1|r.rxroom[4],                               ;
-;                                                                                     ;                           ; spwstream:inst1|r.rxroom[3], spwstream:inst1|r.rxfull                                   ;
-; spwstream:inst|spwram:txmem|rdata[0]                                                ; Stuck at GND              ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.txclken,                                  ;
-;                                                                                     ; due to stuck port data_in ; spwstream:inst|r.txfifo_rvalid, spwstream:inst|r.txdiscard,                             ;
-;                                                                                     ;                           ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.allow_char,                               ;
-;                                                                                     ;                           ; spwstream:inst|spwlink:link_inst|r.xmit_fct_in,                                         ;
-;                                                                                     ;                           ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.allow_fct,                                ;
-;                                                                                     ;                           ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[0],                              ;
-;                                                                                     ;                           ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[1],                              ;
-;                                                                                     ;                           ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[2],                              ;
-;                                                                                     ;                           ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[3],                              ;
-;                                                                                     ;                           ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[4],                              ;
-;                                                                                     ;                           ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[5],                              ;
-;                                                                                     ;                           ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[6],                              ;
-;                                                                                     ;                           ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[7],                              ;
-;                                                                                     ;                           ; spwstream:inst|r.txfifo_raddr[8], spwstream:inst|r.txfifo_raddr[7],                     ;
-;                                                                                     ;                           ; spwstream:inst|r.txfifo_raddr[6], spwstream:inst|r.txfifo_raddr[5],                     ;
-;                                                                                     ;                           ; spwstream:inst|r.txfifo_raddr[4], spwstream:inst|r.txfifo_raddr[3],                     ;
-;                                                                                     ;                           ; spwstream:inst|r.txfifo_raddr[2],                                                       ;
-;                                                                                     ;                           ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.sent_fct,                                 ;
-;                                                                                     ;                           ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.sent_null,                                ;
-;                                                                                     ;                           ; spwstream:inst|spwlink:link_inst|r.rx_credit[4],                                        ;
-;                                                                                     ;                           ; spwstream:inst|spwlink:link_inst|r.rx_credit[3],                                        ;
-;                                                                                     ;                           ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[2],                              ;
-;                                                                                     ;                           ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[3]                               ;
-; spwstream:inst1|spwrecv:recv_inst|r.gotfct                                          ; Lost Fanouts              ; spwstream:inst1|spwrecv:recv_inst|r.escaped,                                            ;
-;                                                                                     ;                           ; spwstream:inst1|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_inbvalid, ;
-;                                                                                     ;                           ; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[0],                                          ;
-;                                                                                     ;                           ; spwstream:inst1|spwrecv:recv_inst|r.parity,                                             ;
-;                                                                                     ;                           ; spwstream:inst1|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwsi3,   ;
-;                                                                                     ;                           ; spwstream:inst1|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwsi2,   ;
-;                                                                                     ;                           ; spwstream:inst1|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwdi2,   ;
-;                                                                                     ;                           ; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[1],                                          ;
-;                                                                                     ;                           ; spwstream:inst1|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwsi1,   ;
-;                                                                                     ;                           ; spwstream:inst1|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwdi1,   ;
-;                                                                                     ;                           ; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[2],                                          ;
-;                                                                                     ;                           ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|spw_so,                                     ;
-;                                                                                     ;                           ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|spw_do,                                     ;
-;                                                                                     ;                           ; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[3],                                          ;
-;                                                                                     ;                           ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.out_strobe,                               ;
-;                                                                                     ;                           ; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[4],                                          ;
-;                                                                                     ;                           ; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[5],                                          ;
-;                                                                                     ;                           ; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[6],                                          ;
-;                                                                                     ;                           ; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[7],                                          ;
-;                                                                                     ;                           ; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[8],                                          ;
-;                                                                                     ;                           ; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[9],                                          ;
-;                                                                                     ;                           ; spwstream:inst1|spwlink:link_inst|r.state.S_ErrorReset                                  ;
-; spwstream:inst1|spwlink:link_inst|r.timerdone                                       ; Lost Fanouts              ; spwstream:inst1|spwlink:link_inst|r.timercnt[10],                                       ;
-;                                                                                     ;                           ; spwstream:inst1|spwlink:link_inst|r.timercnt[9],                                        ;
-;                                                                                     ;                           ; spwstream:inst1|spwlink:link_inst|r.timercnt[8],                                        ;
-;                                                                                     ;                           ; spwstream:inst1|spwlink:link_inst|r.timercnt[7],                                        ;
-;                                                                                     ;                           ; spwstream:inst1|spwlink:link_inst|r.timercnt[6],                                        ;
-;                                                                                     ;                           ; spwstream:inst1|spwlink:link_inst|r.timercnt[5],                                        ;
-;                                                                                     ;                           ; spwstream:inst1|spwlink:link_inst|r.timercnt[4],                                        ;
-;                                                                                     ;                           ; spwstream:inst1|spwlink:link_inst|r.timercnt[3],                                        ;
-;                                                                                     ;                           ; spwstream:inst1|spwlink:link_inst|r.timercnt[2],                                        ;
-;                                                                                     ;                           ; spwstream:inst1|spwlink:link_inst|r.timercnt[1],                                        ;
-;                                                                                     ;                           ; spwstream:inst1|spwlink:link_inst|r.timercnt[0],                                        ;
-;                                                                                     ;                           ; spwstream:inst1|spwrecv:recv_inst|r.null_seen,                                          ;
-;                                                                                     ;                           ; spwstream:inst1|spwrecv:recv_inst|r.bitshift[0],                                        ;
-;                                                                                     ;                           ; spwstream:inst1|spwrecv:recv_inst|r.bitshift[1],                                        ;
-;                                                                                     ;                           ; spwstream:inst1|spwrecv:recv_inst|r.bitshift[2],                                        ;
-;                                                                                     ;                           ; spwstream:inst1|spwrecv:recv_inst|r.bitshift[3],                                        ;
-;                                                                                     ;                           ; spwstream:inst1|spwrecv:recv_inst|r.bitshift[4],                                        ;
-;                                                                                     ;                           ; spwstream:inst1|spwrecv:recv_inst|r.bitshift[5]                                         ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.pend_tick                            ; Stuck at GND              ; spwstream:inst1|spwrecv:recv_inst|r.rxchar,                                             ;
-;                                                                                     ; due to stuck port data_in ; spwstream:inst1|spwlink:link_inst|r.tx_credit[1],                                       ;
-;                                                                                     ;                           ; spwstream:inst1|spwlink:link_inst|r.tx_credit[0],                                       ;
-;                                                                                     ;                           ; spwstream:inst1|spwlink:link_inst|r.tx_credit[3],                                       ;
-;                                                                                     ;                           ; spwstream:inst1|spwlink:link_inst|r.rx_credit[1],                                       ;
-;                                                                                     ;                           ; spwstream:inst1|spwlink:link_inst|r.rx_credit[0], spwstream:inst1|r.txdiscard,          ;
-;                                                                                     ;                           ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitcnt[0],                               ;
-;                                                                                     ;                           ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitcnt[1],                               ;
-;                                                                                     ;                           ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitcnt[2],                               ;
-;                                                                                     ;                           ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitcnt[3],                               ;
-;                                                                                     ;                           ; spwstream:inst1|r.txfifo_raddr[9]                                                       ;
-; spwstream:inst|spwlink:link_inst|r.timercnt[10]                                     ; Lost Fanouts              ; spwstream:inst|spwlink:link_inst|r.timercnt[9],                                         ;
-;                                                                                     ;                           ; spwstream:inst|spwlink:link_inst|r.timercnt[8],                                         ;
-;                                                                                     ;                           ; spwstream:inst|spwlink:link_inst|r.timercnt[7],                                         ;
-;                                                                                     ;                           ; spwstream:inst|spwlink:link_inst|r.timercnt[6],                                         ;
-;                                                                                     ;                           ; spwstream:inst|spwlink:link_inst|r.timercnt[5],                                         ;
-;                                                                                     ;                           ; spwstream:inst|spwlink:link_inst|r.timercnt[4],                                         ;
-;                                                                                     ;                           ; spwstream:inst|spwlink:link_inst|r.timercnt[3],                                         ;
-;                                                                                     ;                           ; spwstream:inst|spwlink:link_inst|r.timercnt[2],                                         ;
-;                                                                                     ;                           ; spwstream:inst|spwlink:link_inst|r.timercnt[1],                                         ;
-;                                                                                     ;                           ; spwstream:inst|spwlink:link_inst|r.timercnt[0]                                          ;
-; spwstream:inst1|r.txfifo_waddr[10]                                                  ; Stuck at GND              ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[11],                             ;
-;                                                                                     ; due to stuck port data_in ; spwstream:inst|r.rxfull, spwstream:inst1|r.rxfifo_waddr[2],                             ;
-;                                                                                     ;                           ; spwstream:inst1|r.rxfifo_waddr[1], spwstream:inst1|r.rxfifo_waddr[0],                   ;
-;                                                                                     ;                           ; spwstream:inst1|r.rxeep, spwstream:inst1|r.rxpacket,                                    ;
-;                                                                                     ;                           ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitcnt[3],                                ;
-;                                                                                     ;                           ; spwstream:inst1|spwrecv:recv_inst|r.rxflag                                              ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.pend_tick                             ; Stuck at GND              ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[10],                             ;
-;                                                                                     ; due to stuck port data_in ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[9],                              ;
-;                                                                                     ;                           ; spwstream:inst|spwlink:link_inst|r.tx_credit[1],                                        ;
-;                                                                                     ;                           ; spwstream:inst|spwlink:link_inst|r.tx_credit[0],                                        ;
-;                                                                                     ;                           ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.parity,                                   ;
-;                                                                                     ;                           ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitcnt[0],                                ;
-;                                                                                     ;                           ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitcnt[1],                                ;
-;                                                                                     ;                           ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitcnt[2],                                ;
-;                                                                                     ;                           ; spwstream:inst|r.txfifo_raddr[9]                                                        ;
-; spwstream:inst1|r.rxfifo_rvalid                                                     ; Lost Fanouts              ; spwstream:inst1|r.rxfifo_waddr[10], spwstream:inst1|r.rxfifo_waddr[9],                  ;
-;                                                                                     ;                           ; spwstream:inst1|r.rxfifo_waddr[8], spwstream:inst1|r.rxfifo_waddr[7],                   ;
-;                                                                                     ;                           ; spwstream:inst1|r.rxfifo_waddr[6], spwstream:inst1|r.rxfifo_waddr[5],                   ;
-;                                                                                     ;                           ; spwstream:inst1|r.rxfifo_waddr[4], spwstream:inst1|r.rxfifo_waddr[3]                    ;
-; spwstream:inst|spwram:txmem|rdata[8]                                                ; Stuck at GND              ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.out_data,                                 ;
-;                                                                                     ; due to stuck port data_in ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[0],                              ;
-;                                                                                     ;                           ; spwstream:inst|spwlink:link_inst|r.tx_credit[5],                                        ;
-;                                                                                     ;                           ; spwstream:inst|spwlink:link_inst|r.tx_credit[4],                                        ;
-;                                                                                     ;                           ; spwstream:inst|spwlink:link_inst|r.tx_credit[3],                                        ;
-;                                                                                     ;                           ; spwstream:inst|spwlink:link_inst|r.tx_credit[2],                                        ;
-;                                                                                     ;                           ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[1],                              ;
-;                                                                                     ;                           ; spwstream:inst|r.txpacket                                                               ;
-; spwstream:inst1|spwrecv:recv_inst|r.disccnt[4]                                      ; Lost Fanouts              ; spwstream:inst1|spwrecv:recv_inst|r.disccnt[3],                                         ;
-;                                                                                     ;                           ; spwstream:inst1|spwrecv:recv_inst|r.disccnt[2],                                         ;
-;                                                                                     ;                           ; spwstream:inst1|spwrecv:recv_inst|r.disccnt[1],                                         ;
-;                                                                                     ;                           ; spwstream:inst1|spwrecv:recv_inst|r.disccnt[0],                                         ;
-;                                                                                     ;                           ; spwstream:inst1|spwrecv:recv_inst|r.disccnt[5],                                         ;
-;                                                                                     ;                           ; spwstream:inst1|spwrecv:recv_inst|r.disccnt[6],                                         ;
-;                                                                                     ;                           ; spwstream:inst1|spwrecv:recv_inst|r.disccnt[7]                                          ;
-; spwstream:inst1|spwlink:link_inst|r.errcred                                         ; Lost Fanouts              ; spwstream:inst1|spwlink:link_inst|r.tx_credit[4],                                       ;
-;                                                                                     ;                           ; spwstream:inst1|spwlink:link_inst|r.tx_credit[5],                                       ;
-;                                                                                     ;                           ; spwstream:inst1|spwlink:link_inst|r.rx_credit[2],                                       ;
-;                                                                                     ;                           ; spwstream:inst1|spwlink:link_inst|r.rx_credit[5],                                       ;
-;                                                                                     ;                           ; spwstream:inst1|spwlink:link_inst|r.rx_credit[4],                                       ;
-;                                                                                     ;                           ; spwstream:inst1|spwlink:link_inst|r.rx_credit[3]                                        ;
-; spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwsi1 ; Stuck at GND              ; spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwsi2,    ;
-;                                                                                     ; due to stuck port data_in ; spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_inbvalid,  ;
-;                                                                                     ;                           ; spwstream:inst|spwrecv:recv_inst|r.null_seen,                                           ;
-;                                                                                     ;                           ; spwstream:inst|spwrecv:recv_inst|r.bit_seen                                             ;
-; spwstream:inst1|spwrecv:recv_inst|r.erresc                                          ; Lost Fanouts              ; spwstream:inst1|spwrecv:recv_inst|r.control,                                            ;
-;                                                                                     ;                           ; spwstream:inst1|spwrecv:recv_inst|r.bitshift[6],                                        ;
-;                                                                                     ;                           ; spwstream:inst1|spwrecv:recv_inst|r.bitshift[7],                                        ;
-;                                                                                     ;                           ; spwstream:inst1|spwrecv:recv_inst|r.bitshift[8]                                         ;
-; spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwdi1 ; Stuck at GND              ; spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwdi2     ;
-;                                                                                     ; due to stuck port data_in ;                                                                                         ;
-; spwstream:inst|spwram:txmem|rdata[2]                                                ; Stuck at GND              ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[4]                               ;
-;                                                                                     ; due to stuck port data_in ;                                                                                         ;
-; spwstream:inst|spwram:txmem|rdata[4]                                                ; Stuck at GND              ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[5]                               ;
-;                                                                                     ; due to stuck port data_in ;                                                                                         ;
-; spwstream:inst|spwram:txmem|rdata[5]                                                ; Stuck at GND              ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[6]                               ;
-;                                                                                     ; due to stuck port data_in ;                                                                                         ;
-; spwstream:inst|spwram:txmem|rdata[6]                                                ; Stuck at GND              ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[7]                               ;
-;                                                                                     ; due to stuck port data_in ;                                                                                         ;
-; spwstream:inst|spwram:txmem|rdata[7]                                                ; Stuck at GND              ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[8]                               ;
-;                                                                                     ; due to stuck port data_in ;                                                                                         ;
-; spwstream:inst1|spwrecv:recv_inst|r.errpar                                          ; Lost Fanouts              ; spwstream:inst1|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_inbit     ;
-+-------------------------------------------------------------------------------------+---------------------------+-----------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                    ;
++----------------------------------------------------------+---------------------------+-----------------------------------------------------------------------------------------+
+; Register name                                            ; Reason for Removal        ; Registers Removed due to This Register                                                  ;
++----------------------------------------------------------+---------------------------+-----------------------------------------------------------------------------------------+
+; spwstream:inst1|spwram:txmem|rdata[8]                    ; Stuck at GND              ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[0],                             ;
+;                                                          ; due to stuck port data_in ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.parity,                                  ;
+;                                                          ;                           ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitcnt[1],                               ;
+;                                                          ;                           ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitcnt[3],                               ;
+;                                                          ;                           ; spwstream:inst1|r.txdiscard,                                                            ;
+;                                                          ;                           ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.out_strobe,                              ;
+;                                                          ;                           ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|spw_so,                                    ;
+;                                                          ;                           ; spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwsi1,    ;
+;                                                          ;                           ; spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwsi2,    ;
+;                                                          ;                           ; spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwsi3,    ;
+;                                                          ;                           ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.out_data,                                ;
+;                                                          ;                           ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|spw_do,                                    ;
+;                                                          ;                           ; spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwdi1,    ;
+;                                                          ;                           ; spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwdi2,    ;
+;                                                          ;                           ; spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_inbit,     ;
+;                                                          ;                           ; spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_inbvalid,  ;
+;                                                          ;                           ; spwstream:inst|spwrecv:recv_inst|r.parity,                                              ;
+;                                                          ;                           ; spwstream:inst|spwrecv:recv_inst|r.control,                                             ;
+;                                                          ;                           ; spwstream:inst|spwrecv:recv_inst|r.gotfct,                                              ;
+;                                                          ;                           ; spwstream:inst|spwrecv:recv_inst|r.rxchar,                                              ;
+;                                                          ;                           ; spwstream:inst|spwrecv:recv_inst|r.tick_out,                                            ;
+;                                                          ;                           ; spwstream:inst|spwrecv:recv_inst|r.bitcnt[3],                                           ;
+;                                                          ;                           ; spwstream:inst|spwrecv:recv_inst|r.bitcnt[9],                                           ;
+;                                                          ;                           ; spwstream:inst|spwrecv:recv_inst|r.bitcnt[2],                                           ;
+;                                                          ;                           ; spwstream:inst|spwrecv:recv_inst|r.bitcnt[8],                                           ;
+;                                                          ;                           ; spwstream:inst|spwrecv:recv_inst|r.bitcnt[1],                                           ;
+;                                                          ;                           ; spwstream:inst|spwrecv:recv_inst|r.bitcnt[7],                                           ;
+;                                                          ;                           ; spwstream:inst|spwrecv:recv_inst|r.bitcnt[0],                                           ;
+;                                                          ;                           ; spwstream:inst|spwrecv:recv_inst|r.bitcnt[6],                                           ;
+;                                                          ;                           ; spwstream:inst|spwrecv:recv_inst|r.bitcnt[5],                                           ;
+;                                                          ;                           ; spwstream:inst|spwrecv:recv_inst|r.bitcnt[4],                                           ;
+;                                                          ;                           ; spwstream:inst|spwrecv:recv_inst|r.errpar,                                              ;
+;                                                          ;                           ; spwstream:inst|spwrecv:recv_inst|r.erresc,                                              ;
+;                                                          ;                           ; spwstream:inst|spwrecv:recv_inst|r.null_seen,                                           ;
+;                                                          ;                           ; spwstream:inst|spwlink:link_inst|r.errcred,                                             ;
+;                                                          ;                           ; spwstream:inst|spwrecv:recv_inst|r.escaped,                                             ;
+;                                                          ;                           ; spwstream:inst|spwrecv:recv_inst|r.rxflag                                               ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.pend_tick  ; Stuck at GND              ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[11],                             ;
+;                                                          ; due to stuck port data_in ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[9],                              ;
+;                                                          ;                           ; spwstream:inst|r.txpacket, spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.sent_fct,      ;
+;                                                          ;                           ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.sent_null,                                ;
+;                                                          ;                           ; spwstream:inst|r.txfifo_raddr[0], spwstream:inst|r.txfifo_raddr[10],                    ;
+;                                                          ;                           ; spwstream:inst|r.txfifo_raddr[7], spwstream:inst|r.txfifo_raddr[6],                     ;
+;                                                          ;                           ; spwstream:inst|r.txfifo_raddr[5], spwstream:inst|r.txfifo_raddr[4],                     ;
+;                                                          ;                           ; spwstream:inst|r.txfifo_raddr[3], spwstream:inst|r.txfifo_raddr[2],                     ;
+;                                                          ;                           ; spwstream:inst|r.txfifo_raddr[1], spwstream:inst|r.txfifo_rvalid,                       ;
+;                                                          ;                           ; spwstream:inst|spwlink:link_inst|r.tx_credit[5],                                        ;
+;                                                          ;                           ; spwstream:inst|spwlink:link_inst|r.tx_credit[4],                                        ;
+;                                                          ;                           ; spwstream:inst|spwlink:link_inst|r.tx_credit[3],                                        ;
+;                                                          ;                           ; spwstream:inst|spwlink:link_inst|r.rx_credit[4],                                        ;
+;                                                          ;                           ; spwstream:inst|spwlink:link_inst|r.rx_credit[3],                                        ;
+;                                                          ;                           ; spwstream:inst|spwlink:link_inst|r.rx_credit[5],                                        ;
+;                                                          ;                           ; spwstream:inst|spwlink:link_inst|r.tx_credit[2]                                         ;
+; spwstream:inst|spwram:txmem|rdata[8]                     ; Stuck at GND              ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[0],                              ;
+;                                                          ; due to stuck port data_in ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.parity,                                   ;
+;                                                          ;                           ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitcnt[1],                                ;
+;                                                          ;                           ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitcnt[3],                                ;
+;                                                          ;                           ; spwstream:inst|r.txdiscard,                                                             ;
+;                                                          ;                           ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.out_strobe,                               ;
+;                                                          ;                           ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|spw_so,                                     ;
+;                                                          ;                           ; spwstream:inst1|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwsi1,   ;
+;                                                          ;                           ; spwstream:inst1|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwsi2,   ;
+;                                                          ;                           ; spwstream:inst1|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwsi3,   ;
+;                                                          ;                           ; spwstream:inst1|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_inbvalid, ;
+;                                                          ;                           ; spwstream:inst1|spwrecv:recv_inst|r.control,                                            ;
+;                                                          ;                           ; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[2],                                          ;
+;                                                          ;                           ; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[8],                                          ;
+;                                                          ;                           ; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[1],                                          ;
+;                                                          ;                           ; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[7],                                          ;
+;                                                          ;                           ; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[0],                                          ;
+;                                                          ;                           ; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[6],                                          ;
+;                                                          ;                           ; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[5],                                          ;
+;                                                          ;                           ; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[4],                                          ;
+;                                                          ;                           ; spwstream:inst1|spwrecv:recv_inst|r.null_seen                                           ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.pend_tick ; Stuck at GND              ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[9],                             ;
+;                                                          ; due to stuck port data_in ; spwstream:inst1|r.txpacket,                                                             ;
+;                                                          ;                           ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.sent_fct,                                ;
+;                                                          ;                           ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.sent_null,                               ;
+;                                                          ;                           ; spwstream:inst1|r.txfifo_raddr[6], spwstream:inst1|r.txfifo_raddr[10],                  ;
+;                                                          ;                           ; spwstream:inst1|r.txfifo_raddr[7], spwstream:inst1|r.txfifo_raddr[5],                   ;
+;                                                          ;                           ; spwstream:inst1|r.txfifo_raddr[4], spwstream:inst1|r.txfifo_raddr[3],                   ;
+;                                                          ;                           ; spwstream:inst1|r.txfifo_raddr[2], spwstream:inst1|r.txfifo_raddr[1],                   ;
+;                                                          ;                           ; spwstream:inst1|r.txfifo_raddr[0], spwstream:inst1|r.txfifo_rvalid,                     ;
+;                                                          ;                           ; spwstream:inst1|spwlink:link_inst|r.tx_credit[5],                                       ;
+;                                                          ;                           ; spwstream:inst1|spwlink:link_inst|r.tx_credit[4],                                       ;
+;                                                          ;                           ; spwstream:inst1|spwlink:link_inst|r.tx_credit[3],                                       ;
+;                                                          ;                           ; spwstream:inst1|spwlink:link_inst|r.rx_credit[4],                                       ;
+;                                                          ;                           ; spwstream:inst1|spwlink:link_inst|r.rx_credit[3],                                       ;
+;                                                          ;                           ; spwstream:inst1|spwlink:link_inst|r.rx_credit[5],                                       ;
+;                                                          ;                           ; spwstream:inst1|spwlink:link_inst|r.tx_credit[2]                                        ;
+; spwstream:inst|spwlink:link_inst|r.state.S_Run           ; Stuck at GND              ; spwstream:inst|r.rxpacket, spwstream:inst|r.rxeep,                                      ;
+;                                                          ; due to stuck port data_in ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.out_data,                                 ;
+;                                                          ;                           ; spwstream:inst|r.rxfifo_waddr[10], spwstream:inst|r.rxfifo_waddr[5],                    ;
+;                                                          ;                           ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|spw_do,                                     ;
+;                                                          ;                           ; spwstream:inst1|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwdi1,   ;
+;                                                          ;                           ; spwstream:inst1|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwdi2,   ;
+;                                                          ;                           ; spwstream:inst1|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_inbit,    ;
+;                                                          ;                           ; spwstream:inst1|spwrecv:recv_inst|r.parity,                                             ;
+;                                                          ;                           ; spwstream:inst1|spwrecv:recv_inst|r.gotfct,                                             ;
+;                                                          ;                           ; spwstream:inst1|spwrecv:recv_inst|r.rxchar,                                             ;
+;                                                          ;                           ; spwstream:inst1|spwrecv:recv_inst|r.tick_out,                                           ;
+;                                                          ;                           ; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[3],                                          ;
+;                                                          ;                           ; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[9],                                          ;
+;                                                          ;                           ; spwstream:inst1|spwrecv:recv_inst|r.errpar,                                             ;
+;                                                          ;                           ; spwstream:inst1|spwrecv:recv_inst|r.erresc,                                             ;
+;                                                          ;                           ; spwstream:inst1|spwlink:link_inst|r.errcred,                                            ;
+;                                                          ;                           ; spwstream:inst1|spwrecv:recv_inst|r.escaped,                                            ;
+;                                                          ;                           ; spwstream:inst1|spwrecv:recv_inst|r.rxflag                                              ;
+; spwstream:inst1|r.txfifo_waddr[10]                       ; Stuck at GND              ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[11],                            ;
+;                                                          ; due to stuck port data_in ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[10],                            ;
+;                                                          ;                           ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[10],                             ;
+;                                                          ;                           ; spwstream:inst|r.rxfull, spwstream:inst1|r.rxfull                                       ;
+; spwstream:inst1|spwlink:link_inst|r.state.S_Run          ; Stuck at GND              ; spwstream:inst1|r.rxpacket, spwstream:inst1|r.rxeep,                                    ;
+;                                                          ; due to stuck port data_in ; spwstream:inst1|r.rxfifo_waddr[10], spwstream:inst1|r.rxfifo_waddr[5]                   ;
+; spwstream:inst|spwlink:link_inst|r.state.S_Started       ; Stuck at GND              ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.allow_char,                               ;
+;                                                          ; due to stuck port data_in ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.allow_fct                                 ;
+; spwstream:inst1|spwlink:link_inst|r.state.S_Started      ; Stuck at GND              ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.allow_char,                              ;
+;                                                          ; due to stuck port data_in ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.allow_fct                                ;
+; spwstream:inst1|spwram:txmem|rdata[0]                    ; Stuck at GND              ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[1]                              ;
+;                                                          ; due to stuck port data_in ;                                                                                         ;
+; spwstream:inst1|spwram:txmem|rdata[1]                    ; Stuck at GND              ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[2]                              ;
+;                                                          ; due to stuck port data_in ;                                                                                         ;
+; spwstream:inst1|spwram:txmem|rdata[2]                    ; Stuck at GND              ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[3]                              ;
+;                                                          ; due to stuck port data_in ;                                                                                         ;
+; spwstream:inst1|spwram:txmem|rdata[3]                    ; Stuck at GND              ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[4]                              ;
+;                                                          ; due to stuck port data_in ;                                                                                         ;
+; spwstream:inst1|spwram:txmem|rdata[4]                    ; Stuck at GND              ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[5]                              ;
+;                                                          ; due to stuck port data_in ;                                                                                         ;
+; spwstream:inst1|spwram:txmem|rdata[5]                    ; Stuck at GND              ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[6]                              ;
+;                                                          ; due to stuck port data_in ;                                                                                         ;
+; spwstream:inst1|spwram:txmem|rdata[6]                    ; Stuck at GND              ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[7]                              ;
+;                                                          ; due to stuck port data_in ;                                                                                         ;
+; spwstream:inst1|spwram:txmem|rdata[7]                    ; Stuck at GND              ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[8]                              ;
+;                                                          ; due to stuck port data_in ;                                                                                         ;
+; spwstream:inst|spwram:txmem|rdata[0]                     ; Stuck at GND              ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[1]                               ;
+;                                                          ; due to stuck port data_in ;                                                                                         ;
+; spwstream:inst|spwram:txmem|rdata[1]                     ; Stuck at GND              ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[2]                               ;
+;                                                          ; due to stuck port data_in ;                                                                                         ;
+; spwstream:inst|spwram:txmem|rdata[2]                     ; Stuck at GND              ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[3]                               ;
+;                                                          ; due to stuck port data_in ;                                                                                         ;
+; spwstream:inst|spwram:txmem|rdata[3]                     ; Stuck at GND              ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[4]                               ;
+;                                                          ; due to stuck port data_in ;                                                                                         ;
+; spwstream:inst|spwram:txmem|rdata[4]                     ; Stuck at GND              ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[5]                               ;
+;                                                          ; due to stuck port data_in ;                                                                                         ;
+; spwstream:inst|spwram:txmem|rdata[5]                     ; Stuck at GND              ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[6]                               ;
+;                                                          ; due to stuck port data_in ;                                                                                         ;
+; spwstream:inst|spwram:txmem|rdata[6]                     ; Stuck at GND              ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[7]                               ;
+;                                                          ; due to stuck port data_in ;                                                                                         ;
+; spwstream:inst|spwram:txmem|rdata[7]                     ; Stuck at GND              ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[8]                               ;
+;                                                          ; due to stuck port data_in ;                                                                                         ;
++----------------------------------------------------------+---------------------------+-----------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -658,21 +667,28 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |spacewire|spwstream:inst1|spwlink:link_inst|r.timercnt[3]          ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |spacewire|spwstream:inst1|spwlink:link_inst|r.rx_credit[2]         ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |spacewire|spwstream:inst1|spwlink:link_inst|r.rx_credit[5]         ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |spacewire|spwstream:inst|spwlink:link_inst|r.timercnt[10]          ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |spacewire|spwstream:inst1|spwlink:link_inst|r.tx_credit[2]         ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |spacewire|spwstream:inst1|spwlink:link_inst|r.timercnt[1]          ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |spacewire|spwstream:inst1|spwlink:link_inst|r.rx_credit[0]         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |spacewire|spwstream:inst1|spwlink:link_inst|r.rx_credit[3]         ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |spacewire|spwstream:inst|spwlink:link_inst|r.timercnt[8]           ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |spacewire|spwstream:inst|spwlink:link_inst|r.rx_credit[0]          ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |spacewire|spwstream:inst|spwlink:link_inst|r.rx_credit[3]          ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |spacewire|spwstream:inst1|spwlink:link_inst|r.tx_credit[0]         ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |spacewire|spwstream:inst1|spwlink:link_inst|r.tx_credit[5]         ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |spacewire|spwstream:inst|spwlink:link_inst|r.tx_credit[0]          ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |spacewire|spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitcnt[1]  ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |spacewire|spwstream:inst1|spwrecv:recv_inst|r.disccnt[1]           ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |spacewire|spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitcnt[2] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |spacewire|spwstream:inst1|spwrecv:recv_inst|r.bitcnt[5]            ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |spacewire|spwstream:inst|spwlink:link_inst|r.tx_credit[1]          ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |spacewire|spwstream:inst|spwlink:link_inst|r.tx_credit[4]          ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |spacewire|spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.parity     ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |spacewire|spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitcnt[1] ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |spacewire|spwstream:inst1|spwrecv:recv_inst|r.disccnt[2]           ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |spacewire|spwstream:inst|spwrecv:recv_inst|r.disccnt[0]            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |spacewire|spwstream:inst1|spwrecv:recv_inst|r.bitcnt[4]            ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |spacewire|spwstream:inst|spwrecv:recv_inst|r.bitcnt[6]             ;
 ; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |spacewire|spwstream:inst1|spwrecv:recv_inst|r.bitshift[6]          ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |spacewire|spwstream:inst|spwrecv:recv_inst|r.bitshift[8]           ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; No         ; |spacewire|spwstream:inst|v                                         ;
 ; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; No         ; |spacewire|spwstream:inst1|v                                        ;
-; 9:1                ; 6 bits    ; 36 LEs        ; 12 LEs               ; 24 LEs                 ; No         ; |spacewire|spwstream:inst|spwlink:link_inst|Selector2               ;
-; 16:1               ; 6 bits    ; 60 LEs        ; 36 LEs               ; 24 LEs                 ; No         ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector0              ;
+; 16:1               ; 6 bits    ; 60 LEs        ; 36 LEs               ; 24 LEs                 ; No         ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector1              ;
+; 16:1               ; 6 bits    ; 60 LEs        ; 36 LEs               ; 24 LEs                 ; No         ; |spacewire|spwstream:inst|spwlink:link_inst|Selector0               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
 
 
@@ -794,6 +810,32 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_constant0:inst5|lpm_constant:LPM_CONSTANT_component ;
++--------------------+------------------+--------------------------------------------------------------+
+; Parameter Name     ; Value            ; Type                                                         ;
++--------------------+------------------+--------------------------------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                                               ;
+; LPM_CVALUE         ; 1                ; Signed Integer                                               ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                                      ;
+; CBXI_PARAMETER     ; lpm_constant_rf6 ; Untyped                                                      ;
++--------------------+------------------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_constant0:inst4|lpm_constant:LPM_CONSTANT_component ;
++--------------------+------------------+--------------------------------------------------------------+
+; Parameter Name     ; Value            ; Type                                                         ;
++--------------------+------------------+--------------------------------------------------------------+
+; LPM_WIDTH          ; 8                ; Signed Integer                                               ;
+; LPM_CVALUE         ; 1                ; Signed Integer                                               ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                                      ;
+; CBXI_PARAMETER     ; lpm_constant_rf6 ; Untyped                                                      ;
++--------------------+------------------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +---------------------------------------------------------+
 ; Port Connectivity Checks: "spwstream:inst|spwram:txmem" ;
 +------+-------+----------+-------------------------------+
@@ -827,7 +869,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Jun  2 17:39:03 2023
+    Info: Processing started: Fri Jun  2 18:10:05 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off spacewire -c spacewire
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 0 entities, in source file spwpkg.vhd
@@ -866,24 +908,39 @@ Info (12021): Found 2 design units, including 1 entities, in source file spwrecv
     Info (12023): Found entity 1: spwrecv
 Info (12021): Found 1 design units, including 1 entities, in source file spacewire.bdf
     Info (12023): Found entity 1: spacewire
+Info (12021): Found 2 design units, including 1 entities, in source file lpm_constant0.vhd
+    Info (12022): Found design unit 1: lpm_constant0-SYN
+    Info (12023): Found entity 1: lpm_constant0
 Info (12127): Elaborating entity "spacewire" for the top level hierarchy
+Warning (275011): Block or symbol "spwstream" of instance "inst1" overlaps another block or symbol
 Info (12128): Elaborating entity "spwstream" for hierarchy "spwstream:inst"
 Info (12128): Elaborating entity "spwlink" for hierarchy "spwstream:inst|spwlink:link_inst"
 Info (12128): Elaborating entity "spwrecv" for hierarchy "spwstream:inst|spwrecv:recv_inst"
 Info (12128): Elaborating entity "spwxmit" for hierarchy "spwstream:inst|spwxmit:\xmit_sel0:xmit_inst"
 Info (12128): Elaborating entity "spwrecvfront_generic" for hierarchy "spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst"
 Info (12128): Elaborating entity "spwram" for hierarchy "spwstream:inst|spwram:rxmem"
-Info (17049): 231 registers lost all their fanouts during netlist optimizations.
+Info (12128): Elaborating entity "lpm_constant0" for hierarchy "lpm_constant0:inst5"
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "lpm_constant0:inst5|lpm_constant:LPM_CONSTANT_component"
+Info (12130): Elaborated megafunction instantiation "lpm_constant0:inst5|lpm_constant:LPM_CONSTANT_component"
+Info (12133): Instantiated megafunction "lpm_constant0:inst5|lpm_constant:LPM_CONSTANT_component" with the following parameter:
+    Info (12134): Parameter "lpm_cvalue" = "1"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "LPM_CONSTANT"
+    Info (12134): Parameter "lpm_width" = "8"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "pin_name1" is stuck at GND
+    Warning (13410): Pin "pin_name2" is stuck at GND
+Info (17049): 4 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "CLK"
-Info (21057): Implemented 1 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 0 output pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 615 megabytes
-    Info: Processing ended: Fri Jun  2 17:39:05 2023
+    Info (21059): Implemented 2 output pins
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 15 warnings
+    Info: Peak virtual memory: 621 megabytes
+    Info: Processing ended: Fri Jun  2 18:10:07 2023
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
