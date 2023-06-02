@@ -16,7 +16,7 @@
 // PROGRAM "Quartus II 64-Bit"
 // VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
-// DATE "06/02/2023 18:11:41"
+// DATE "06/02/2023 18:31:36"
 
 // 
 // Device: Altera EP4CE22F17C6 Package FBGA256
@@ -31,15 +31,39 @@
 module spacewire (
 	pin_name1,
 	CLK,
-	pin_name2);
+	pin_name2,
+	SpWT_started,
+	SpWT_connecting,
+	SpWT_running,
+	SpWT_txrdy,
+	SpWR_txrdy,
+	SpWR_running,
+	SpWR_connecting,
+	SpWR_started);
 output 	pin_name1;
 input 	CLK;
 output 	pin_name2;
+output 	SpWT_started;
+output 	SpWT_connecting;
+output 	SpWT_running;
+output 	SpWT_txrdy;
+output 	SpWR_txrdy;
+output 	SpWR_running;
+output 	SpWR_connecting;
+output 	SpWR_started;
 
 // Design Ports Information
-// pin_name1	=>  Location: PIN_A2,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// pin_name2	=>  Location: PIN_J16,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// CLK	=>  Location: PIN_B3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// pin_name1	=>  Location: PIN_G16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// pin_name2	=>  Location: PIN_P15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// SpWT_started	=>  Location: PIN_C3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// SpWT_connecting	=>  Location: PIN_R13,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// SpWT_running	=>  Location: PIN_B6,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// SpWT_txrdy	=>  Location: PIN_D16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// SpWR_txrdy	=>  Location: PIN_J15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// SpWR_running	=>  Location: PIN_E10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// SpWR_connecting	=>  Location: PIN_F14,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// SpWR_started	=>  Location: PIN_R11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// CLK	=>  Location: PIN_N12,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
 wire gnd;
@@ -60,9 +84,17 @@ initial $sdf_annotate("spacewire_v.sdo");
 wire \CLK~input_o ;
 wire \pin_name1~output_o ;
 wire \pin_name2~output_o ;
+wire \SpWT_started~output_o ;
+wire \SpWT_connecting~output_o ;
+wire \SpWT_running~output_o ;
+wire \SpWT_txrdy~output_o ;
+wire \SpWR_txrdy~output_o ;
+wire \SpWR_running~output_o ;
+wire \SpWR_connecting~output_o ;
+wire \SpWR_started~output_o ;
 
 
-// Location: IOOBUF_X7_Y34_N9
+// Location: IOOBUF_X53_Y20_N23
 cycloneive_io_obuf \pin_name1~output (
 	.i(gnd),
 	.oe(vcc),
@@ -75,7 +107,7 @@ defparam \pin_name1~output .bus_hold = "false";
 defparam \pin_name1~output .open_drain_output = "false";
 // synopsys translate_on
 
-// Location: IOOBUF_X53_Y14_N9
+// Location: IOOBUF_X53_Y6_N16
 cycloneive_io_obuf \pin_name2~output (
 	.i(gnd),
 	.oe(vcc),
@@ -88,7 +120,111 @@ defparam \pin_name2~output .bus_hold = "false";
 defparam \pin_name2~output .open_drain_output = "false";
 // synopsys translate_on
 
-// Location: IOIBUF_X3_Y34_N1
+// Location: IOOBUF_X1_Y34_N2
+cycloneive_io_obuf \SpWT_started~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\SpWT_started~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \SpWT_started~output .bus_hold = "false";
+defparam \SpWT_started~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X40_Y0_N23
+cycloneive_io_obuf \SpWT_connecting~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\SpWT_connecting~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \SpWT_connecting~output .bus_hold = "false";
+defparam \SpWT_connecting~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X16_Y34_N9
+cycloneive_io_obuf \SpWT_running~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\SpWT_running~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \SpWT_running~output .bus_hold = "false";
+defparam \SpWT_running~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X53_Y25_N2
+cycloneive_io_obuf \SpWT_txrdy~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\SpWT_txrdy~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \SpWT_txrdy~output .bus_hold = "false";
+defparam \SpWT_txrdy~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X53_Y14_N2
+cycloneive_io_obuf \SpWR_txrdy~output (
+	.i(vcc),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\SpWR_txrdy~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \SpWR_txrdy~output .bus_hold = "false";
+defparam \SpWR_txrdy~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X45_Y34_N16
+cycloneive_io_obuf \SpWR_running~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\SpWR_running~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \SpWR_running~output .bus_hold = "false";
+defparam \SpWR_running~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X53_Y24_N23
+cycloneive_io_obuf \SpWR_connecting~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\SpWR_connecting~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \SpWR_connecting~output .bus_hold = "false";
+defparam \SpWR_connecting~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X34_Y0_N2
+cycloneive_io_obuf \SpWR_started~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\SpWR_started~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \SpWR_started~output .bus_hold = "false";
+defparam \SpWR_started~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X47_Y0_N22
 cycloneive_io_ibuf \CLK~input (
 	.i(CLK),
 	.ibar(gnd),
@@ -101,5 +237,21 @@ defparam \CLK~input .simulate_z_as = "z";
 assign pin_name1 = \pin_name1~output_o ;
 
 assign pin_name2 = \pin_name2~output_o ;
+
+assign SpWT_started = \SpWT_started~output_o ;
+
+assign SpWT_connecting = \SpWT_connecting~output_o ;
+
+assign SpWT_running = \SpWT_running~output_o ;
+
+assign SpWT_txrdy = \SpWT_txrdy~output_o ;
+
+assign SpWR_txrdy = \SpWR_txrdy~output_o ;
+
+assign SpWR_running = \SpWR_running~output_o ;
+
+assign SpWR_connecting = \SpWR_connecting~output_o ;
+
+assign SpWR_started = \SpWR_started~output_o ;
 
 endmodule
