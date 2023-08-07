@@ -1,5 +1,5 @@
 Fitter report for spacewire
-Fri Jun  2 18:35:42 2023
+Sun Jun  4 16:47:35 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -66,18 +66,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Fri Jun  2 18:35:42 2023           ;
+; Fitter Status                      ; Successful - Sun Jun  4 16:47:35 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; spacewire                                       ;
 ; Top-level Entity Name              ; spacewire                                       ;
 ; Family                             ; Cyclone IV E                                    ;
 ; Device                             ; EP4CE22F17C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 531 / 22,320 ( 2 % )                            ;
-;     Total combinational functions  ; 518 / 22,320 ( 2 % )                            ;
+; Total logic elements               ; 535 / 22,320 ( 2 % )                            ;
+;     Total combinational functions  ; 521 / 22,320 ( 2 % )                            ;
 ;     Dedicated logic registers      ; 269 / 22,320 ( 1 % )                            ;
 ; Total registers                    ; 269                                             ;
-; Total pins                         ; 13 / 154 ( 8 % )                                ;
+; Total pins                         ; 15 / 154 ( 10 % )                               ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 608,256 ( 0 % )                             ;
 ; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                                 ;
@@ -151,7 +151,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 5      ;
+; Number detected on machine ; 2      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -161,8 +161,6 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------+--------------------------------------+
 ; Pin Name        ; Reason                               ;
 +-----------------+--------------------------------------+
-; pin_name1       ; Missing drive strength and slew rate ;
-; pin_name2       ; Missing drive strength and slew rate ;
 ; SpWT_started    ; Missing drive strength and slew rate ;
 ; SpWT_connecting ; Missing drive strength and slew rate ;
 ; SpWT_running    ; Missing drive strength and slew rate ;
@@ -171,6 +169,10 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; SpWR_running    ; Missing drive strength and slew rate ;
 ; SpWR_connecting ; Missing drive strength and slew rate ;
 ; SpWR_started    ; Missing drive strength and slew rate ;
+; SpWT_do         ; Missing drive strength and slew rate ;
+; SpWT_so         ; Missing drive strength and slew rate ;
+; SpWR_do         ; Missing drive strength and slew rate ;
+; SpWR_so         ; Missing drive strength and slew rate ;
 +-----------------+--------------------------------------+
 
 
@@ -180,8 +182,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 824 ( 0.00 % )     ;
-;     -- Achieved     ; 0 / 824 ( 0.00 % )     ;
+;     -- Requested    ; 0 / 831 ( 0.00 % )     ;
+;     -- Achieved     ; 0 / 831 ( 0.00 % )     ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -204,7 +206,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 814     ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 821     ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 10      ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -220,29 +222,29 @@ The pin-out file can be found in /home/quartus/spacewire/output_files/spacewire.
 +---------------------------------------------+----------------------+
 ; Resource                                    ; Usage                ;
 +---------------------------------------------+----------------------+
-; Total logic elements                        ; 531 / 22,320 ( 2 % ) ;
-;     -- Combinational with no register       ; 262                  ;
-;     -- Register only                        ; 13                   ;
-;     -- Combinational with a register        ; 256                  ;
+; Total logic elements                        ; 535 / 22,320 ( 2 % ) ;
+;     -- Combinational with no register       ; 266                  ;
+;     -- Register only                        ; 14                   ;
+;     -- Combinational with a register        ; 255                  ;
 ;                                             ;                      ;
 ; Logic element usage by number of LUT inputs ;                      ;
-;     -- 4 input functions                    ; 216                  ;
-;     -- 3 input functions                    ; 106                  ;
-;     -- <=2 input functions                  ; 196                  ;
-;     -- Register only                        ; 13                   ;
+;     -- 4 input functions                    ; 221                  ;
+;     -- 3 input functions                    ; 101                  ;
+;     -- <=2 input functions                  ; 199                  ;
+;     -- Register only                        ; 14                   ;
 ;                                             ;                      ;
 ; Logic elements by mode                      ;                      ;
-;     -- normal mode                          ; 387                  ;
+;     -- normal mode                          ; 390                  ;
 ;     -- arithmetic mode                      ; 131                  ;
 ;                                             ;                      ;
 ; Total registers*                            ; 269 / 23,018 ( 1 % ) ;
 ;     -- Dedicated logic registers            ; 269 / 22,320 ( 1 % ) ;
 ;     -- I/O registers                        ; 0 / 698 ( 0 % )      ;
 ;                                             ;                      ;
-; Total LABs:  partially or completely used   ; 41 / 1,395 ( 3 % )   ;
+; Total LABs:  partially or completely used   ; 38 / 1,395 ( 3 % )   ;
 ; Virtual pins                                ; 0                    ;
-; I/O pins                                    ; 13 / 154 ( 8 % )     ;
-;     -- Clock pins                           ; 1 / 7 ( 14 % )       ;
+; I/O pins                                    ; 15 / 154 ( 10 % )    ;
+;     -- Clock pins                           ; 2 / 7 ( 29 % )       ;
 ;     -- Dedicated input pins                 ; 0 / 9 ( 0 % )        ;
 ;                                             ;                      ;
 ; Global signals                              ; 1                    ;
@@ -257,10 +259,10 @@ The pin-out file can be found in /home/quartus/spacewire/output_files/spacewire.
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )        ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )        ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%         ;
-; Peak interconnect usage (total/H/V)         ; 3% / 2% / 4%         ;
+; Peak interconnect usage (total/H/V)         ; 1% / 1% / 1%         ;
 ; Maximum fan-out                             ; 269                  ;
 ; Highest non-global fan-out                  ; 53                   ;
-; Total fan-out                               ; 2301                 ;
+; Total fan-out                               ; 2314                 ;
 ; Average fan-out                             ; 2.75                 ;
 +---------------------------------------------+----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
@@ -274,28 +276,28 @@ The pin-out file can be found in /home/quartus/spacewire/output_files/spacewire.
 +---------------------------------------------+---------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                 ; Low                            ;
 ;                                             ;                     ;                                ;
-; Total logic elements                        ; 531 / 22320 ( 2 % ) ; 0 / 22320 ( 0 % )              ;
-;     -- Combinational with no register       ; 262                 ; 0                              ;
-;     -- Register only                        ; 13                  ; 0                              ;
-;     -- Combinational with a register        ; 256                 ; 0                              ;
+; Total logic elements                        ; 535 / 22320 ( 2 % ) ; 0 / 22320 ( 0 % )              ;
+;     -- Combinational with no register       ; 266                 ; 0                              ;
+;     -- Register only                        ; 14                  ; 0                              ;
+;     -- Combinational with a register        ; 255                 ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Logic element usage by number of LUT inputs ;                     ;                                ;
-;     -- 4 input functions                    ; 216                 ; 0                              ;
-;     -- 3 input functions                    ; 106                 ; 0                              ;
-;     -- <=2 input functions                  ; 196                 ; 0                              ;
-;     -- Register only                        ; 13                  ; 0                              ;
+;     -- 4 input functions                    ; 221                 ; 0                              ;
+;     -- 3 input functions                    ; 101                 ; 0                              ;
+;     -- <=2 input functions                  ; 199                 ; 0                              ;
+;     -- Register only                        ; 14                  ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Logic elements by mode                      ;                     ;                                ;
-;     -- normal mode                          ; 387                 ; 0                              ;
+;     -- normal mode                          ; 390                 ; 0                              ;
 ;     -- arithmetic mode                      ; 131                 ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Total registers                             ; 269                 ; 0                              ;
 ;     -- Dedicated logic registers            ; 269 / 22320 ( 1 % ) ; 0 / 22320 ( 0 % )              ;
 ;                                             ;                     ;                                ;
-; Total LABs:  partially or completely used   ; 41 / 1395 ( 3 % )   ; 0 / 1395 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 38 / 1395 ( 3 % )   ; 0 / 1395 ( 0 % )               ;
 ;                                             ;                     ;                                ;
 ; Virtual pins                                ; 0                   ; 0                              ;
-; I/O pins                                    ; 13                  ; 0                              ;
+; I/O pins                                    ; 15                  ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 132 ( 0 % )     ; 0 / 132 ( 0 % )                ;
 ; Total memory bits                           ; 0                   ; 0                              ;
 ; Total RAM block bits                        ; 0                   ; 0                              ;
@@ -308,8 +310,8 @@ The pin-out file can be found in /home/quartus/spacewire/output_files/spacewire.
 ;     -- Registered Output Connections        ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Internal Connections                        ;                     ;                                ;
-;     -- Total Connections                    ; 2296                ; 5                              ;
-;     -- Registered Connections               ; 846                 ; 0                              ;
+;     -- Total Connections                    ; 2309                ; 5                              ;
+;     -- Registered Connections               ; 857                 ; 0                              ;
 ;                                             ;                     ;                                ;
 ; External Connections                        ;                     ;                                ;
 ;     -- Top                                  ; 0                   ; 0                              ;
@@ -317,7 +319,7 @@ The pin-out file can be found in /home/quartus/spacewire/output_files/spacewire.
 ;                                             ;                     ;                                ;
 ; Partition Interface                         ;                     ;                                ;
 ;     -- Input Ports                          ; 3                   ; 0                              ;
-;     -- Output Ports                         ; 10                  ; 0                              ;
+;     -- Output Ports                         ; 12                  ; 0                              ;
 ;     -- Bidir Ports                          ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Registered Ports                            ;                     ;                                ;
@@ -342,8 +344,8 @@ The pin-out file can be found in /home/quartus/spacewire/output_files/spacewire.
 ; Name           ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ;
 +----------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 ; CLK            ; E1    ; 1        ; 0            ; 16           ; 7            ; 269                   ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; SpWR_linkstart ; F9    ; 7        ; 34           ; 34           ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; SpWT_linkstart ; D8    ; 8        ; 23           ; 34           ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; SpWR_linkstart ; M1    ; 2        ; 0            ; 16           ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; SpWT_linkstart ; M2    ; 2        ; 0            ; 16           ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 +----------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 
 
@@ -352,16 +354,18 @@ The pin-out file can be found in /home/quartus/spacewire/output_files/spacewire.
 +-----------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 ; Name            ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Location assigned by ; Output Enable Source ; Output Enable Group ;
 +-----------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
-; SpWR_connecting ; C6    ; 8        ; 18           ; 34           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; SpWR_running    ; D9    ; 7        ; 31           ; 34           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; SpWR_started    ; B10   ; 7        ; 34           ; 34           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; SpWR_txrdy      ; A15   ; 7        ; 38           ; 34           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; SpWT_connecting ; D15   ; 6        ; 53           ; 26           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; SpWT_running    ; E9    ; 7        ; 29           ; 34           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; SpWT_started    ; C8    ; 8        ; 23           ; 34           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; SpWT_txrdy      ; A7    ; 8        ; 20           ; 34           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; pin_name1       ; A10   ; 7        ; 34           ; 34           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; pin_name2       ; C9    ; 7        ; 31           ; 34           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; SpWR_connecting ; F8    ; 8        ; 20           ; 34           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; SpWR_do         ; B11   ; 7        ; 40           ; 34           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; SpWR_running    ; E9    ; 7        ; 29           ; 34           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; SpWR_so         ; C11   ; 7        ; 38           ; 34           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; SpWR_started    ; C8    ; 8        ; 23           ; 34           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; SpWR_txrdy      ; D8    ; 8        ; 23           ; 34           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; SpWT_connecting ; A10   ; 7        ; 34           ; 34           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; SpWT_do         ; C9    ; 7        ; 31           ; 34           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; SpWT_running    ; B10   ; 7        ; 34           ; 34           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; SpWT_so         ; A7    ; 8        ; 20           ; 34           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; SpWT_started    ; F9    ; 7        ; 34           ; 34           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; SpWT_txrdy      ; A15   ; 7        ; 38           ; 34           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 +-----------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
@@ -383,16 +387,16 @@ The pin-out file can be found in /home/quartus/spacewire/output_files/spacewire.
 ; G12      ; MSEL2                                    ; -                        ; -                       ; Dedicated Programming Pin ;
 ; G12      ; MSEL3                                    ; -                        ; -                       ; Dedicated Programming Pin ;
 ; F16      ; DIFFIO_R4n, nCEO                         ; Use as programming pin   ; ~ALTERA_nCEO~           ; Dual Purpose Pin          ;
-; D15      ; PADD23                                   ; Use as regular IO        ; SpWT_connecting         ; Dual Purpose Pin          ;
-; A15      ; DIFFIO_T19n, PADD1                       ; Use as regular IO        ; SpWR_txrdy              ; Dual Purpose Pin          ;
-; F9       ; DIFFIO_T17p, PADD4, DQS2T/CQ3T,DPCLK8    ; Use as regular IO        ; SpWR_linkstart          ; Dual Purpose Pin          ;
-; A10      ; DIFFIO_T16n, PADD5                       ; Use as regular IO        ; pin_name1               ; Dual Purpose Pin          ;
-; B10      ; DIFFIO_T16p, PADD6                       ; Use as regular IO        ; SpWR_started            ; Dual Purpose Pin          ;
-; C9       ; DIFFIO_T15n, PADD7                       ; Use as regular IO        ; pin_name2               ; Dual Purpose Pin          ;
-; D9       ; DIFFIO_T15p, PADD8                       ; Use as regular IO        ; SpWR_running            ; Dual Purpose Pin          ;
-; E9       ; DIFFIO_T13p, PADD12, DQS4T/CQ5T,DPCLK9   ; Use as regular IO        ; SpWT_running            ; Dual Purpose Pin          ;
-; C8       ; DIFFIO_T11p, PADD17, DQS5T/CQ5T#,DPCLK10 ; Use as regular IO        ; SpWT_started            ; Dual Purpose Pin          ;
-; A7       ; DIFFIO_T9n, PADD18                       ; Use as regular IO        ; SpWT_txrdy              ; Dual Purpose Pin          ;
+; B11      ; DIFFIO_T20p, PADD0                       ; Use as regular IO        ; SpWR_do                 ; Dual Purpose Pin          ;
+; A15      ; DIFFIO_T19n, PADD1                       ; Use as regular IO        ; SpWT_txrdy              ; Dual Purpose Pin          ;
+; F9       ; DIFFIO_T17p, PADD4, DQS2T/CQ3T,DPCLK8    ; Use as regular IO        ; SpWT_started            ; Dual Purpose Pin          ;
+; A10      ; DIFFIO_T16n, PADD5                       ; Use as regular IO        ; SpWT_connecting         ; Dual Purpose Pin          ;
+; B10      ; DIFFIO_T16p, PADD6                       ; Use as regular IO        ; SpWT_running            ; Dual Purpose Pin          ;
+; C9       ; DIFFIO_T15n, PADD7                       ; Use as regular IO        ; SpWT_do                 ; Dual Purpose Pin          ;
+; E9       ; DIFFIO_T13p, PADD12, DQS4T/CQ5T,DPCLK9   ; Use as regular IO        ; SpWR_running            ; Dual Purpose Pin          ;
+; C8       ; DIFFIO_T11p, PADD17, DQS5T/CQ5T#,DPCLK10 ; Use as regular IO        ; SpWR_started            ; Dual Purpose Pin          ;
+; F8       ; DIFFIO_T10p, DATA3                       ; Use as regular IO        ; SpWR_connecting         ; Dual Purpose Pin          ;
+; A7       ; DIFFIO_T9n, PADD18                       ; Use as regular IO        ; SpWT_so                 ; Dual Purpose Pin          ;
 +----------+------------------------------------------+--------------------------+-------------------------+---------------------------+
 
 
@@ -402,12 +406,12 @@ The pin-out file can be found in /home/quartus/spacewire/output_files/spacewire.
 ; I/O Bank ; Usage           ; VCCIO Voltage ; VREF Voltage ;
 +----------+-----------------+---------------+--------------+
 ; 1        ; 5 / 14 ( 36 % ) ; 2.5V          ; --           ;
-; 2        ; 0 / 16 ( 0 % )  ; 2.5V          ; --           ;
+; 2        ; 2 / 16 ( 13 % ) ; 2.5V          ; --           ;
 ; 3        ; 0 / 25 ( 0 % )  ; 2.5V          ; --           ;
 ; 4        ; 0 / 20 ( 0 % )  ; 2.5V          ; --           ;
 ; 5        ; 0 / 18 ( 0 % )  ; 2.5V          ; --           ;
-; 6        ; 2 / 13 ( 15 % ) ; 2.5V          ; --           ;
-; 7        ; 7 / 24 ( 29 % ) ; 2.5V          ; --           ;
+; 6        ; 1 / 13 ( 8 % )  ; 2.5V          ; --           ;
+; 7        ; 8 / 24 ( 33 % ) ; 2.5V          ; --           ;
 ; 8        ; 4 / 24 ( 17 % ) ; 2.5V          ; --           ;
 +----------+-----------------+---------------+--------------+
 
@@ -423,15 +427,15 @@ The pin-out file can be found in /home/quartus/spacewire/output_files/spacewire.
 ; A4       ; 236        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; A5       ; 232        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; A6       ; 225        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; A7       ; 220        ; 8        ; SpWT_txrdy                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; A7       ; 220        ; 8        ; SpWT_so                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; A8       ; 211        ; 8        ; GND+                                                      ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; A9       ; 209        ; 7        ; GND+                                                      ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; A10      ; 198        ; 7        ; pin_name1                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; A10      ; 198        ; 7        ; SpWT_connecting                                           ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; A11      ; 188        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; A12      ; 186        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; A13      ; 179        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; A14      ; 181        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; A15      ; 191        ; 7        ; SpWR_txrdy                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; A15      ; 191        ; 7        ; SpWT_txrdy                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; A16      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; B1       ; 5          ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; B2       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -442,8 +446,8 @@ The pin-out file can be found in /home/quartus/spacewire/output_files/spacewire.
 ; B7       ; 221        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B8       ; 212        ; 8        ; GND+                                                      ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; B9       ; 210        ; 7        ; GND+                                                      ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; B10      ; 199        ; 7        ; SpWR_started                                              ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; B11      ; 189        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; B10      ; 199        ; 7        ; SpWT_running                                              ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; B11      ; 189        ; 7        ; SpWR_do                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; B12      ; 187        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B13      ; 180        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B14      ; 182        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -454,12 +458,12 @@ The pin-out file can be found in /home/quartus/spacewire/output_files/spacewire.
 ; C3       ; 245        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C4       ;            ; 8        ; VCCIO8                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; C5       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; C6       ; 224        ; 8        ; SpWR_connecting                                           ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; C6       ; 224        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; C7       ;            ; 8        ; VCCIO8                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; C8       ; 215        ; 8        ; SpWT_started                                              ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; C9       ; 200        ; 7        ; pin_name2                                                 ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; C8       ; 215        ; 8        ; SpWR_started                                              ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; C9       ; 200        ; 7        ; SpWT_do                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C10      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; C11      ; 190        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
+; C11      ; 190        ; 7        ; SpWR_so                                                   ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C12      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; C13      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; C14      ; 175        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -472,14 +476,14 @@ The pin-out file can be found in /home/quartus/spacewire/output_files/spacewire.
 ; D5       ; 241        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D6       ; 234        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D7       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; D8       ; 216        ; 8        ; SpWT_linkstart                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; D9       ; 201        ; 7        ; SpWR_running                                              ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; D8       ; 216        ; 8        ; SpWR_txrdy                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; D9       ; 201        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D10      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; D11      ; 177        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D12      ; 178        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D13      ;            ;          ; VCCD_PLL2                                                 ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; D14      ; 176        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; D15      ; 170        ; 6        ; SpWT_connecting                                           ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; D15      ; 170        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; D16      ; 169        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; E1       ; 26         ; 1        ; CLK                                                       ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; E2       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -489,7 +493,7 @@ The pin-out file can be found in /home/quartus/spacewire/output_files/spacewire.
 ; E6       ; 231        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; E7       ; 227        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; E8       ; 218        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; E9       ; 205        ; 7        ; SpWT_running                                              ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; E9       ; 205        ; 7        ; SpWR_running                                              ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; E10      ; 184        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; E11      ; 183        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; E12      ;            ;          ; GNDA2                                                     ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -504,8 +508,8 @@ The pin-out file can be found in /home/quartus/spacewire/output_files/spacewire.
 ; F5       ;            ; --       ; VCCA3                                                     ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; F6       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; F7       ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; F8       ; 219        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; F9       ; 197        ; 7        ; SpWR_linkstart                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; F8       ; 219        ; 8        ; SpWR_connecting                                           ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; F9       ; 197        ; 7        ; SpWT_started                                              ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; F10      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; F11      ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; F12      ;            ; --       ; VCCA2                                                     ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
@@ -594,8 +598,8 @@ The pin-out file can be found in /home/quartus/spacewire/output_files/spacewire.
 ; L14      ; 134        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; L15      ; 138        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; L16      ; 137        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; M1       ; 28         ; 2        ; GND+                                                      ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; M2       ; 27         ; 2        ; GND+                                                      ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; M1       ; 28         ; 2        ; SpWR_linkstart                                            ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; M2       ; 27         ; 2        ; SpWT_linkstart                                            ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; M3       ;            ; 2        ; VCCIO2                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; M4       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; M5       ;            ;          ; GNDA1                                                     ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -683,17 +687,17 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +---------------------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                          ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                    ; Library Name ;
 +---------------------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------------------+--------------+
-; |spacewire                                                          ; 531 (1)     ; 269 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 13   ; 0            ; 262 (1)      ; 13 (0)            ; 256 (0)          ; |spacewire                                                                             ; work         ;
-;    |spwstream:inst1|                                                ; 276 (59)    ; 139 (35)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 133 (23)     ; 9 (0)             ; 134 (36)         ; |spacewire|spwstream:inst1                                                             ; work         ;
-;       |spwlink:link_inst|                                           ; 102 (102)   ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 67 (67)      ; 0 (0)             ; 35 (35)          ; |spacewire|spwstream:inst1|spwlink:link_inst                                           ; work         ;
-;       |spwrecv:recv_inst|                                           ; 53 (53)     ; 38 (38)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 15 (15)      ; 0 (0)             ; 38 (38)          ; |spacewire|spwstream:inst1|spwrecv:recv_inst                                           ; work         ;
-;       |spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst| ; 7 (7)       ; 7 (7)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 6 (6)             ; 1 (1)            ; |spacewire|spwstream:inst1|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst ; work         ;
-;       |spwxmit:\xmit_sel0:xmit_inst|                                ; 57 (57)     ; 27 (27)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 28 (28)      ; 3 (3)             ; 26 (26)          ; |spacewire|spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst                                ; work         ;
-;    |spwstream:inst|                                                 ; 258 (59)    ; 130 (35)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 128 (24)     ; 4 (0)             ; 126 (35)         ; |spacewire|spwstream:inst                                                              ; work         ;
-;       |spwlink:link_inst|                                           ; 103 (103)   ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 70 (70)      ; 0 (0)             ; 33 (33)          ; |spacewire|spwstream:inst|spwlink:link_inst                                            ; work         ;
-;       |spwrecv:recv_inst|                                           ; 53 (53)     ; 38 (38)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 15 (15)      ; 0 (0)             ; 38 (38)          ; |spacewire|spwstream:inst|spwrecv:recv_inst                                            ; work         ;
-;       |spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst| ; 7 (7)       ; 7 (7)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 3 (3)             ; 4 (4)            ; |spacewire|spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst  ; work         ;
-;       |spwxmit:\xmit_sel0:xmit_inst|                                ; 38 (38)     ; 18 (18)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 19 (19)      ; 1 (1)             ; 18 (18)          ; |spacewire|spwstream:inst|spwxmit:\xmit_sel0:xmit_inst                                 ; work         ;
+; |spacewire                                                          ; 535 (1)     ; 269 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 15   ; 0            ; 266 (1)      ; 14 (0)            ; 255 (0)          ; |spacewire                                                                             ; work         ;
+;    |spwstream:inst1|                                                ; 275 (58)    ; 139 (35)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 136 (23)     ; 7 (0)             ; 132 (35)         ; |spacewire|spwstream:inst1                                                             ; work         ;
+;       |spwlink:link_inst|                                           ; 104 (104)   ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 71 (71)      ; 0 (0)             ; 33 (33)          ; |spacewire|spwstream:inst1|spwlink:link_inst                                           ; work         ;
+;       |spwrecv:recv_inst|                                           ; 53 (53)     ; 38 (38)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 14 (14)      ; 0 (0)             ; 39 (39)          ; |spacewire|spwstream:inst1|spwrecv:recv_inst                                           ; work         ;
+;       |spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst| ; 7 (7)       ; 7 (7)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 5 (5)             ; 2 (2)            ; |spacewire|spwstream:inst1|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst ; work         ;
+;       |spwxmit:\xmit_sel0:xmit_inst|                                ; 55 (55)     ; 27 (27)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 28 (28)      ; 2 (2)             ; 25 (25)          ; |spacewire|spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst                                ; work         ;
+;    |spwstream:inst|                                                 ; 259 (61)    ; 130 (35)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 129 (26)     ; 7 (0)             ; 123 (35)         ; |spacewire|spwstream:inst                                                              ; work         ;
+;       |spwlink:link_inst|                                           ; 102 (102)   ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 69 (69)      ; 0 (0)             ; 33 (33)          ; |spacewire|spwstream:inst|spwlink:link_inst                                            ; work         ;
+;       |spwrecv:recv_inst|                                           ; 53 (53)     ; 38 (38)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 14 (14)      ; 0 (0)             ; 39 (39)          ; |spacewire|spwstream:inst|spwrecv:recv_inst                                            ; work         ;
+;       |spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst| ; 7 (7)       ; 7 (7)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 5 (5)             ; 2 (2)            ; |spacewire|spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst  ; work         ;
+;       |spwxmit:\xmit_sel0:xmit_inst|                                ; 38 (38)     ; 18 (18)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 20 (20)      ; 2 (2)             ; 16 (16)          ; |spacewire|spwstream:inst|spwxmit:\xmit_sel0:xmit_inst                                 ; work         ;
 +---------------------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -703,8 +707,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------+---------------+---------------+-----------------------+-----+------+
 ; Name            ; Pin Type ; Pad to Core 0 ; Pad to Core 1 ; Pad to Input Register ; TCO ; TCOE ;
 +-----------------+----------+---------------+---------------+-----------------------+-----+------+
-; pin_name1       ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; pin_name2       ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; SpWT_started    ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; SpWT_connecting ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; SpWT_running    ; Output   ; --            ; --            ; --                    ; --  ; --   ;
@@ -713,23 +715,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SpWR_running    ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; SpWR_connecting ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; SpWR_started    ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; SpWT_do         ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; SpWT_so         ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; SpWR_do         ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; SpWR_so         ; Output   ; --            ; --            ; --                    ; --  ; --   ;
+; SpWT_linkstart  ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; CLK             ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; SpWT_linkstart  ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; SpWR_linkstart  ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; SpWR_linkstart  ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 +-----------------+----------+---------------+---------------+-----------------------+-----+------+
 
 
-+------------------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                                     ;
-+------------------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                                  ; Pad To Core Index ; Setting ;
-+------------------------------------------------------+-------------------+---------+
-; CLK                                                  ;                   ;         ;
-; SpWT_linkstart                                       ;                   ;         ;
-;      - spwstream:inst|spwlink:link_inst|Selector0~2  ; 1                 ; 6       ;
-; SpWR_linkstart                                       ;                   ;         ;
-;      - spwstream:inst1|spwlink:link_inst|Selector0~5 ; 0                 ; 6       ;
-+------------------------------------------------------+-------------------+---------+
++---------------------------------------------------+
+; Pad To Core Delay Chain Fanout                    ;
++---------------------+-------------------+---------+
+; Source Pin / Fanout ; Pad To Core Index ; Setting ;
++---------------------+-------------------+---------+
+; SpWT_linkstart      ;                   ;         ;
+; CLK                 ;                   ;         ;
+; SpWR_linkstart      ;                   ;         ;
++---------------------+-------------------+---------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -738,25 +742,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                                                                   ; Location           ; Fan-Out ; Usage                    ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +----------------------------------------------------------------------------------------+--------------------+---------+--------------------------+--------+----------------------+------------------+---------------------------+
 ; CLK                                                                                    ; PIN_E1             ; 269     ; Clock                    ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; spwstream:inst1|spwlink:link_inst|r.rx_credit[0]~0                                     ; LCCOMB_X29_Y27_N28 ; 3       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; spwstream:inst1|spwlink:link_inst|r.state.S_ErrorReset                                 ; FF_X30_Y30_N27     ; 52      ; Sync. clear              ; no     ; --                   ; --               ; --                        ;
-; spwstream:inst1|spwlink:link_inst|r.tx_credit[2]~0                                     ; LCCOMB_X31_Y28_N22 ; 3       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; spwstream:inst1|spwrecv:recv_inst|r.disccnt[1]~10                                      ; LCCOMB_X31_Y30_N8  ; 8       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; spwstream:inst1|spwrecv:recv_inst|v.bitcnt[3]~0                                        ; LCCOMB_X30_Y31_N14 ; 28      ; Clock enable, Sync. load ; no     ; --                   ; --               ; --                        ;
-; spwstream:inst1|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_inbvalid ; FF_X31_Y31_N19     ; 7       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|process_0~2                               ; LCCOMB_X30_Y30_N4  ; 8       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitcnt[1]~0                             ; LCCOMB_X28_Y28_N2  ; 4       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[3]~4                           ; LCCOMB_X30_Y27_N20 ; 2       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclken                                 ; FF_X30_Y30_N23     ; 17      ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; spwstream:inst|spwlink:link_inst|r.rx_credit[2]~0                                      ; LCCOMB_X27_Y29_N14 ; 3       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; spwstream:inst|spwlink:link_inst|r.state.S_ErrorReset                                  ; FF_X25_Y31_N23     ; 53      ; Sync. clear              ; no     ; --                   ; --               ; --                        ;
-; spwstream:inst|spwlink:link_inst|r.tx_credit[1]~0                                      ; LCCOMB_X25_Y30_N2  ; 3       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; spwstream:inst|spwrecv:recv_inst|r.disccnt[1]~10                                       ; LCCOMB_X26_Y31_N28 ; 8       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; spwstream:inst|spwrecv:recv_inst|v.bitcnt[3]~0                                         ; LCCOMB_X26_Y32_N30 ; 28      ; Clock enable, Sync. load ; no     ; --                   ; --               ; --                        ;
-; spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_inbvalid  ; FF_X27_Y31_N1      ; 7       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|process_0~3                                ; LCCOMB_X25_Y30_N20 ; 8       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitcnt[1]~0                              ; LCCOMB_X28_Y29_N24 ; 2       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[3]~4                            ; LCCOMB_X27_Y30_N0  ; 2       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
+; spwstream:inst1|spwlink:link_inst|r.rx_credit[1]~0                                     ; LCCOMB_X30_Y27_N10 ; 3       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
+; spwstream:inst1|spwlink:link_inst|r.state.S_ErrorReset                                 ; FF_X28_Y28_N31     ; 52      ; Sync. clear              ; no     ; --                   ; --               ; --                        ;
+; spwstream:inst1|spwlink:link_inst|r.tx_credit[2]~0                                     ; LCCOMB_X29_Y26_N22 ; 3       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
+; spwstream:inst1|spwrecv:recv_inst|r.disccnt[0]~10                                      ; LCCOMB_X29_Y28_N4  ; 8       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
+; spwstream:inst1|spwrecv:recv_inst|v.bitcnt[3]~0                                        ; LCCOMB_X31_Y28_N2  ; 28      ; Clock enable, Sync. load ; no     ; --                   ; --               ; --                        ;
+; spwstream:inst1|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_inbvalid ; FF_X27_Y28_N19     ; 7       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|process_0~2                               ; LCCOMB_X29_Y26_N8  ; 8       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitcnt[1]~0                             ; LCCOMB_X28_Y26_N20 ; 4       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[3]~4                           ; LCCOMB_X29_Y26_N2  ; 2       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclken                                 ; FF_X36_Y30_N17     ; 18      ; Clock enable             ; no     ; --                   ; --               ; --                        ;
+; spwstream:inst|spwlink:link_inst|r.rx_credit[0]~0                                      ; LCCOMB_X39_Y32_N22 ; 3       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
+; spwstream:inst|spwlink:link_inst|r.state.S_ErrorReset                                  ; FF_X35_Y29_N5      ; 53      ; Sync. clear              ; no     ; --                   ; --               ; --                        ;
+; spwstream:inst|spwlink:link_inst|r.tx_credit[0]~0                                      ; LCCOMB_X36_Y32_N22 ; 3       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
+; spwstream:inst|spwrecv:recv_inst|r.disccnt[0]~10                                       ; LCCOMB_X35_Y31_N22 ; 8       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
+; spwstream:inst|spwrecv:recv_inst|v.bitcnt[3]~0                                         ; LCCOMB_X35_Y31_N28 ; 28      ; Clock enable, Sync. load ; no     ; --                   ; --               ; --                        ;
+; spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_inbvalid  ; FF_X35_Y30_N5      ; 7       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|process_0~0                                ; LCCOMB_X34_Y29_N30 ; 8       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[3]~4                            ; LCCOMB_X36_Y28_N30 ; 2       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.parity~0                                 ; LCCOMB_X34_Y28_N16 ; 2       ; Clock enable             ; no     ; --                   ; --               ; --                        ;
 +----------------------------------------------------------------------------------------+--------------------+---------+--------------------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -765,7 +769,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name ; Location ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; CLK  ; PIN_E1   ; 269     ; 50                                   ; Global Clock         ; GCLK2            ; --                        ;
+; CLK  ; PIN_E1   ; 269     ; 0                                    ; Global Clock         ; GCLK2            ; --                        ;
 +------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
@@ -778,14 +782,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; spwstream:inst1|spwlink:link_inst|r.state.S_ErrorReset                                   ; 52      ;
 ; spwstream:inst1|spwrecv:recv_inst|v.bitcnt[3]~0                                          ; 28      ;
 ; spwstream:inst|spwrecv:recv_inst|v.bitcnt[3]~0                                           ; 28      ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|Equal1~0                                    ; 18      ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|Equal1~0                                     ; 18      ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclken                                   ; 17      ;
+; spwstream:inst1|spwlink:link_inst|r.state.S_Run                                          ; 19      ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclken                                   ; 18      ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|Equal1~0                                    ; 17      ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|Equal1~0                                     ; 17      ;
 ; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[0]                                            ; 14      ;
 ; spwstream:inst|spwrecv:recv_inst|r.bitcnt[0]                                             ; 14      ;
 ; spwstream:inst|spwlink:link_inst|Equal0~3                                                ; 14      ;
-; spwstream:inst1|spwlink:link_inst|r.state.S_Run                                          ; 14      ;
-; spwstream:inst|spwlink:link_inst|Selector0~7                                             ; 13      ;
+; spwstream:inst|spwlink:link_inst|Selector0~4                                             ; 13      ;
+; spwstream:inst1|spwlink:link_inst|r.state.S_Connecting                                   ; 13      ;
 ; spwstream:inst|spwlink:link_inst|r.state.S_Run                                           ; 13      ;
 ; ~GND                                                                                     ; 12      ;
 ; spwstream:inst1|spwrecv:recv_inst|v~12                                                   ; 12      ;
@@ -793,70 +798,75 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; spwstream:inst1|spwlink:link_inst|Selector6~1                                            ; 12      ;
 ; spwstream:inst1|spwlink:link_inst|Equal0~3                                               ; 12      ;
 ; spwstream:inst1|spwlink:link_inst|r.state.S_Started                                      ; 12      ;
-; spwstream:inst1|spwlink:link_inst|r.state.S_Connecting                                   ; 12      ;
 ; spwstream:inst|spwlink:link_inst|r.state.S_Connecting                                    ; 12      ;
 ; spwstream:inst|spwlink:link_inst|Selector6~0                                             ; 11      ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|process_0~2                                  ; 11      ;
-; spwstream:inst|spwlink:link_inst|Selector0~3                                             ; 11      ;
+; spwstream:inst|spwlink:link_inst|Selector3~1                                             ; 11      ;
 ; spwstream:inst|spwlink:link_inst|r.state.S_Started                                       ; 11      ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|process_0~1                                 ; 10      ;
-; spwstream:inst1|spwlink:link_inst|Selector0~1                                            ; 10      ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|process_0~3                                  ; 10      ;
 ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|process_0~3                                 ; 9       ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|process_0~1                                 ; 9       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|process_0~1                                  ; 9       ;
 ; spwstream:inst1|spwrecv:recv_inst|r.rxchar                                               ; 9       ;
 ; spwstream:inst|spwrecv:recv_inst|r.rxchar                                                ; 9       ;
 ; spwstream:inst|spwrecv:recv_inst|r.gotfct                                                ; 9       ;
 ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|Equal0~1                                    ; 8       ;
 ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|Equal0~0                                    ; 8       ;
-; spwstream:inst1|spwrecv:recv_inst|r.disccnt[1]~10                                        ; 8       ;
+; spwstream:inst|spwlink:link_inst|xmiti.txen~0                                            ; 8       ;
+; spwstream:inst1|spwrecv:recv_inst|r.disccnt[0]~10                                        ; 8       ;
 ; spwstream:inst1|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_inbit      ; 8       ;
 ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|process_0~2                                 ; 8       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|process_0~3                                  ; 8       ;
-; spwstream:inst|spwrecv:recv_inst|r.disccnt[1]~10                                         ; 8       ;
-; spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_inbit       ; 8       ;
-; spwstream:inst|spwlink:link_inst|xmiti.txen~0                                            ; 8       ;
 ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|process_0~0                                  ; 8       ;
+; spwstream:inst|spwrecv:recv_inst|r.disccnt[0]~10                                         ; 8       ;
+; spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_inbit       ; 8       ;
 ; spwstream:inst1|Add1~20                                                                  ; 8       ;
+; spwstream:inst|Add1~20                                                                   ; 8       ;
 ; spwstream:inst1|spwrecv:recv_inst|r.gotfct                                               ; 8       ;
 ; spwstream:inst|spwlink:link_inst|r.xmit_fct_in                                           ; 8       ;
-; spwstream:inst1|spwlink:link_inst|xmiti.txen~0                                           ; 7       ;
+; spwstream:inst1|Equal1~0                                                                 ; 7       ;
 ; spwstream:inst1|spwrecv:recv_inst|r.control                                              ; 7       ;
 ; spwstream:inst|spwrecv:recv_inst|r.control                                               ; 7       ;
 ; spwstream:inst1|spwlink:link_inst|process_0~3                                            ; 7       ;
-; spwstream:inst|Add1~20                                                                   ; 7       ;
 ; spwstream:inst1|spwlink:link_inst|r.rx_credit[3]                                         ; 7       ;
 ; spwstream:inst1|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_inbvalid   ; 7       ;
 ; spwstream:inst|spwlink:link_inst|r.rx_credit[3]                                          ; 7       ;
 ; spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_inbvalid    ; 7       ;
 ; spwstream:inst1|spwlink:link_inst|r.xmit_fct_in                                          ; 7       ;
-; spwstream:inst1|Equal1~0                                                                 ; 6       ;
 ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|xmito.txack~0                               ; 6       ;
 ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|xmito.txack~0                                ; 6       ;
+; spwstream:inst1|spwlink:link_inst|xmiti.txen~0                                           ; 6       ;
 ; spwstream:inst1|spwrecv:recv_inst|r.bitshift[7]                                          ; 6       ;
 ; spwstream:inst1|spwrecv:recv_inst|r.bitshift[6]                                          ; 6       ;
 ; spwstream:inst1|spwrecv:recv_inst|v~0                                                    ; 6       ;
 ; spwstream:inst|spwrecv:recv_inst|r.bitshift[7]                                           ; 6       ;
 ; spwstream:inst|spwrecv:recv_inst|r.bitshift[6]                                           ; 6       ;
 ; spwstream:inst|spwrecv:recv_inst|v~0                                                     ; 6       ;
-; spwstream:inst1|spwlink:link_inst|Selector0~7                                            ; 6       ;
-; spwstream:inst|spwlink:link_inst|Selector0~8                                             ; 6       ;
+; spwstream:inst1|spwlink:link_inst|Selector1~0                                            ; 6       ;
+; spwstream:inst1|spwlink:link_inst|process_0~1                                            ; 6       ;
+; spwstream:inst|spwlink:link_inst|Selector3~4                                             ; 6       ;
 ; spwstream:inst1|spwrecv:recv_inst|r.escaped                                              ; 6       ;
 ; spwstream:inst|spwrecv:recv_inst|r.escaped                                               ; 6       ;
 ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|xmito.fctack~0                              ; 5       ;
 ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitcnt[0]                                 ; 5       ;
 ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|xmito.fctack~0                               ; 5       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitcnt[0]                                  ; 5       ;
 ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.allow_fct                                  ; 5       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitcnt[2]                                  ; 5       ;
+; spwstream:inst1|spwlink:link_inst|Selector1~5                                            ; 5       ;
 ; spwstream:inst1|spwlink:link_inst|Selector0~0                                            ; 5       ;
 ; spwstream:inst|spwlink:link_inst|process_0~3                                             ; 5       ;
 ; spwstream:inst|spwlink:link_inst|process_0~2                                             ; 5       ;
+; spwstream:inst|Add1~18                                                                   ; 5       ;
+; spwstream:inst|Add1~16                                                                   ; 5       ;
+; spwstream:inst|Add1~14                                                                   ; 5       ;
+; spwstream:inst|Add1~12                                                                   ; 5       ;
 ; spwstream:inst1|spwlink:link_inst|r.rx_credit[4]                                         ; 5       ;
 ; spwstream:inst1|spwlink:link_inst|r.tx_credit[3]                                         ; 5       ;
 ; spwstream:inst1|spwlink:link_inst|r.tx_credit[4]                                         ; 5       ;
-; spwstream:inst|spwlink:link_inst|r.rx_credit[4]                                          ; 5       ;
 ; spwstream:inst|spwlink:link_inst|r.tx_credit[3]                                          ; 5       ;
 ; spwstream:inst|spwlink:link_inst|r.tx_credit[4]                                          ; 5       ;
+; spwstream:inst|spwlink:link_inst|r.rx_credit[4]                                          ; 5       ;
+; spwstream:inst1|spwlink:link_inst|r.errcred                                              ; 5       ;
 ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitcnt[1]~0                               ; 4       ;
-; spwstream:inst|Equal1~2                                                                  ; 4       ;
+; spwstream:inst|Equal1~0                                                                  ; 4       ;
 ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.allow_fct                                 ; 4       ;
 ; spwstream:inst1|spwlink:link_inst|r.rx_credit[0]                                         ; 4       ;
 ; spwstream:inst1|spwlink:link_inst|r.rx_credit[1]                                         ; 4       ;
@@ -866,25 +876,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; spwstream:inst|spwlink:link_inst|r.rx_credit[0]                                          ; 4       ;
 ; spwstream:inst|spwlink:link_inst|r.rx_credit[1]                                          ; 4       ;
 ; spwstream:inst|spwlink:link_inst|r.rx_credit[2]                                          ; 4       ;
-; spwstream:inst|r.txdiscard                                                               ; 4       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitcnt[0]                                  ; 4       ;
-; spwstream:inst1|spwlink:link_inst|Selector0~6                                            ; 4       ;
-; spwstream:inst1|spwlink:link_inst|Selector0~2                                            ; 4       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitcnt[1]                                  ; 4       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitcnt[2]                                  ; 4       ;
+; spwstream:inst1|spwlink:link_inst|Selector0~1                                            ; 4       ;
+; spwstream:inst1|spwlink:link_inst|Selector1~3                                            ; 4       ;
+; spwstream:inst1|spwlink:link_inst|Selector1~1                                            ; 4       ;
 ; spwstream:inst1|spwlink:link_inst|process_0~2                                            ; 4       ;
-; spwstream:inst|Add1~18                                                                   ; 4       ;
-; spwstream:inst|Add1~16                                                                   ; 4       ;
-; spwstream:inst|Add1~14                                                                   ; 4       ;
-; spwstream:inst|Add1~12                                                                   ; 4       ;
 ; spwstream:inst1|spwlink:link_inst|r.tx_credit[5]                                         ; 4       ;
 ; spwstream:inst|spwlink:link_inst|r.tx_credit[5]                                          ; 4       ;
-; spwstream:inst1|spwrecv:recv_inst|r.null_seen                                            ; 4       ;
 ; spwstream:inst|spwrecv:recv_inst|r.null_seen                                             ; 4       ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.out_strobe                                ; 3       ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.out_data                                  ; 3       ;
-; spwstream:inst1|spwlink:link_inst|r.rx_credit[0]~0                                       ; 3       ;
+; spwstream:inst1|spwlink:link_inst|r.rx_credit[1]~0                                       ; 3       ;
 ; spwstream:inst1|spwlink:link_inst|r.tx_credit[2]~0                                       ; 3       ;
-; spwstream:inst|spwlink:link_inst|r.rx_credit[2]~0                                        ; 3       ;
-; spwstream:inst|spwlink:link_inst|r.tx_credit[1]~0                                        ; 3       ;
+; spwstream:inst|spwlink:link_inst|r.tx_credit[0]~0                                        ; 3       ;
+; spwstream:inst|spwlink:link_inst|r.rx_credit[0]~0                                        ; 3       ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.out_data                                  ; 3       ;
 ; spwstream:inst1|spwlink:link_inst|v~23                                                   ; 3       ;
 ; spwstream:inst1|spwlink:link_inst|v~22                                                   ; 3       ;
 ; spwstream:inst1|spwlink:link_inst|v~21                                                   ; 3       ;
@@ -892,16 +897,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; spwstream:inst1|spwrecv:recv_inst|r.parity                                               ; 3       ;
 ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitcnt[3]                                 ; 3       ;
 ; spwstream:inst1|r.txdiscard                                                              ; 3       ;
+; spwstream:inst|r.txdiscard                                                               ; 3       ;
 ; spwstream:inst|spwrecv:recv_inst|r.bitshift[8]                                           ; 3       ;
 ; spwstream:inst|spwlink:link_inst|v~27                                                    ; 3       ;
 ; spwstream:inst|spwlink:link_inst|v~26                                                    ; 3       ;
 ; spwstream:inst|spwlink:link_inst|v~25                                                    ; 3       ;
-; spwstream:inst|spwrecv:recv_inst|r.parity                                                ; 3       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitcnt[1]                                  ; 3       ;
 ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitcnt[3]                                  ; 3       ;
+; spwstream:inst|spwrecv:recv_inst|r.parity                                                ; 3       ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.out_strobe                                ; 3       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.out_strobe                                 ; 3       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.out_data                                   ; 3       ;
 ; spwstream:inst1|spwlink:link_inst|r.state.S_ErrorWait                                    ; 3       ;
-; spwstream:inst1|spwlink:link_inst|Selector0~4                                            ; 3       ;
-; spwstream:inst1|spwlink:link_inst|process_0~1                                            ; 3       ;
 ; spwstream:inst1|spwlink:link_inst|Equal0~2                                               ; 3       ;
 ; spwstream:inst1|spwlink:link_inst|Equal0~1                                               ; 3       ;
 ; spwstream:inst1|spwlink:link_inst|Equal0~0                                               ; 3       ;
@@ -910,23 +916,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; spwstream:inst|r.txfifo_raddr[0]                                                         ; 3       ;
 ; spwstream:inst|spwlink:link_inst|r.state.S_ErrorWait                                     ; 3       ;
 ; spwstream:inst|spwlink:link_inst|process_0~4                                             ; 3       ;
-; spwstream:inst|spwlink:link_inst|Selector0~5                                             ; 3       ;
-; spwstream:inst|spwlink:link_inst|Selector0~4                                             ; 3       ;
+; spwstream:inst|spwlink:link_inst|Selector3~3                                             ; 3       ;
+; spwstream:inst|spwlink:link_inst|Selector0~2                                             ; 3       ;
 ; spwstream:inst|spwlink:link_inst|r.timerdone                                             ; 3       ;
 ; spwstream:inst|spwlink:link_inst|r.state.S_Ready                                         ; 3       ;
 ; spwstream:inst|spwlink:link_inst|process_0~1                                             ; 3       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.out_strobe                                 ; 3       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.out_data                                   ; 3       ;
-; spwstream:inst1|Add1~18                                                                  ; 3       ;
-; spwstream:inst1|Add1~16                                                                  ; 3       ;
-; spwstream:inst1|Add1~14                                                                  ; 3       ;
-; spwstream:inst1|Add1~12                                                                  ; 3       ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|spw_so                                      ; 3       ;
 ; spwstream:inst1|Add1~10                                                                  ; 3       ;
 ; spwstream:inst1|Add1~8                                                                   ; 3       ;
 ; spwstream:inst1|Add1~6                                                                   ; 3       ;
 ; spwstream:inst1|Add1~4                                                                   ; 3       ;
 ; spwstream:inst1|Add1~2                                                                   ; 3       ;
 ; spwstream:inst1|Add1~0                                                                   ; 3       ;
+; spwstream:inst|Add1~10                                                                   ; 3       ;
 ; spwstream:inst|Add1~8                                                                    ; 3       ;
 ; spwstream:inst|Add1~6                                                                    ; 3       ;
 ; spwstream:inst|Add1~4                                                                    ; 3       ;
@@ -934,14 +936,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; spwstream:inst|Add1~0                                                                    ; 3       ;
 ; spwstream:inst1|spwlink:link_inst|r.rx_credit[5]                                         ; 3       ;
 ; spwstream:inst|spwlink:link_inst|r.rx_credit[5]                                          ; 3       ;
+; spwstream:inst1|spwrecv:recv_inst|r.null_seen                                            ; 3       ;
 ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[3]~4                             ; 2       ;
 ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[3]~4                              ; 2       ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~32                                        ; 2       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~26                                         ; 2       ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~25                                        ; 2       ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[0]                               ; 2       ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.parity                                    ; 2       ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~33                                        ; 2       ;
+; spwstream:inst1|spwlink:link_inst|Selector5~4                                            ; 2       ;
 ; spwstream:inst1|r.rxpacket                                                               ; 2       ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[4]~2                             ; 2       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[4]~2                              ; 2       ;
 ; spwstream:inst|r.rxpacket                                                                ; 2       ;
 ; spwstream:inst1|r.rxeep                                                                  ; 2       ;
 ; spwstream:inst1|r.rxfull                                                                 ; 2       ;
@@ -950,14 +952,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; spwstream:inst1|spwlink:link_inst|Add0~1                                                 ; 2       ;
 ; spwstream:inst1|spwlink:link_inst|Add0~0                                                 ; 2       ;
 ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.sent_fct                                  ; 2       ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~4                                         ; 2       ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~9                                         ; 2       ;
 ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.sent_null                                 ; 2       ;
 ; spwstream:inst1|r.txpacket                                                               ; 2       ;
-; spwstream:inst|Equal1~1                                                                  ; 2       ;
-; spwstream:inst|r.rxeep                                                                   ; 2       ;
-; spwstream:inst|r.rxfull                                                                  ; 2       ;
-; spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwsi2      ; 2       ;
-; spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwdi2      ; 2       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.sent_fct                                   ; 2       ;
+; spwstream:inst|r.txpacket                                                                ; 2       ;
+; spwstream:inst|spwlink:link_inst|Add0~1                                                  ; 2       ;
+; spwstream:inst|spwlink:link_inst|Add0~0                                                  ; 2       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.parity~0                                   ; 2       ;
 ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[7]                               ; 2       ;
 ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[6]                               ; 2       ;
 ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[5]                               ; 2       ;
@@ -966,14 +968,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[2]                               ; 2       ;
 ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[1]                               ; 2       ;
 ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[0]                               ; 2       ;
-; spwstream:inst|spwlink:link_inst|Add0~1                                                  ; 2       ;
-; spwstream:inst|spwlink:link_inst|Add0~0                                                  ; 2       ;
-; spwstream:inst|r.txpacket                                                                ; 2       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.sent_fct                                   ; 2       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~19                                         ; 2       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~10                                         ; 2       ;
 ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.sent_null                                  ; 2       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitcnt[1]~0                                ; 2       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|Add1~0                                       ; 2       ;
+; spwstream:inst|r.rxeep                                                                   ; 2       ;
+; spwstream:inst|r.rxfull                                                                  ; 2       ;
+; spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwsi2      ; 2       ;
+; spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwdi2      ; 2       ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~7                                         ; 2       ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[0]                               ; 2       ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.parity                                    ; 2       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~7                                          ; 2       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[0]                                ; 2       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.parity                                     ; 2       ;
 ; spwstream:inst1|spwrecv:recv_inst|Equal0~2                                               ; 2       ;
 ; spwstream:inst1|spwrecv:recv_inst|r.bitshift[4]                                          ; 2       ;
 ; spwstream:inst1|spwrecv:recv_inst|r.bitshift[5]                                          ; 2       ;
@@ -988,6 +994,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; spwstream:inst1|spwlink:link_inst|r.tx_credit[1]                                         ; 2       ;
 ; spwstream:inst1|spwlink:link_inst|r.tx_credit[2]                                         ; 2       ;
 ; spwstream:inst1|r.txfifo_rvalid                                                          ; 2       ;
+; spwstream:inst|r.txfifo_rvalid                                                           ; 2       ;
 ; spwstream:inst|spwrecv:recv_inst|Equal0~2                                                ; 2       ;
 ; spwstream:inst|spwrecv:recv_inst|r.bitshift[4]                                           ; 2       ;
 ; spwstream:inst|spwrecv:recv_inst|r.bitshift[5]                                           ; 2       ;
@@ -996,19 +1003,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; spwstream:inst|spwrecv:recv_inst|Equal0~1                                                ; 2       ;
 ; spwstream:inst|spwrecv:recv_inst|r.bitshift[1]                                           ; 2       ;
 ; spwstream:inst|spwlink:link_inst|Selector6~1                                             ; 2       ;
-; spwstream:inst|spwrecv:recv_inst|v~4                                                     ; 2       ;
-; spwstream:inst|spwrecv:recv_inst|Equal0~0                                                ; 2       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~7                                          ; 2       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[0]                                ; 2       ;
 ; spwstream:inst|spwlink:link_inst|Equal2~0                                                ; 2       ;
 ; spwstream:inst|spwlink:link_inst|r.tx_credit[0]                                          ; 2       ;
 ; spwstream:inst|spwlink:link_inst|r.tx_credit[1]                                          ; 2       ;
 ; spwstream:inst|spwlink:link_inst|r.tx_credit[2]                                          ; 2       ;
-; spwstream:inst|r.txfifo_rvalid                                                           ; 2       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.parity                                     ; 2       ;
-; spwstream:inst1|spwlink:link_inst|Selector0~5                                            ; 2       ;
+; spwstream:inst|spwrecv:recv_inst|v~4                                                     ; 2       ;
+; spwstream:inst|spwrecv:recv_inst|Equal0~0                                                ; 2       ;
+; spwstream:inst1|spwlink:link_inst|Selector1~6                                            ; 2       ;
+; spwstream:inst1|spwlink:link_inst|Selector1~4                                            ; 2       ;
 ; spwstream:inst1|spwlink:link_inst|r.state.S_Ready                                        ; 2       ;
-; spwstream:inst1|spwlink:link_inst|Selector0~3                                            ; 2       ;
+; spwstream:inst1|spwlink:link_inst|Selector1~2                                            ; 2       ;
 ; spwstream:inst1|spwrecv:recv_inst|Equal1~1                                               ; 2       ;
 ; spwstream:inst1|spwrecv:recv_inst|Equal1~0                                               ; 2       ;
 ; spwstream:inst1|spwlink:link_inst|r.timercnt[0]                                          ; 2       ;
@@ -1024,14 +1028,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; spwstream:inst1|spwlink:link_inst|r.timercnt[10]                                         ; 2       ;
 ; spwstream:inst1|r.txfifo_raddr[10]                                                       ; 2       ;
 ; spwstream:inst1|r.txfifo_raddr[9]                                                        ; 2       ;
-; spwstream:inst1|r.txfifo_raddr[8]                                                        ; 2       ;
-; spwstream:inst1|r.txfifo_raddr[7]                                                        ; 2       ;
-; spwstream:inst1|r.txfifo_raddr[6]                                                        ; 2       ;
-; spwstream:inst1|r.txfifo_raddr[5]                                                        ; 2       ;
-; spwstream:inst1|r.txfifo_raddr[4]                                                        ; 2       ;
-; spwstream:inst1|r.txfifo_raddr[3]                                                        ; 2       ;
-; spwstream:inst1|r.txfifo_raddr[2]                                                        ; 2       ;
 ; spwstream:inst1|r.txfifo_raddr[1]                                                        ; 2       ;
+; spwstream:inst1|r.txfifo_raddr[2]                                                        ; 2       ;
+; spwstream:inst1|r.txfifo_raddr[3]                                                        ; 2       ;
+; spwstream:inst1|r.txfifo_raddr[4]                                                        ; 2       ;
+; spwstream:inst1|r.txfifo_raddr[5]                                                        ; 2       ;
+; spwstream:inst1|r.txfifo_raddr[6]                                                        ; 2       ;
+; spwstream:inst1|r.txfifo_raddr[7]                                                        ; 2       ;
+; spwstream:inst1|r.txfifo_raddr[8]                                                        ; 2       ;
 ; spwstream:inst|r.txfifo_raddr[10]                                                        ; 2       ;
 ; spwstream:inst|r.txfifo_raddr[1]                                                         ; 2       ;
 ; spwstream:inst|r.txfifo_raddr[2]                                                         ; 2       ;
@@ -1042,7 +1046,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; spwstream:inst|r.txfifo_raddr[7]                                                         ; 2       ;
 ; spwstream:inst|r.txfifo_raddr[8]                                                         ; 2       ;
 ; spwstream:inst|r.txfifo_raddr[9]                                                         ; 2       ;
-; spwstream:inst|spwlink:link_inst|Selector0~6                                             ; 2       ;
+; spwstream:inst|spwlink:link_inst|Selector0~3                                             ; 2       ;
 ; spwstream:inst|spwlink:link_inst|Equal0~2                                                ; 2       ;
 ; spwstream:inst|spwlink:link_inst|r.timercnt[0]                                           ; 2       ;
 ; spwstream:inst|spwlink:link_inst|r.timercnt[1]                                           ; 2       ;
@@ -1057,14 +1061,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; spwstream:inst|spwlink:link_inst|r.timercnt[8]                                           ; 2       ;
 ; spwstream:inst|spwlink:link_inst|r.timercnt[9]                                           ; 2       ;
 ; spwstream:inst|spwlink:link_inst|r.timercnt[10]                                          ; 2       ;
-; spwstream:inst|spwlink:link_inst|Selector0~2                                             ; 2       ;
+; spwstream:inst|spwlink:link_inst|Selector3~0                                             ; 2       ;
 ; spwstream:inst|spwrecv:recv_inst|Equal1~1                                                ; 2       ;
 ; spwstream:inst|spwrecv:recv_inst|Equal1~0                                                ; 2       ;
 ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|spw_so                                       ; 2       ;
 ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|spw_do                                       ; 2       ;
 ; spwstream:inst1|spwrecv:recv_inst|r.rxflag                                               ; 2       ;
 ; spwstream:inst|spwrecv:recv_inst|r.rxflag                                                ; 2       ;
-; spwstream:inst|Add1~10                                                                   ; 2       ;
+; spwstream:inst1|Add1~18                                                                  ; 2       ;
+; spwstream:inst1|Add1~16                                                                  ; 2       ;
+; spwstream:inst1|Add1~14                                                                  ; 2       ;
+; spwstream:inst1|Add1~12                                                                  ; 2       ;
 ; spwstream:inst1|Add4~20                                                                  ; 2       ;
 ; spwstream:inst1|Add4~18                                                                  ; 2       ;
 ; spwstream:inst1|Add4~16                                                                  ; 2       ;
@@ -1087,7 +1094,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; spwstream:inst|Add4~4                                                                    ; 2       ;
 ; spwstream:inst|Add4~2                                                                    ; 2       ;
 ; spwstream:inst|Add4~0                                                                    ; 2       ;
-; spwstream:inst1|spwlink:link_inst|r.errcred                                              ; 2       ;
 ; spwstream:inst1|spwrecv:recv_inst|r.tick_out                                             ; 2       ;
 ; spwstream:inst1|spwrecv:recv_inst|r.disccnt[7]                                           ; 2       ;
 ; spwstream:inst1|spwrecv:recv_inst|r.disccnt[6]                                           ; 2       ;
@@ -1113,10 +1119,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; spwstream:inst|spwrecv:recv_inst|r.errpar                                                ; 2       ;
 ; SpWR_linkstart~input                                                                     ; 1       ;
 ; SpWT_linkstart~input                                                                     ; 1       ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~33                                        ; 1       ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~35                                        ; 1       ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~34                                        ; 1       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~29                                         ; 1       ;
 ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~28                                         ; 1       ;
 ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~27                                         ; 1       ;
-; spwstream:inst|spwlink:link_inst|Selector0~13                                            ; 1       ;
+; spwstream:inst|spwlink:link_inst|Selector0~9                                             ; 1       ;
 ; spwstream:inst|spwlink:link_inst|v~55                                                    ; 1       ;
 ; spwstream:inst|spwlink:link_inst|v~54                                                    ; 1       ;
 ; spwstream:inst|spwlink:link_inst|v~53                                                    ; 1       ;
@@ -1127,41 +1135,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; spwstream:inst|spwlink:link_inst|v~48                                                    ; 1       ;
 ; spwstream:inst|spwlink:link_inst|v~47                                                    ; 1       ;
 ; spwstream:inst|spwlink:link_inst|v~46                                                    ; 1       ;
+; spwstream:inst1|spwlink:link_inst|Selector3~3                                            ; 1       ;
 ; spwstream:inst1|spwrecv:recv_inst|v~18                                                   ; 1       ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[4]~3                             ; 1       ;
 ; spwstream:inst|spwrecv:recv_inst|v~18                                                    ; 1       ;
 ; spwstream:inst1|spwrecv:recv_inst|v.bitcnt[8]~8                                          ; 1       ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[3]~2                             ; 1       ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[4]                               ; 1       ;
 ; spwstream:inst|spwrecv:recv_inst|v.bitcnt[8]~8                                           ; 1       ;
 ; spwstream:inst1|spwrecv:recv_inst|v.bitcnt[7]~7                                          ; 1       ;
 ; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[8]                                            ; 1       ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~31                                        ; 1       ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[3]                               ; 1       ;
 ; spwstream:inst|spwrecv:recv_inst|v.bitcnt[7]~7                                           ; 1       ;
 ; spwstream:inst|spwrecv:recv_inst|r.bitcnt[8]                                             ; 1       ;
 ; spwstream:inst1|spwrecv:recv_inst|v.bitcnt[6]~6                                          ; 1       ;
 ; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[7]                                            ; 1       ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~30                                        ; 1       ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[2]                               ; 1       ;
 ; spwstream:inst|spwrecv:recv_inst|v.bitcnt[6]~6                                           ; 1       ;
 ; spwstream:inst|spwrecv:recv_inst|r.bitcnt[7]                                             ; 1       ;
 ; spwstream:inst1|spwrecv:recv_inst|v.bitcnt[5]~5                                          ; 1       ;
 ; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[6]                                            ; 1       ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~29                                        ; 1       ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[1]                               ; 1       ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~28                                        ; 1       ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|parity~0                                    ; 1       ;
 ; spwstream:inst|spwrecv:recv_inst|v.bitcnt[5]~5                                           ; 1       ;
 ; spwstream:inst|spwrecv:recv_inst|r.bitcnt[6]                                             ; 1       ;
 ; spwstream:inst1|spwrecv:recv_inst|v.bitcnt[4]~4                                          ; 1       ;
 ; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[5]                                            ; 1       ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~27                                        ; 1       ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~26                                        ; 1       ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~24                                        ; 1       ;
 ; spwstream:inst|spwrecv:recv_inst|v.bitcnt[4]~4                                           ; 1       ;
 ; spwstream:inst|spwrecv:recv_inst|r.bitcnt[5]                                             ; 1       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[4]~3                              ; 1       ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[3]~3                             ; 1       ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[4]                               ; 1       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[3]~3                              ; 1       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[4]                                ; 1       ;
 ; spwstream:inst1|spwrecv:recv_inst|v~17                                                   ; 1       ;
 ; spwstream:inst1|spwrecv:recv_inst|v~16                                                   ; 1       ;
 ; spwstream:inst1|spwrecv:recv_inst|v~15                                                   ; 1       ;
@@ -1170,16 +1168,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; spwstream:inst|spwrecv:recv_inst|v~16                                                    ; 1       ;
 ; spwstream:inst|spwrecv:recv_inst|v~15                                                    ; 1       ;
 ; spwstream:inst|spwrecv:recv_inst|r.bitcnt[4]                                             ; 1       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[3]~2                              ; 1       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[4]                                ; 1       ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~32                                        ; 1       ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[3]                               ; 1       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~26                                         ; 1       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[3]                                ; 1       ;
 ; spwstream:inst1|v~3                                                                      ; 1       ;
 ; spwstream:inst1|spwrecv:recv_inst|v.bitcnt[2]~3                                          ; 1       ;
 ; spwstream:inst|v~3                                                                       ; 1       ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|spw_so                                      ; 1       ;
 ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|spw_do                                      ; 1       ;
 ; spwstream:inst|spwrecv:recv_inst|v.bitcnt[2]~3                                           ; 1       ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~31                                        ; 1       ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[2]                               ; 1       ;
 ; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~25                                         ; 1       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[3]                                ; 1       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[2]                                ; 1       ;
 ; spwstream:inst1|v~2                                                                      ; 1       ;
 ; spwstream:inst1|Equal1~4                                                                 ; 1       ;
 ; spwstream:inst1|Equal1~3                                                                 ; 1       ;
@@ -1188,33 +1189,40 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; spwstream:inst1|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwdi1     ; 1       ;
 ; spwstream:inst1|spwrecv:recv_inst|v.bitcnt[1]~2                                          ; 1       ;
 ; spwstream:inst1|spwrecv:recv_inst|r.bitcnt[2]                                            ; 1       ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~30                                        ; 1       ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~29                                        ; 1       ;
+; spwstream:inst1|v~1                                                                      ; 1       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~24                                         ; 1       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~23                                         ; 1       ;
+; spwstream:inst|v~2                                                                       ; 1       ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~28                                        ; 1       ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~27                                        ; 1       ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~26                                        ; 1       ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~25                                        ; 1       ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~24                                        ; 1       ;
 ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~23                                        ; 1       ;
 ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~22                                        ; 1       ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~21                                        ; 1       ;
-; spwstream:inst1|v~1                                                                      ; 1       ;
-; spwstream:inst|v~2                                                                       ; 1       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~22                                         ; 1       ;
+; spwstream:inst|v~1                                                                       ; 1       ;
 ; spwstream:inst|Equal1~4                                                                  ; 1       ;
 ; spwstream:inst|Equal1~3                                                                  ; 1       ;
+; spwstream:inst|Equal1~2                                                                  ; 1       ;
 ; spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwsi1      ; 1       ;
 ; spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst|s_spwdi1      ; 1       ;
 ; spwstream:inst|spwrecv:recv_inst|v.bitcnt[1]~2                                           ; 1       ;
 ; spwstream:inst|spwrecv:recv_inst|r.bitcnt[2]                                             ; 1       ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~21                                        ; 1       ;
 ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~20                                        ; 1       ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[1]                               ; 1       ;
 ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~19                                        ; 1       ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~18                                        ; 1       ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~17                                        ; 1       ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~16                                        ; 1       ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~15                                        ; 1       ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~14                                        ; 1       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~24                                         ; 1       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[2]                                ; 1       ;
-; spwstream:inst|v~1                                                                       ; 1       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~23                                         ; 1       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~22                                         ; 1       ;
-; spwstream:inst1|v.rxroom[0]~5                                                            ; 1       ;
-; spwstream:inst1|v.rxroom[1]~4                                                            ; 1       ;
-; spwstream:inst1|v.rxroom[2]~3                                                            ; 1       ;
-; spwstream:inst1|v.rxroom[3]~2                                                            ; 1       ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|parity~0                                    ; 1       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~21                                         ; 1       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[1]                                ; 1       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~20                                         ; 1       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|parity~0                                     ; 1       ;
+; spwstream:inst1|v.rxroom[0]~4                                                            ; 1       ;
+; spwstream:inst1|v.rxroom[1]~3                                                            ; 1       ;
+; spwstream:inst1|v.rxroom[2]~2                                                            ; 1       ;
 ; spwstream:inst1|v.rxroom[3]~1                                                            ; 1       ;
 ; spwstream:inst1|v.rxroom[4]~0                                                            ; 1       ;
 ; spwstream:inst1|Equal1~1                                                                 ; 1       ;
@@ -1253,26 +1261,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; spwstream:inst1|spwrecv:recv_inst|v~13                                                   ; 1       ;
 ; spwstream:inst1|spwrecv:recv_inst|v~11                                                   ; 1       ;
 ; spwstream:inst1|spwrecv:recv_inst|v~10                                                   ; 1       ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~18                                        ; 1       ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~17                                        ; 1       ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~16                                        ; 1       ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~15                                        ; 1       ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~14                                        ; 1       ;
 ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~13                                        ; 1       ;
 ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~12                                        ; 1       ;
 ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~11                                        ; 1       ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~10                                        ; 1       ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~9                                         ; 1       ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~8                                         ; 1       ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~7                                         ; 1       ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~6                                         ; 1       ;
 ; spwstream:inst1|spwlink:link_inst|v~29                                                   ; 1       ;
 ; spwstream:inst1|spwlink:link_inst|v~28                                                   ; 1       ;
 ; spwstream:inst1|spwlink:link_inst|v~27                                                   ; 1       ;
 ; spwstream:inst1|spwlink:link_inst|v~26                                                   ; 1       ;
 ; spwstream:inst1|spwlink:link_inst|v~25                                                   ; 1       ;
 ; spwstream:inst1|spwlink:link_inst|v~24                                                   ; 1       ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~5                                         ; 1       ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~10                                        ; 1       ;
 ; spwstream:inst1|r.txdiscard~0                                                            ; 1       ;
 ; spwstream:inst1|Equal2~3                                                                 ; 1       ;
 ; spwstream:inst1|Equal2~2                                                                 ; 1       ;
 ; spwstream:inst1|Equal2~1                                                                 ; 1       ;
 ; spwstream:inst1|Equal2~0                                                                 ; 1       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~19                                         ; 1       ;
+; spwstream:inst|r.txdiscard~0                                                             ; 1       ;
+; spwstream:inst|Equal2~3                                                                  ; 1       ;
+; spwstream:inst|Equal2~2                                                                  ; 1       ;
+; spwstream:inst|Equal2~1                                                                  ; 1       ;
+; spwstream:inst|Equal2~0                                                                  ; 1       ;
 ; spwstream:inst|spwrecv:recv_inst|v.bitshift[8]~8                                         ; 1       ;
 ; spwstream:inst|spwrecv:recv_inst|v.bitshift[4]~7                                         ; 1       ;
 ; spwstream:inst|spwrecv:recv_inst|v.bitshift[5]~6                                         ; 1       ;
@@ -1281,18 +1295,40 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; spwstream:inst|spwrecv:recv_inst|v.bitshift[0]~3                                         ; 1       ;
 ; spwstream:inst|spwrecv:recv_inst|v.bitshift[1]~2                                         ; 1       ;
 ; spwstream:inst|spwlink:link_inst|v~45                                                    ; 1       ;
-; spwstream:inst|v.rxroom[0]~5                                                             ; 1       ;
 ; spwstream:inst|spwlink:link_inst|v~44                                                    ; 1       ;
-; spwstream:inst|v.rxroom[1]~4                                                             ; 1       ;
 ; spwstream:inst|spwlink:link_inst|v~43                                                    ; 1       ;
-; spwstream:inst|v.rxroom[2]~3                                                             ; 1       ;
-; spwstream:inst|v.rxroom[3]~2                                                             ; 1       ;
-; spwstream:inst|v.rxroom[4]~1                                                             ; 1       ;
-; spwstream:inst|v.rxroom[4]~0                                                             ; 1       ;
 ; spwstream:inst|spwlink:link_inst|v~42                                                    ; 1       ;
 ; spwstream:inst|spwlink:link_inst|v~41                                                    ; 1       ;
 ; spwstream:inst|spwlink:link_inst|v~40                                                    ; 1       ;
-; spwstream:inst|Equal1~0                                                                  ; 1       ;
+; spwstream:inst|spwlink:link_inst|v~39                                                    ; 1       ;
+; spwstream:inst|v.rxroom[0]~7                                                             ; 1       ;
+; spwstream:inst|v.rxroom[0]~6                                                             ; 1       ;
+; spwstream:inst|spwlink:link_inst|v~38                                                    ; 1       ;
+; spwstream:inst|v.rxroom[1]~5                                                             ; 1       ;
+; spwstream:inst|spwlink:link_inst|v~37                                                    ; 1       ;
+; spwstream:inst|v.rxroom[2]~4                                                             ; 1       ;
+; spwstream:inst|v.rxroom[2]~3                                                             ; 1       ;
+; spwstream:inst|v.rxroom[3]~2                                                             ; 1       ;
+; spwstream:inst|v.rxroom[3]~1                                                             ; 1       ;
+; spwstream:inst|v.rxroom[4]~0                                                             ; 1       ;
+; spwstream:inst|spwlink:link_inst|v~36                                                    ; 1       ;
+; spwstream:inst|spwlink:link_inst|v~35                                                    ; 1       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~18                                         ; 1       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~17                                         ; 1       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~16                                         ; 1       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~15                                         ; 1       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~14                                         ; 1       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~13                                         ; 1       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~12                                         ; 1       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~11                                         ; 1       ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|Equal0~2                                    ; 1       ;
+; spwstream:inst|spwlink:link_inst|v~34                                                    ; 1       ;
+; spwstream:inst|Equal1~1                                                                  ; 1       ;
+; spwstream:inst|r.rxfifo_waddr[6]                                                         ; 1       ;
+; spwstream:inst|r.rxfifo_waddr[7]                                                         ; 1       ;
+; spwstream:inst|r.rxfifo_waddr[8]                                                         ; 1       ;
+; spwstream:inst|r.rxfifo_waddr[9]                                                         ; 1       ;
+; spwstream:inst|r.rxfifo_waddr[10]                                                        ; 1       ;
 ; spwstream:inst|v~0                                                                       ; 1       ;
 ; spwstream:inst|r.rxfifo_waddr[0]                                                         ; 1       ;
 ; spwstream:inst|r.rxfifo_waddr[1]                                                         ; 1       ;
@@ -1300,11 +1336,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; spwstream:inst|r.rxfifo_waddr[3]                                                         ; 1       ;
 ; spwstream:inst|r.rxfifo_waddr[4]                                                         ; 1       ;
 ; spwstream:inst|r.rxfifo_waddr[5]                                                         ; 1       ;
-; spwstream:inst|r.rxfifo_waddr[6]                                                         ; 1       ;
-; spwstream:inst|r.rxfifo_waddr[7]                                                         ; 1       ;
-; spwstream:inst|r.rxfifo_waddr[8]                                                         ; 1       ;
-; spwstream:inst|r.rxfifo_waddr[9]                                                         ; 1       ;
-; spwstream:inst|r.rxfifo_waddr[10]                                                        ; 1       ;
 ; spwstream:inst|spwrecv:recv_inst|v.bitshift[7]~1                                         ; 1       ;
 ; spwstream:inst|spwrecv:recv_inst|v.bitshift[6]~0                                         ; 1       ;
 ; spwstream:inst|spwrecv:recv_inst|v~14                                                    ; 1       ;
@@ -1315,31 +1346,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; spwstream:inst|spwrecv:recv_inst|v~13                                                    ; 1       ;
 ; spwstream:inst|spwrecv:recv_inst|v~11                                                    ; 1       ;
 ; spwstream:inst|spwrecv:recv_inst|v~10                                                    ; 1       ;
-; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|Equal0~2                                    ; 1       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~21                                         ; 1       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.bitshift[1]                                ; 1       ;
-; spwstream:inst|spwlink:link_inst|v~39                                                    ; 1       ;
-; spwstream:inst|spwlink:link_inst|v~38                                                    ; 1       ;
-; spwstream:inst|spwlink:link_inst|v~37                                                    ; 1       ;
-; spwstream:inst|spwlink:link_inst|v~36                                                    ; 1       ;
-; spwstream:inst|spwlink:link_inst|v~35                                                    ; 1       ;
-; spwstream:inst|spwlink:link_inst|v~34                                                    ; 1       ;
-; spwstream:inst|r.txdiscard~0                                                             ; 1       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~20                                         ; 1       ;
-; spwstream:inst|Equal2~3                                                                  ; 1       ;
-; spwstream:inst|Equal2~2                                                                  ; 1       ;
-; spwstream:inst|Equal2~1                                                                  ; 1       ;
-; spwstream:inst|Equal2~0                                                                  ; 1       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~18                                         ; 1       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|parity~0                                     ; 1       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~17                                         ; 1       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~16                                         ; 1       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~15                                         ; 1       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~14                                         ; 1       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~13                                         ; 1       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~12                                         ; 1       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~11                                         ; 1       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~10                                         ; 1       ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~8                                         ; 1       ;
+; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~6                                         ; 1       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~9                                          ; 1       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~8                                          ; 1       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~6                                          ; 1       ;
 ; spwstream:inst1|spwlink:link_inst|xmit_fct_in~1                                          ; 1       ;
 ; spwstream:inst1|spwlink:link_inst|xmit_fct_in~0                                          ; 1       ;
 ; spwstream:inst1|r.rxroom[0]                                                              ; 1       ;
@@ -1352,15 +1363,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; spwstream:inst1|r.rxroom[5]                                                              ; 1       ;
 ; spwstream:inst1|spwlink:link_inst|Selector2~1                                            ; 1       ;
 ; spwstream:inst1|spwlink:link_inst|Selector2~0                                            ; 1       ;
-; spwstream:inst1|spwlink:link_inst|Selector1~0                                            ; 1       ;
-; spwstream:inst1|spwlink:link_inst|Selector0~12                                           ; 1       ;
+; spwstream:inst1|spwlink:link_inst|Selector1~7                                            ; 1       ;
+; spwstream:inst1|spwlink:link_inst|Selector0~6                                            ; 1       ;
 ; spwstream:inst1|spwrecv:recv_inst|v~9                                                    ; 1       ;
 ; spwstream:inst1|spwrecv:recv_inst|Equal0~3                                               ; 1       ;
 ; spwstream:inst1|spwrecv:recv_inst|r.bitshift[0]                                          ; 1       ;
-; spwstream:inst1|spwlink:link_inst|Selector0~11                                           ; 1       ;
-; spwstream:inst1|spwlink:link_inst|Selector0~10                                           ; 1       ;
-; spwstream:inst1|spwlink:link_inst|Selector0~9                                            ; 1       ;
-; spwstream:inst1|spwlink:link_inst|Selector0~8                                            ; 1       ;
+; spwstream:inst1|spwlink:link_inst|Selector0~5                                            ; 1       ;
+; spwstream:inst1|spwlink:link_inst|Selector0~4                                            ; 1       ;
+; spwstream:inst1|spwlink:link_inst|Selector0~3                                            ; 1       ;
+; spwstream:inst1|spwlink:link_inst|Selector0~2                                            ; 1       ;
 ; spwstream:inst1|spwlink:link_inst|v~20                                                   ; 1       ;
 ; spwstream:inst1|spwlink:link_inst|v~19                                                   ; 1       ;
 ; spwstream:inst1|spwlink:link_inst|v~18                                                   ; 1       ;
@@ -1391,14 +1402,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.allow_char                                ; 1       ;
 ; spwstream:inst|process_0~1                                                               ; 1       ;
 ; spwstream:inst|process_0~0                                                               ; 1       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|process_0~2                                  ; 1       ;
+; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.allow_char                                 ; 1       ;
 ; spwstream:inst|spwrecv:recv_inst|v~9                                                     ; 1       ;
 ; spwstream:inst|spwrecv:recv_inst|Equal0~3                                                ; 1       ;
 ; spwstream:inst|spwrecv:recv_inst|r.bitshift[0]                                           ; 1       ;
 ; spwstream:inst|spwlink:link_inst|Selector1~0                                             ; 1       ;
-; spwstream:inst|spwlink:link_inst|Selector0~12                                            ; 1       ;
-; spwstream:inst|spwlink:link_inst|Selector0~11                                            ; 1       ;
-; spwstream:inst|spwlink:link_inst|Selector0~10                                            ; 1       ;
-; spwstream:inst|spwlink:link_inst|Selector0~9                                             ; 1       ;
+; spwstream:inst|spwlink:link_inst|Selector0~8                                             ; 1       ;
+; spwstream:inst|spwlink:link_inst|Selector0~7                                             ; 1       ;
+; spwstream:inst|spwlink:link_inst|Selector0~6                                             ; 1       ;
+; spwstream:inst|spwlink:link_inst|Selector0~5                                             ; 1       ;
 ; spwstream:inst|spwlink:link_inst|v~33                                                    ; 1       ;
 ; spwstream:inst|spwlink:link_inst|v~32                                                    ; 1       ;
 ; spwstream:inst|spwlink:link_inst|v~31                                                    ; 1       ;
@@ -1424,17 +1437,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; spwstream:inst|spwrecv:recv_inst|v~3                                                     ; 1       ;
 ; spwstream:inst|spwrecv:recv_inst|v~2                                                     ; 1       ;
 ; spwstream:inst|spwrecv:recv_inst|v~1                                                     ; 1       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~9                                          ; 1       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~8                                          ; 1       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~6                                          ; 1       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|process_0~1                                  ; 1       ;
-; spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.allow_char                                 ; 1       ;
-; spwstream:inst1|spwlink:link_inst|Selector3~1                                            ; 1       ;
-; spwstream:inst1|spwlink:link_inst|Selector3~0                                            ; 1       ;
+; spwstream:inst1|spwlink:link_inst|Selector3~2                                            ; 1       ;
 ; spwstream:inst1|spwlink:link_inst|Selector4~1                                            ; 1       ;
 ; spwstream:inst1|spwlink:link_inst|Selector4~0                                            ; 1       ;
-; spwstream:inst1|spwlink:link_inst|Selector5~1                                            ; 1       ;
-; spwstream:inst1|spwlink:link_inst|Selector5~0                                            ; 1       ;
+; spwstream:inst1|spwlink:link_inst|Selector5~3                                            ; 1       ;
+; spwstream:inst1|spwlink:link_inst|Selector5~2                                            ; 1       ;
 ; spwstream:inst1|spwrecv:recv_inst|r.bit_seen                                             ; 1       ;
 ; spwstream:inst1|spwlink:link_inst|process_0~0                                            ; 1       ;
 ; spwstream:inst1|Equal3~3                                                                 ; 1       ;
@@ -1449,8 +1456,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; spwstream:inst|spwlink:link_inst|Selector5~0                                             ; 1       ;
 ; spwstream:inst|spwlink:link_inst|Selector4~1                                             ; 1       ;
 ; spwstream:inst|spwlink:link_inst|Selector4~0                                             ; 1       ;
-; spwstream:inst|spwlink:link_inst|Selector3~1                                             ; 1       ;
-; spwstream:inst|spwlink:link_inst|Selector3~0                                             ; 1       ;
+; spwstream:inst|spwlink:link_inst|Selector3~5                                             ; 1       ;
+; spwstream:inst|spwlink:link_inst|Selector3~2                                             ; 1       ;
 ; spwstream:inst|spwrecv:recv_inst|r.bit_seen                                              ; 1       ;
 ; spwstream:inst|spwlink:link_inst|process_0~0                                             ; 1       ;
 ; spwstream:inst1|r.txfull                                                                 ; 1       ;
@@ -1506,6 +1513,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; spwstream:inst1|spwlink:link_inst|Add1~2                                                 ; 1       ;
 ; spwstream:inst1|spwlink:link_inst|Add1~1                                                 ; 1       ;
 ; spwstream:inst1|spwlink:link_inst|Add1~0                                                 ; 1       ;
+; spwstream:inst|spwlink:link_inst|Add1~10                                                 ; 1       ;
+; spwstream:inst|spwlink:link_inst|Add1~9                                                  ; 1       ;
+; spwstream:inst|spwlink:link_inst|Add1~8                                                  ; 1       ;
+; spwstream:inst|spwlink:link_inst|Add1~7                                                  ; 1       ;
+; spwstream:inst|spwlink:link_inst|Add1~6                                                  ; 1       ;
+; spwstream:inst|spwlink:link_inst|Add1~5                                                  ; 1       ;
+; spwstream:inst|spwlink:link_inst|Add1~4                                                  ; 1       ;
+; spwstream:inst|spwlink:link_inst|Add1~3                                                  ; 1       ;
+; spwstream:inst|spwlink:link_inst|Add1~2                                                  ; 1       ;
+; spwstream:inst|spwlink:link_inst|Add1~1                                                  ; 1       ;
+; spwstream:inst|spwlink:link_inst|Add1~0                                                  ; 1       ;
 ; spwstream:inst|spwlink:link_inst|Add4~10                                                 ; 1       ;
 ; spwstream:inst|spwlink:link_inst|Add4~9                                                  ; 1       ;
 ; spwstream:inst|spwlink:link_inst|Add4~8                                                  ; 1       ;
@@ -1527,17 +1545,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; spwstream:inst|Add1~5                                                                    ; 1       ;
 ; spwstream:inst|Add1~3                                                                    ; 1       ;
 ; spwstream:inst|Add1~1                                                                    ; 1       ;
-; spwstream:inst|spwlink:link_inst|Add1~10                                                 ; 1       ;
-; spwstream:inst|spwlink:link_inst|Add1~9                                                  ; 1       ;
-; spwstream:inst|spwlink:link_inst|Add1~8                                                  ; 1       ;
-; spwstream:inst|spwlink:link_inst|Add1~7                                                  ; 1       ;
-; spwstream:inst|spwlink:link_inst|Add1~6                                                  ; 1       ;
-; spwstream:inst|spwlink:link_inst|Add1~5                                                  ; 1       ;
-; spwstream:inst|spwlink:link_inst|Add1~4                                                  ; 1       ;
-; spwstream:inst|spwlink:link_inst|Add1~3                                                  ; 1       ;
-; spwstream:inst|spwlink:link_inst|Add1~2                                                  ; 1       ;
-; spwstream:inst|spwlink:link_inst|Add1~1                                                  ; 1       ;
-; spwstream:inst|spwlink:link_inst|Add1~0                                                  ; 1       ;
 ; spwstream:inst1|spwlink:link_inst|LessThan2~10                                           ; 1       ;
 ; spwstream:inst1|spwlink:link_inst|LessThan2~9                                            ; 1       ;
 ; spwstream:inst1|spwlink:link_inst|LessThan2~7                                            ; 1       ;
@@ -1690,89 +1697,87 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+------------------------+
 ; Other Routing Resource Type ; Usage                  ;
 +-----------------------------+------------------------+
-; Block interconnects         ; 521 / 71,559 ( < 1 % ) ;
-; C16 interconnects           ; 0 / 2,597 ( 0 % )      ;
-; C4 interconnects            ; 175 / 46,848 ( < 1 % ) ;
-; Direct links                ; 213 / 71,559 ( < 1 % ) ;
+; Block interconnects         ; 450 / 71,559 ( < 1 % ) ;
+; C16 interconnects           ; 2 / 2,597 ( < 1 % )    ;
+; C4 interconnects            ; 109 / 46,848 ( < 1 % ) ;
+; Direct links                ; 234 / 71,559 ( < 1 % ) ;
 ; Global clocks               ; 1 / 20 ( 5 % )         ;
-; Local interconnects         ; 380 / 24,624 ( 2 % )   ;
-; R24 interconnects           ; 1 / 2,496 ( < 1 % )    ;
-; R4 interconnects            ; 149 / 62,424 ( < 1 % ) ;
+; Local interconnects         ; 375 / 24,624 ( 2 % )   ;
+; R24 interconnects           ; 6 / 2,496 ( < 1 % )    ;
+; R4 interconnects            ; 126 / 62,424 ( < 1 % ) ;
 +-----------------------------+------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 12.95) ; Number of LABs  (Total = 41) ;
+; Number of Logic Elements  (Average = 14.08) ; Number of LABs  (Total = 38) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 0                            ;
-; 2                                           ; 1                            ;
+; 1                                           ; 1                            ;
+; 2                                           ; 0                            ;
 ; 3                                           ; 0                            ;
 ; 4                                           ; 0                            ;
-; 5                                           ; 2                            ;
+; 5                                           ; 0                            ;
 ; 6                                           ; 1                            ;
-; 7                                           ; 2                            ;
-; 8                                           ; 1                            ;
-; 9                                           ; 1                            ;
-; 10                                          ; 3                            ;
-; 11                                          ; 3                            ;
-; 12                                          ; 0                            ;
-; 13                                          ; 2                            ;
-; 14                                          ; 0                            ;
-; 15                                          ; 7                            ;
-; 16                                          ; 18                           ;
+; 7                                           ; 1                            ;
+; 8                                           ; 0                            ;
+; 9                                           ; 0                            ;
+; 10                                          ; 0                            ;
+; 11                                          ; 0                            ;
+; 12                                          ; 3                            ;
+; 13                                          ; 6                            ;
+; 14                                          ; 2                            ;
+; 15                                          ; 5                            ;
+; 16                                          ; 19                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.49) ; Number of LABs  (Total = 41) ;
+; LAB-wide Signals  (Average = 1.42) ; Number of LABs  (Total = 38) ;
 +------------------------------------+------------------------------+
-; 1 Clock                            ; 39                           ;
-; 1 Clock enable                     ; 10                           ;
-; 1 Sync. clear                      ; 9                            ;
-; 1 Sync. load                       ; 2                            ;
-; 2 Clock enables                    ; 1                            ;
+; 1 Clock                            ; 37                           ;
+; 1 Clock enable                     ; 12                           ;
+; 1 Sync. clear                      ; 5                            ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 19.22) ; Number of LABs  (Total = 41) ;
+; Number of Signals Sourced  (Average = 20.76) ; Number of LABs  (Total = 38) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 0                            ;
-; 2                                            ; 1                            ;
+; 1                                            ; 1                            ;
+; 2                                            ; 0                            ;
 ; 3                                            ; 0                            ;
 ; 4                                            ; 0                            ;
 ; 5                                            ; 0                            ;
 ; 6                                            ; 0                            ;
 ; 7                                            ; 0                            ;
 ; 8                                            ; 0                            ;
-; 9                                            ; 1                            ;
+; 9                                            ; 0                            ;
 ; 10                                           ; 2                            ;
-; 11                                           ; 5                            ;
+; 11                                           ; 1                            ;
 ; 12                                           ; 0                            ;
 ; 13                                           ; 0                            ;
 ; 14                                           ; 1                            ;
 ; 15                                           ; 2                            ;
-; 16                                           ; 2                            ;
+; 16                                           ; 1                            ;
 ; 17                                           ; 1                            ;
-; 18                                           ; 3                            ;
+; 18                                           ; 0                            ;
 ; 19                                           ; 2                            ;
-; 20                                           ; 1                            ;
-; 21                                           ; 2                            ;
-; 22                                           ; 6                            ;
-; 23                                           ; 0                            ;
+; 20                                           ; 4                            ;
+; 21                                           ; 6                            ;
+; 22                                           ; 4                            ;
+; 23                                           ; 1                            ;
 ; 24                                           ; 2                            ;
-; 25                                           ; 2                            ;
-; 26                                           ; 1                            ;
+; 25                                           ; 1                            ;
+; 26                                           ; 2                            ;
 ; 27                                           ; 1                            ;
-; 28                                           ; 3                            ;
-; 29                                           ; 2                            ;
+; 28                                           ; 2                            ;
+; 29                                           ; 3                            ;
 ; 30                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
@@ -1780,63 +1785,52 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 6.76) ; Number of LABs  (Total = 41) ;
+; Number of Signals Sourced Out  (Average = 6.61) ; Number of LABs  (Total = 38) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
 ; 1                                               ; 3                            ;
-; 2                                               ; 3                            ;
-; 3                                               ; 0                            ;
-; 4                                               ; 6                            ;
-; 5                                               ; 5                            ;
-; 6                                               ; 6                            ;
+; 2                                               ; 2                            ;
+; 3                                               ; 4                            ;
+; 4                                               ; 3                            ;
+; 5                                               ; 1                            ;
+; 6                                               ; 4                            ;
 ; 7                                               ; 3                            ;
-; 8                                               ; 3                            ;
+; 8                                               ; 8                            ;
 ; 9                                               ; 3                            ;
-; 10                                              ; 0                            ;
-; 11                                              ; 3                            ;
-; 12                                              ; 3                            ;
-; 13                                              ; 2                            ;
-; 14                                              ; 0                            ;
-; 15                                              ; 0                            ;
-; 16                                              ; 1                            ;
+; 10                                              ; 2                            ;
+; 11                                              ; 1                            ;
+; 12                                              ; 4                            ;
 +-------------------------------------------------+------------------------------+
 
 
-+-----------------------------------------------------------------------------+
-; LAB Distinct Inputs                                                         ;
-+----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 10.51) ; Number of LABs  (Total = 41) ;
-+----------------------------------------------+------------------------------+
-; 0                                            ; 0                            ;
-; 1                                            ; 0                            ;
-; 2                                            ; 2                            ;
-; 3                                            ; 1                            ;
-; 4                                            ; 1                            ;
-; 5                                            ; 6                            ;
-; 6                                            ; 3                            ;
-; 7                                            ; 2                            ;
-; 8                                            ; 1                            ;
-; 9                                            ; 3                            ;
-; 10                                           ; 4                            ;
-; 11                                           ; 4                            ;
-; 12                                           ; 4                            ;
-; 13                                           ; 1                            ;
-; 14                                           ; 1                            ;
-; 15                                           ; 0                            ;
-; 16                                           ; 0                            ;
-; 17                                           ; 2                            ;
-; 18                                           ; 2                            ;
-; 19                                           ; 0                            ;
-; 20                                           ; 0                            ;
-; 21                                           ; 1                            ;
-; 22                                           ; 1                            ;
-; 23                                           ; 1                            ;
-; 24                                           ; 0                            ;
-; 25                                           ; 0                            ;
-; 26                                           ; 0                            ;
-; 27                                           ; 0                            ;
-; 28                                           ; 1                            ;
-+----------------------------------------------+------------------------------+
++----------------------------------------------------------------------------+
+; LAB Distinct Inputs                                                        ;
++---------------------------------------------+------------------------------+
+; Number of Distinct Inputs  (Average = 9.58) ; Number of LABs  (Total = 38) ;
++---------------------------------------------+------------------------------+
+; 0                                           ; 0                            ;
+; 1                                           ; 0                            ;
+; 2                                           ; 5                            ;
+; 3                                           ; 1                            ;
+; 4                                           ; 3                            ;
+; 5                                           ; 0                            ;
+; 6                                           ; 2                            ;
+; 7                                           ; 3                            ;
+; 8                                           ; 2                            ;
+; 9                                           ; 3                            ;
+; 10                                          ; 1                            ;
+; 11                                          ; 3                            ;
+; 12                                          ; 6                            ;
+; 13                                          ; 1                            ;
+; 14                                          ; 1                            ;
+; 15                                          ; 2                            ;
+; 16                                          ; 1                            ;
+; 17                                          ; 1                            ;
+; 18                                          ; 1                            ;
+; 19                                          ; 1                            ;
+; 20                                          ; 0                            ;
+; 21                                          ; 1                            ;
++---------------------------------------------+------------------------------+
 
 
 +------------------------------------------+
@@ -1896,12 +1890,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 ; Pin/Rules          ; IO_000001    ; IO_000002    ; IO_000003    ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007    ; IO_000008    ; IO_000009 ; IO_000010 ; IO_000011    ; IO_000012    ; IO_000013    ; IO_000014    ; IO_000015    ; IO_000018    ; IO_000019    ; IO_000020    ; IO_000021    ; IO_000022    ; IO_000023    ; IO_000024    ; IO_000026    ; IO_000027    ; IO_000045    ; IO_000046    ; IO_000047    ; IO_000033 ; IO_000034    ; IO_000042    ;
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
-; Total Pass         ; 0            ; 0            ; 0            ; 0            ; 0            ; 13        ; 0            ; 0            ; 13        ; 13        ; 0            ; 10           ; 0            ; 0            ; 3            ; 0            ; 10           ; 3            ; 0            ; 0            ; 0            ; 10           ; 0            ; 0            ; 0            ; 0            ; 0            ; 13        ; 0            ; 0            ;
+; Total Pass         ; 0            ; 0            ; 0            ; 0            ; 0            ; 15        ; 0            ; 0            ; 15        ; 15        ; 0            ; 12           ; 0            ; 0            ; 3            ; 0            ; 12           ; 3            ; 0            ; 0            ; 0            ; 12           ; 0            ; 0            ; 0            ; 0            ; 0            ; 15        ; 0            ; 0            ;
 ; Total Unchecked    ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
-; Total Inapplicable ; 13           ; 13           ; 13           ; 13           ; 13           ; 0         ; 13           ; 13           ; 0         ; 0         ; 13           ; 3            ; 13           ; 13           ; 10           ; 13           ; 3            ; 10           ; 13           ; 13           ; 13           ; 3            ; 13           ; 13           ; 13           ; 13           ; 13           ; 0         ; 13           ; 13           ;
+; Total Inapplicable ; 15           ; 15           ; 15           ; 15           ; 15           ; 0         ; 15           ; 15           ; 0         ; 0         ; 15           ; 3            ; 15           ; 15           ; 12           ; 15           ; 3            ; 12           ; 15           ; 15           ; 15           ; 3            ; 15           ; 15           ; 15           ; 15           ; 15           ; 0         ; 15           ; 15           ;
 ; Total Fail         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
-; pin_name1          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; pin_name2          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SpWT_started       ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SpWT_connecting    ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SpWT_running       ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -1910,8 +1902,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SpWR_running       ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SpWR_connecting    ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SpWR_started       ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; CLK                ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SpWT_do            ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SpWT_so            ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SpWR_do            ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; SpWR_so            ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SpWT_linkstart     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; CLK                ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; SpWR_linkstart     ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 
@@ -1974,9 +1970,7 @@ Info (169124): Fitter converted 5 user pins into dedicated programming pins
     Info (169125): Pin ~ALTERA_DATA0~ is reserved at location H2
     Info (169125): Pin ~ALTERA_nCEO~ is reserved at location F16
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
-Critical Warning (169085): No exact pin location assignment(s) for 13 pins of 13 total pins
-    Info (169086): Pin pin_name1 not assigned to an exact location on the device
-    Info (169086): Pin pin_name2 not assigned to an exact location on the device
+Critical Warning (169085): No exact pin location assignment(s) for 15 pins of 15 total pins
     Info (169086): Pin SpWT_started not assigned to an exact location on the device
     Info (169086): Pin SpWT_connecting not assigned to an exact location on the device
     Info (169086): Pin SpWT_running not assigned to an exact location on the device
@@ -1985,21 +1979,28 @@ Critical Warning (169085): No exact pin location assignment(s) for 13 pins of 13
     Info (169086): Pin SpWR_running not assigned to an exact location on the device
     Info (169086): Pin SpWR_connecting not assigned to an exact location on the device
     Info (169086): Pin SpWR_started not assigned to an exact location on the device
-    Info (169086): Pin CLK not assigned to an exact location on the device
+    Info (169086): Pin SpWT_do not assigned to an exact location on the device
+    Info (169086): Pin SpWT_so not assigned to an exact location on the device
+    Info (169086): Pin SpWR_do not assigned to an exact location on the device
+    Info (169086): Pin SpWR_so not assigned to an exact location on the device
     Info (169086): Pin SpWT_linkstart not assigned to an exact location on the device
+    Info (169086): Pin CLK not assigned to an exact location on the device
     Info (169086): Pin SpWR_linkstart not assigned to an exact location on the device
-Critical Warning (332012): Synopsys Design Constraints File file not found: 'spacewire.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
-Info (332144): No user constrained base clocks found in the design
-Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
-Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
-Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
+Info (332104): Reading SDC File: 'spacewire.sdc'
+Critical Warning (332168): The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
+    Critical Warning (332169): From clk (Rise) to clk (Rise) (setup and hold)
+Info (332129): Detected timing requirements -- optimizing circuit to achieve only the specified requirements
+Info (332111): Found 1 clocks
+    Info (332111):   Period   Clock Name
+    Info (332111): ======== ============
+    Info (332111):   50.000          clk
 Info (176353): Automatically promoted node CLK~input (placed in PIN E1 (CLK1, DIFFCLK_0n))
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G2
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
 Info (176214): Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
-    Info (176211): Number of I/O pins in group: 12 (unused VREF, 2.5V VCCIO, 2 input, 10 output, 0 bidirectional)
+    Info (176211): Number of I/O pins in group: 14 (unused VREF, 2.5V VCCIO, 2 input, 12 output, 0 bidirectional)
         Info (176212): I/O standards used: 2.5 V.
 Info (176215): I/O bank details before I/O pin placement
     Info (176214): Statistics of I/O banks
@@ -2011,30 +2012,31 @@ Info (176215): I/O bank details before I/O pin placement
         Info (176213): I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  12 pins available
         Info (176213): I/O bank number 7 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  24 pins available
         Info (176213): I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  24 pins available
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (170189): Fitter placement preparation operations beginning
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 2% of the available device resources in the region that extends from location X21_Y23 to location X31_Y34
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:03
+    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X21_Y23 to location X31_Y34
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.74 seconds.
+    Info (170200): Optimizations that may affect the design's timing were skipped
+Info (11888): Total time spent on timing analysis during the Fitter is 0.18 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file /home/quartus/spacewire/output_files/spacewire.fit.smsg
-Info: Quartus II 64-Bit Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 794 megabytes
-    Info: Processing ended: Fri Jun  2 18:35:43 2023
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:13
+Info: Quartus II 64-Bit Fitter was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 775 megabytes
+    Info: Processing ended: Sun Jun  4 16:47:35 2023
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:07
 
 
 +----------------------------+

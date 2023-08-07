@@ -1,5 +1,5 @@
 Simulator report for spacewire_qsim
-Fri Jun  2 18:36:50 2023
+Sun Jun  4 16:28:33 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -44,44 +44,44 @@ applicable agreement for further details.
 ; Type                        ; Value        ;
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
-; Simulation End Time         ; 1.0 us       ;
-; Simulation Netlist Size     ; 2399 nodes   ;
-; Simulation Coverage         ;       7.01 % ;
-; Total Number of Transitions ; 2289         ;
+; Simulation End Time         ; 10.0 us      ;
+; Simulation Netlist Size     ; 2401 nodes   ;
+; Simulation Coverage         ;       8.44 % ;
+; Total Number of Transitions ; 22739        ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; Cyclone III  ;
 +-----------------------------+--------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Simulator Settings                                                                                                                                   ;
-+--------------------------------------------------------------------------------------------+-----------------------------------------+---------------+
-; Option                                                                                     ; Setting                                 ; Default Value ;
-+--------------------------------------------------------------------------------------------+-----------------------------------------+---------------+
-; Simulation mode                                                                            ; Functional                              ; Timing        ;
-; Start time                                                                                 ; 0 ns                                    ; 0 ns          ;
-; Simulation results format                                                                  ; VWF                                     ;               ;
-; Vector input source                                                                        ; /home/quartus/spacewire/signal_test.vwf ;               ;
-; Add pins automatically to simulation output waveforms                                      ; On                                      ; On            ;
-; Check outputs                                                                              ; Off                                     ; Off           ;
-; Report simulation coverage                                                                 ; On                                      ; On            ;
-; Display complete 1/0 value coverage report                                                 ; On                                      ; On            ;
-; Display missing 1-value coverage report                                                    ; On                                      ; On            ;
-; Display missing 0-value coverage report                                                    ; On                                      ; On            ;
-; Detect setup and hold time violations                                                      ; Off                                     ; Off           ;
-; Detect glitches                                                                            ; Off                                     ; Off           ;
-; Disable timing delays in Timing Simulation                                                 ; Off                                     ; Off           ;
-; Generate Signal Activity File                                                              ; Off                                     ; Off           ;
-; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                     ; Off           ;
-; Group bus channels in simulation results                                                   ; Off                                     ; Off           ;
-; Preserve fewer signal transitions to reduce memory requirements                            ; On                                      ; On            ;
-; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                              ; INPUT_EDGE    ;
-; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                     ; Off           ;
-; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                     ;               ;
-; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                    ; Auto          ;
-; Interconnect Delay Model Type                                                              ; Transport                               ; Transport     ;
-; Cell Delay Model Type                                                                      ; Transport                               ; Transport     ;
-+--------------------------------------------------------------------------------------------+-----------------------------------------+---------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                 ;
++--------------------------------------------------------------------------------------------+---------------------------------------+---------------+
+; Option                                                                                     ; Setting                               ; Default Value ;
++--------------------------------------------------------------------------------------------+---------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                            ; Timing        ;
+; Start time                                                                                 ; 0 ns                                  ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                   ;               ;
+; Vector input source                                                                        ; /home/quartus/spacewire/spacewire.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                    ; On            ;
+; Check outputs                                                                              ; Off                                   ; Off           ;
+; Report simulation coverage                                                                 ; On                                    ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                    ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                    ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                    ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                   ; Off           ;
+; Detect glitches                                                                            ; Off                                   ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                   ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                   ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                   ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                   ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                    ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                            ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                   ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                   ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                  ; Auto          ;
+; Interconnect Delay Model Type                                                              ; Transport                             ; Transport     ;
+; Cell Delay Model Type                                                                      ; Transport                             ; Transport     ;
++--------------------------------------------------------------------------------------------+---------------------------------------+---------------+
 
 
 +----------------------+
@@ -96,13 +96,13 @@ Please use Quartus II 64-Bit to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;       7.01 % ;
-; Total nodes checked                                 ; 2399         ;
-; Total output ports checked                          ; 2355         ;
-; Total output ports with complete 1/0-value coverage ; 165          ;
-; Total output ports with no 1/0-value coverage       ; 2130         ;
-; Total output ports with no 1-value coverage         ; 2138         ;
-; Total output ports with no 0-value coverage         ; 2182         ;
+; Total coverage as a percentage                      ;       8.44 % ;
+; Total nodes checked                                 ; 2401         ;
+; Total output ports checked                          ; 2357         ;
+; Total output ports with complete 1/0-value coverage ; 199          ;
+; Total output ports with no 1/0-value coverage       ; 2044         ;
+; Total output ports with no 1-value coverage         ; 2078         ;
+; Total output ports with no 0-value coverage         ; 2124         ;
 +-----------------------------------------------------+--------------+
 
 
@@ -130,6 +130,8 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |spacewire|spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~110         ; |spacewire|spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|v~110         ; out              ;
 ; |spacewire|spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[0] ; |spacewire|spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[0] ; regout           ;
 ; |spacewire|spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclken     ; |spacewire|spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|r.txclken     ; regout           ;
+; |spacewire|spwstream:inst1|spwlink:link_inst|v~25                     ; |spacewire|spwstream:inst1|spwlink:link_inst|v~25                     ; out              ;
+; |spacewire|spwstream:inst1|spwlink:link_inst|v~31                     ; |spacewire|spwstream:inst1|spwlink:link_inst|v~31                     ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~104                    ; |spacewire|spwstream:inst1|spwlink:link_inst|v~104                    ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~105                    ; |spacewire|spwstream:inst1|spwlink:link_inst|v~105                    ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~106                    ; |spacewire|spwstream:inst1|spwlink:link_inst|v~106                    ; out              ;
@@ -141,6 +143,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~112                    ; |spacewire|spwstream:inst1|spwlink:link_inst|v~112                    ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~113                    ; |spacewire|spwstream:inst1|spwlink:link_inst|v~113                    ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~114                    ; |spacewire|spwstream:inst1|spwlink:link_inst|v~114                    ; out              ;
+; |spacewire|spwstream:inst1|spwlink:link_inst|v~115                    ; |spacewire|spwstream:inst1|spwlink:link_inst|v~115                    ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~116                    ; |spacewire|spwstream:inst1|spwlink:link_inst|v~116                    ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~117                    ; |spacewire|spwstream:inst1|spwlink:link_inst|v~117                    ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~118                    ; |spacewire|spwstream:inst1|spwlink:link_inst|v~118                    ; out              ;
@@ -152,6 +155,10 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~124                    ; |spacewire|spwstream:inst1|spwlink:link_inst|v~124                    ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~125                    ; |spacewire|spwstream:inst1|spwlink:link_inst|v~125                    ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~126                    ; |spacewire|spwstream:inst1|spwlink:link_inst|v~126                    ; out              ;
+; |spacewire|spwstream:inst1|spwlink:link_inst|v~127                    ; |spacewire|spwstream:inst1|spwlink:link_inst|v~127                    ; out              ;
+; |spacewire|spwstream:inst1|spwlink:link_inst|r.timercnt[7]            ; |spacewire|spwstream:inst1|spwlink:link_inst|r.timercnt[7]            ; regout           ;
+; |spacewire|spwstream:inst1|spwlink:link_inst|r.timercnt[6]            ; |spacewire|spwstream:inst1|spwlink:link_inst|r.timercnt[6]            ; regout           ;
+; |spacewire|spwstream:inst1|spwlink:link_inst|r.timercnt[5]            ; |spacewire|spwstream:inst1|spwlink:link_inst|r.timercnt[5]            ; regout           ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|r.timercnt[4]            ; |spacewire|spwstream:inst1|spwlink:link_inst|r.timercnt[4]            ; regout           ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|r.timercnt[3]            ; |spacewire|spwstream:inst1|spwlink:link_inst|r.timercnt[3]            ; regout           ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|r.timercnt[2]            ; |spacewire|spwstream:inst1|spwlink:link_inst|r.timercnt[2]            ; regout           ;
@@ -176,6 +183,8 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |spacewire|spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~110          ; |spacewire|spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|v~110          ; out              ;
 ; |spacewire|spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[0]  ; |spacewire|spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.txclkcnt[0]  ; regout           ;
 ; |spacewire|spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.txclken      ; |spacewire|spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|r.txclken      ; regout           ;
+; |spacewire|spwstream:inst|spwlink:link_inst|v~25                      ; |spacewire|spwstream:inst|spwlink:link_inst|v~25                      ; out              ;
+; |spacewire|spwstream:inst|spwlink:link_inst|v~31                      ; |spacewire|spwstream:inst|spwlink:link_inst|v~31                      ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~104                     ; |spacewire|spwstream:inst|spwlink:link_inst|v~104                     ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~105                     ; |spacewire|spwstream:inst|spwlink:link_inst|v~105                     ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~106                     ; |spacewire|spwstream:inst|spwlink:link_inst|v~106                     ; out              ;
@@ -187,6 +196,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~112                     ; |spacewire|spwstream:inst|spwlink:link_inst|v~112                     ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~113                     ; |spacewire|spwstream:inst|spwlink:link_inst|v~113                     ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~114                     ; |spacewire|spwstream:inst|spwlink:link_inst|v~114                     ; out              ;
+; |spacewire|spwstream:inst|spwlink:link_inst|v~115                     ; |spacewire|spwstream:inst|spwlink:link_inst|v~115                     ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~116                     ; |spacewire|spwstream:inst|spwlink:link_inst|v~116                     ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~117                     ; |spacewire|spwstream:inst|spwlink:link_inst|v~117                     ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~118                     ; |spacewire|spwstream:inst|spwlink:link_inst|v~118                     ; out              ;
@@ -198,6 +208,10 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~124                     ; |spacewire|spwstream:inst|spwlink:link_inst|v~124                     ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~125                     ; |spacewire|spwstream:inst|spwlink:link_inst|v~125                     ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~126                     ; |spacewire|spwstream:inst|spwlink:link_inst|v~126                     ; out              ;
+; |spacewire|spwstream:inst|spwlink:link_inst|v~127                     ; |spacewire|spwstream:inst|spwlink:link_inst|v~127                     ; out              ;
+; |spacewire|spwstream:inst|spwlink:link_inst|r.timercnt[7]             ; |spacewire|spwstream:inst|spwlink:link_inst|r.timercnt[7]             ; regout           ;
+; |spacewire|spwstream:inst|spwlink:link_inst|r.timercnt[6]             ; |spacewire|spwstream:inst|spwlink:link_inst|r.timercnt[6]             ; regout           ;
+; |spacewire|spwstream:inst|spwlink:link_inst|r.timercnt[5]             ; |spacewire|spwstream:inst|spwlink:link_inst|r.timercnt[5]             ; regout           ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|r.timercnt[4]             ; |spacewire|spwstream:inst|spwlink:link_inst|r.timercnt[4]             ; regout           ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|r.timercnt[3]             ; |spacewire|spwstream:inst|spwlink:link_inst|r.timercnt[3]             ; regout           ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|r.timercnt[2]             ; |spacewire|spwstream:inst|spwlink:link_inst|r.timercnt[2]             ; regout           ;
@@ -205,6 +219,18 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |spacewire|spwstream:inst|spwlink:link_inst|r.timercnt[0]             ; |spacewire|spwstream:inst|spwlink:link_inst|r.timercnt[0]             ; regout           ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|r.state~0                 ; |spacewire|spwstream:inst|spwlink:link_inst|r.state~0                 ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|r.state~4                 ; |spacewire|spwstream:inst|spwlink:link_inst|r.state~4                 ; out0             ;
+; |spacewire|spwstream:inst1|spwlink:link_inst|Selector0~0              ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector0~0              ; out0             ;
+; |spacewire|spwstream:inst1|spwlink:link_inst|Selector0~5              ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector0~5              ; out0             ;
+; |spacewire|spwstream:inst1|spwlink:link_inst|Selector1~0              ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector1~0              ; out0             ;
+; |spacewire|spwstream:inst1|spwlink:link_inst|Selector1~6              ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector1~6              ; out0             ;
+; |spacewire|spwstream:inst1|spwlink:link_inst|Selector6~0              ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector6~0              ; out0             ;
+; |spacewire|spwstream:inst1|spwlink:link_inst|Selector6~6              ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector6~6              ; out0             ;
+; |spacewire|spwstream:inst|spwlink:link_inst|Selector0~0               ; |spacewire|spwstream:inst|spwlink:link_inst|Selector0~0               ; out0             ;
+; |spacewire|spwstream:inst|spwlink:link_inst|Selector0~5               ; |spacewire|spwstream:inst|spwlink:link_inst|Selector0~5               ; out0             ;
+; |spacewire|spwstream:inst|spwlink:link_inst|Selector1~0               ; |spacewire|spwstream:inst|spwlink:link_inst|Selector1~0               ; out0             ;
+; |spacewire|spwstream:inst|spwlink:link_inst|Selector1~6               ; |spacewire|spwstream:inst|spwlink:link_inst|Selector1~6               ; out0             ;
+; |spacewire|spwstream:inst|spwlink:link_inst|Selector6~0               ; |spacewire|spwstream:inst|spwlink:link_inst|Selector6~0               ; out0             ;
+; |spacewire|spwstream:inst|spwlink:link_inst|Selector6~6               ; |spacewire|spwstream:inst|spwlink:link_inst|Selector6~6               ; out0             ;
 ; |spacewire|spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|Add0~0        ; |spacewire|spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|Add0~0        ; out0             ;
 ; |spacewire|spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|Add0~1        ; |spacewire|spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|Add0~1        ; out0             ;
 ; |spacewire|spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|Add0~3        ; |spacewire|spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|Add0~3        ; out0             ;
@@ -231,8 +257,11 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Add5~10                  ; |spacewire|spwstream:inst1|spwlink:link_inst|Add5~10                  ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Add5~11                  ; |spacewire|spwstream:inst1|spwlink:link_inst|Add5~11                  ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Add5~12                  ; |spacewire|spwstream:inst1|spwlink:link_inst|Add5~12                  ; out0             ;
+; |spacewire|spwstream:inst1|spwlink:link_inst|Add5~13                  ; |spacewire|spwstream:inst1|spwlink:link_inst|Add5~13                  ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Add5~14                  ; |spacewire|spwstream:inst1|spwlink:link_inst|Add5~14                  ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Add5~15                  ; |spacewire|spwstream:inst1|spwlink:link_inst|Add5~15                  ; out0             ;
+; |spacewire|spwstream:inst1|spwlink:link_inst|Add5~16                  ; |spacewire|spwstream:inst1|spwlink:link_inst|Add5~16                  ; out0             ;
+; |spacewire|spwstream:inst1|spwlink:link_inst|Add5~17                  ; |spacewire|spwstream:inst1|spwlink:link_inst|Add5~17                  ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Add5~18                  ; |spacewire|spwstream:inst1|spwlink:link_inst|Add5~18                  ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Add5~19                  ; |spacewire|spwstream:inst1|spwlink:link_inst|Add5~19                  ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Add5~21                  ; |spacewire|spwstream:inst1|spwlink:link_inst|Add5~21                  ; out0             ;
@@ -266,8 +295,11 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |spacewire|spwstream:inst|spwlink:link_inst|Add5~10                   ; |spacewire|spwstream:inst|spwlink:link_inst|Add5~10                   ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Add5~11                   ; |spacewire|spwstream:inst|spwlink:link_inst|Add5~11                   ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Add5~12                   ; |spacewire|spwstream:inst|spwlink:link_inst|Add5~12                   ; out0             ;
+; |spacewire|spwstream:inst|spwlink:link_inst|Add5~13                   ; |spacewire|spwstream:inst|spwlink:link_inst|Add5~13                   ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Add5~14                   ; |spacewire|spwstream:inst|spwlink:link_inst|Add5~14                   ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Add5~15                   ; |spacewire|spwstream:inst|spwlink:link_inst|Add5~15                   ; out0             ;
+; |spacewire|spwstream:inst|spwlink:link_inst|Add5~16                   ; |spacewire|spwstream:inst|spwlink:link_inst|Add5~16                   ; out0             ;
+; |spacewire|spwstream:inst|spwlink:link_inst|Add5~17                   ; |spacewire|spwstream:inst|spwlink:link_inst|Add5~17                   ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Add5~18                   ; |spacewire|spwstream:inst|spwlink:link_inst|Add5~18                   ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Add5~19                   ; |spacewire|spwstream:inst|spwlink:link_inst|Add5~19                   ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Add5~21                   ; |spacewire|spwstream:inst|spwlink:link_inst|Add5~21                   ; out0             ;
@@ -276,7 +308,9 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |spacewire|spwstream:inst|spwlink:link_inst|Add5~25                   ; |spacewire|spwstream:inst|spwlink:link_inst|Add5~25                   ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Add5~27                   ; |spacewire|spwstream:inst|spwlink:link_inst|Add5~27                   ; out0             ;
 ; |spacewire|spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|Equal0~0      ; |spacewire|spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|Equal0~0      ; out0             ;
+; |spacewire|spwstream:inst1|spwlink:link_inst|Equal0~0                 ; |spacewire|spwstream:inst1|spwlink:link_inst|Equal0~0                 ; out0             ;
 ; |spacewire|spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|Equal0~0       ; |spacewire|spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|Equal0~0       ; out0             ;
+; |spacewire|spwstream:inst|spwlink:link_inst|Equal0~0                  ; |spacewire|spwstream:inst|spwlink:link_inst|Equal0~0                  ; out0             ;
 +-----------------------------------------------------------------------+-----------------------------------------------------------------------+------------------+
 
 
@@ -286,11 +320,9 @@ The following table displays output ports that do not toggle to 1 during simulat
 +-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+------------------+
 ; Node Name                                                                                           ; Output Port Name                                                                                    ; Output Port Type ;
 +-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+------------------+
-; |spacewire|pin_name1                                                                                ; |spacewire|pin_name1                                                                                ; pin_out          ;
+; |spacewire|SpWT_started                                                                             ; |spacewire|SpWT_started                                                                             ; pin_out          ;
 ; |spacewire|SpWT_linkstart                                                                           ; |spacewire|SpWT_linkstart                                                                           ; out              ;
 ; |spacewire|SpWR_linkstart                                                                           ; |spacewire|SpWR_linkstart                                                                           ; out              ;
-; |spacewire|pin_name2                                                                                ; |spacewire|pin_name2                                                                                ; pin_out          ;
-; |spacewire|SpWT_started                                                                             ; |spacewire|SpWT_started                                                                             ; pin_out          ;
 ; |spacewire|SpWT_connecting                                                                          ; |spacewire|SpWT_connecting                                                                          ; pin_out          ;
 ; |spacewire|SpWT_running                                                                             ; |spacewire|SpWT_running                                                                             ; pin_out          ;
 ; |spacewire|SpWT_txrdy                                                                               ; |spacewire|SpWT_txrdy                                                                               ; pin_out          ;
@@ -298,6 +330,10 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |spacewire|SpWR_running                                                                             ; |spacewire|SpWR_running                                                                             ; pin_out          ;
 ; |spacewire|SpWR_connecting                                                                          ; |spacewire|SpWR_connecting                                                                          ; pin_out          ;
 ; |spacewire|SpWR_started                                                                             ; |spacewire|SpWR_started                                                                             ; pin_out          ;
+; |spacewire|SpWT_do                                                                                  ; |spacewire|SpWT_do                                                                                  ; pin_out          ;
+; |spacewire|SpWT_so                                                                                  ; |spacewire|SpWT_so                                                                                  ; pin_out          ;
+; |spacewire|SpWR_do                                                                                  ; |spacewire|SpWR_do                                                                                  ; pin_out          ;
+; |spacewire|SpWR_so                                                                                  ; |spacewire|SpWR_so                                                                                  ; pin_out          ;
 ; |spacewire|spwstream:inst1|r.txfifo_raddr[8]                                                        ; |spacewire|spwstream:inst1|r.txfifo_raddr[8]                                                        ; regout           ;
 ; |spacewire|spwstream:inst1|r.txfifo_raddr[7]                                                        ; |spacewire|spwstream:inst1|r.txfifo_raddr[7]                                                        ; regout           ;
 ; |spacewire|spwstream:inst1|r.txfifo_raddr[6]                                                        ; |spacewire|spwstream:inst1|r.txfifo_raddr[6]                                                        ; regout           ;
@@ -740,7 +776,6 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |spacewire|spwstream:inst1|spwlink:link_inst|r.state.S_Started                                      ; |spacewire|spwstream:inst1|spwlink:link_inst|r.state.S_Started                                      ; regout           ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|r.state.S_Connecting                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|r.state.S_Connecting                                   ; regout           ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~0                                                    ; |spacewire|spwstream:inst1|spwlink:link_inst|v~0                                                    ; out              ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|v~1                                                    ; |spacewire|spwstream:inst1|spwlink:link_inst|v~1                                                    ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~2                                                    ; |spacewire|spwstream:inst1|spwlink:link_inst|v~2                                                    ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~3                                                    ; |spacewire|spwstream:inst1|spwlink:link_inst|v~3                                                    ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~4                                                    ; |spacewire|spwstream:inst1|spwlink:link_inst|v~4                                                    ; out              ;
@@ -751,49 +786,38 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |spacewire|spwstream:inst1|spwlink:link_inst|process_0~3                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|process_0~3                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|process_0~4                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|process_0~4                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~6                                                    ; |spacewire|spwstream:inst1|spwlink:link_inst|v~6                                                    ; out              ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|v~7                                                    ; |spacewire|spwstream:inst1|spwlink:link_inst|v~7                                                    ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~8                                                    ; |spacewire|spwstream:inst1|spwlink:link_inst|v~8                                                    ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~9                                                    ; |spacewire|spwstream:inst1|spwlink:link_inst|v~9                                                    ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~10                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~10                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~11                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~11                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~12                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~12                                                   ; out              ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|v~13                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~13                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~14                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~14                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~15                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~15                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~16                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~16                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~17                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~17                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~18                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~18                                                   ; out              ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|v~19                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~19                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~20                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~20                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~21                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~21                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~22                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~22                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~23                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~23                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v_timerrst~0                                           ; |spacewire|spwstream:inst1|spwlink:link_inst|v_timerrst~0                                           ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v_timerrst~1                                           ; |spacewire|spwstream:inst1|spwlink:link_inst|v_timerrst~1                                           ; out              ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|process_0~8                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|process_0~8                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~24                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~24                                                   ; out              ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|v~25                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~25                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~26                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~26                                                   ; out              ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|v~27                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~27                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~28                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~28                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~29                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~29                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~30                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~30                                                   ; out              ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|v~31                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~31                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~32                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~32                                                   ; out              ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|v~33                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~33                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~34                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~34                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~35                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~35                                                   ; out              ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|v_timerrst~2                                           ; |spacewire|spwstream:inst1|spwlink:link_inst|v_timerrst~2                                           ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|process_0~9                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|process_0~9                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|process_0~10                                           ; |spacewire|spwstream:inst1|spwlink:link_inst|process_0~10                                           ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~36                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~36                                                   ; out              ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|v~37                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~37                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~38                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~38                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~39                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~39                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~40                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~40                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~41                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~41                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~42                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~42                                                   ; out              ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|v~43                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~43                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~44                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~44                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~45                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~45                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~46                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~46                                                   ; out              ;
@@ -803,20 +827,17 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |spacewire|spwstream:inst1|spwlink:link_inst|process_0~12                                           ; |spacewire|spwstream:inst1|spwlink:link_inst|process_0~12                                           ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|process_0~13                                           ; |spacewire|spwstream:inst1|spwlink:link_inst|process_0~13                                           ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~48                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~48                                                   ; out              ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|v~49                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~49                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~50                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~50                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~51                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~51                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~52                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~52                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~53                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~53                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~54                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~54                                                   ; out              ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|v~55                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~55                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~56                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~56                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~57                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~57                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~58                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~58                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~59                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~59                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|process_0~14                                           ; |spacewire|spwstream:inst1|spwlink:link_inst|process_0~14                                           ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~60                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~60                                                   ; out              ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|v~61                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~61                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~62                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~62                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~63                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~63                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~64                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~64                                                   ; out              ;
@@ -830,7 +851,6 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |spacewire|spwstream:inst1|spwlink:link_inst|r.tx_credit[0]                                         ; |spacewire|spwstream:inst1|spwlink:link_inst|r.tx_credit[0]                                         ; regout           ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~66                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~66                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|r.rx_credit[5]                                         ; |spacewire|spwstream:inst1|spwlink:link_inst|r.rx_credit[5]                                         ; regout           ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|v~67                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~67                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|r.rx_credit[4]                                         ; |spacewire|spwstream:inst1|spwlink:link_inst|r.rx_credit[4]                                         ; regout           ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~68                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~68                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~69                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~69                                                   ; out              ;
@@ -871,24 +891,17 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~100                                                  ; |spacewire|spwstream:inst1|spwlink:link_inst|v~100                                                  ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~101                                                  ; |spacewire|spwstream:inst1|spwlink:link_inst|v~101                                                  ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~102                                                  ; |spacewire|spwstream:inst1|spwlink:link_inst|v~102                                                  ; out              ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|v~103                                                  ; |spacewire|spwstream:inst1|spwlink:link_inst|v~103                                                  ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|r.errcred                                              ; |spacewire|spwstream:inst1|spwlink:link_inst|r.errcred                                              ; regout           ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|r.timercnt[10]                                         ; |spacewire|spwstream:inst1|spwlink:link_inst|r.timercnt[10]                                         ; regout           ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|v~115                                                  ; |spacewire|spwstream:inst1|spwlink:link_inst|v~115                                                  ; out              ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|v~127                                                  ; |spacewire|spwstream:inst1|spwlink:link_inst|v~127                                                  ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|r.timercnt[9]                                          ; |spacewire|spwstream:inst1|spwlink:link_inst|r.timercnt[9]                                          ; regout           ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|r.timercnt[8]                                          ; |spacewire|spwstream:inst1|spwlink:link_inst|r.timercnt[8]                                          ; regout           ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|r.timercnt[7]                                          ; |spacewire|spwstream:inst1|spwlink:link_inst|r.timercnt[7]                                          ; regout           ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|linko.rxchar                                           ; |spacewire|spwstream:inst1|spwlink:link_inst|linko.rxchar                                           ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|txen~0                                                 ; |spacewire|spwstream:inst1|spwlink:link_inst|txen~0                                                 ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|r.timerdone                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|r.timerdone                                            ; regout           ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|xmiti.txen                                             ; |spacewire|spwstream:inst1|spwlink:link_inst|xmiti.txen                                             ; out0             ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|r.xmit_fct_in                                          ; |spacewire|spwstream:inst1|spwlink:link_inst|r.xmit_fct_in                                          ; regout           ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|xmiti.txwrite                                          ; |spacewire|spwstream:inst1|spwlink:link_inst|xmiti.txwrite                                          ; out0             ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|r.state.S_ErrorWait                                    ; |spacewire|spwstream:inst1|spwlink:link_inst|r.state.S_ErrorWait                                    ; regout           ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|r.state.S_ErrorReset                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|r.state.S_ErrorReset                                   ; regout           ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|rxen~0                                                 ; |spacewire|spwstream:inst1|spwlink:link_inst|rxen~0                                                 ; out0             ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|v~129                                                  ; |spacewire|spwstream:inst1|spwlink:link_inst|v~129                                                  ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~131                                                  ; |spacewire|spwstream:inst1|spwlink:link_inst|v~131                                                  ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|xmiti.stnull                                           ; |spacewire|spwstream:inst1|spwlink:link_inst|xmiti.stnull                                           ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|xmiti.stfct                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|xmiti.stfct                                            ; out0             ;
@@ -1335,7 +1348,6 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |spacewire|spwstream:inst|spwlink:link_inst|r.state.S_Started                                       ; |spacewire|spwstream:inst|spwlink:link_inst|r.state.S_Started                                       ; regout           ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|r.state.S_Connecting                                    ; |spacewire|spwstream:inst|spwlink:link_inst|r.state.S_Connecting                                    ; regout           ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~0                                                     ; |spacewire|spwstream:inst|spwlink:link_inst|v~0                                                     ; out              ;
-; |spacewire|spwstream:inst|spwlink:link_inst|v~1                                                     ; |spacewire|spwstream:inst|spwlink:link_inst|v~1                                                     ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~2                                                     ; |spacewire|spwstream:inst|spwlink:link_inst|v~2                                                     ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~3                                                     ; |spacewire|spwstream:inst|spwlink:link_inst|v~3                                                     ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~4                                                     ; |spacewire|spwstream:inst|spwlink:link_inst|v~4                                                     ; out              ;
@@ -1346,49 +1358,38 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |spacewire|spwstream:inst|spwlink:link_inst|process_0~3                                             ; |spacewire|spwstream:inst|spwlink:link_inst|process_0~3                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|process_0~4                                             ; |spacewire|spwstream:inst|spwlink:link_inst|process_0~4                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~6                                                     ; |spacewire|spwstream:inst|spwlink:link_inst|v~6                                                     ; out              ;
-; |spacewire|spwstream:inst|spwlink:link_inst|v~7                                                     ; |spacewire|spwstream:inst|spwlink:link_inst|v~7                                                     ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~8                                                     ; |spacewire|spwstream:inst|spwlink:link_inst|v~8                                                     ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~9                                                     ; |spacewire|spwstream:inst|spwlink:link_inst|v~9                                                     ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~10                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~10                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~11                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~11                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~12                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~12                                                    ; out              ;
-; |spacewire|spwstream:inst|spwlink:link_inst|v~13                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~13                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~14                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~14                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~15                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~15                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~16                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~16                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~17                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~17                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~18                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~18                                                    ; out              ;
-; |spacewire|spwstream:inst|spwlink:link_inst|v~19                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~19                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~20                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~20                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~21                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~21                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~22                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~22                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~23                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~23                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v_timerrst~0                                            ; |spacewire|spwstream:inst|spwlink:link_inst|v_timerrst~0                                            ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v_timerrst~1                                            ; |spacewire|spwstream:inst|spwlink:link_inst|v_timerrst~1                                            ; out              ;
-; |spacewire|spwstream:inst|spwlink:link_inst|process_0~8                                             ; |spacewire|spwstream:inst|spwlink:link_inst|process_0~8                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~24                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~24                                                    ; out              ;
-; |spacewire|spwstream:inst|spwlink:link_inst|v~25                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~25                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~26                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~26                                                    ; out              ;
-; |spacewire|spwstream:inst|spwlink:link_inst|v~27                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~27                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~28                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~28                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~29                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~29                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~30                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~30                                                    ; out              ;
-; |spacewire|spwstream:inst|spwlink:link_inst|v~31                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~31                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~32                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~32                                                    ; out              ;
-; |spacewire|spwstream:inst|spwlink:link_inst|v~33                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~33                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~34                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~34                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~35                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~35                                                    ; out              ;
-; |spacewire|spwstream:inst|spwlink:link_inst|v_timerrst~2                                            ; |spacewire|spwstream:inst|spwlink:link_inst|v_timerrst~2                                            ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|process_0~9                                             ; |spacewire|spwstream:inst|spwlink:link_inst|process_0~9                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|process_0~10                                            ; |spacewire|spwstream:inst|spwlink:link_inst|process_0~10                                            ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~36                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~36                                                    ; out              ;
-; |spacewire|spwstream:inst|spwlink:link_inst|v~37                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~37                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~38                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~38                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~39                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~39                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~40                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~40                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~41                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~41                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~42                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~42                                                    ; out              ;
-; |spacewire|spwstream:inst|spwlink:link_inst|v~43                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~43                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~44                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~44                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~45                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~45                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~46                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~46                                                    ; out              ;
@@ -1398,20 +1399,17 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |spacewire|spwstream:inst|spwlink:link_inst|process_0~12                                            ; |spacewire|spwstream:inst|spwlink:link_inst|process_0~12                                            ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|process_0~13                                            ; |spacewire|spwstream:inst|spwlink:link_inst|process_0~13                                            ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~48                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~48                                                    ; out              ;
-; |spacewire|spwstream:inst|spwlink:link_inst|v~49                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~49                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~50                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~50                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~51                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~51                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~52                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~52                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~53                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~53                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~54                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~54                                                    ; out              ;
-; |spacewire|spwstream:inst|spwlink:link_inst|v~55                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~55                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~56                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~56                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~57                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~57                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~58                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~58                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~59                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~59                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|process_0~14                                            ; |spacewire|spwstream:inst|spwlink:link_inst|process_0~14                                            ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~60                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~60                                                    ; out              ;
-; |spacewire|spwstream:inst|spwlink:link_inst|v~61                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~61                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~62                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~62                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~63                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~63                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~64                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~64                                                    ; out              ;
@@ -1425,7 +1423,6 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |spacewire|spwstream:inst|spwlink:link_inst|r.tx_credit[0]                                          ; |spacewire|spwstream:inst|spwlink:link_inst|r.tx_credit[0]                                          ; regout           ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~66                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~66                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|r.rx_credit[5]                                          ; |spacewire|spwstream:inst|spwlink:link_inst|r.rx_credit[5]                                          ; regout           ;
-; |spacewire|spwstream:inst|spwlink:link_inst|v~67                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~67                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|r.rx_credit[4]                                          ; |spacewire|spwstream:inst|spwlink:link_inst|r.rx_credit[4]                                          ; regout           ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~68                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~68                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~69                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~69                                                    ; out              ;
@@ -1466,42 +1463,30 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~100                                                   ; |spacewire|spwstream:inst|spwlink:link_inst|v~100                                                   ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~101                                                   ; |spacewire|spwstream:inst|spwlink:link_inst|v~101                                                   ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~102                                                   ; |spacewire|spwstream:inst|spwlink:link_inst|v~102                                                   ; out              ;
-; |spacewire|spwstream:inst|spwlink:link_inst|v~103                                                   ; |spacewire|spwstream:inst|spwlink:link_inst|v~103                                                   ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|r.errcred                                               ; |spacewire|spwstream:inst|spwlink:link_inst|r.errcred                                               ; regout           ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|r.timercnt[10]                                          ; |spacewire|spwstream:inst|spwlink:link_inst|r.timercnt[10]                                          ; regout           ;
-; |spacewire|spwstream:inst|spwlink:link_inst|v~115                                                   ; |spacewire|spwstream:inst|spwlink:link_inst|v~115                                                   ; out              ;
-; |spacewire|spwstream:inst|spwlink:link_inst|v~127                                                   ; |spacewire|spwstream:inst|spwlink:link_inst|v~127                                                   ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|r.timercnt[9]                                           ; |spacewire|spwstream:inst|spwlink:link_inst|r.timercnt[9]                                           ; regout           ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|r.timercnt[8]                                           ; |spacewire|spwstream:inst|spwlink:link_inst|r.timercnt[8]                                           ; regout           ;
-; |spacewire|spwstream:inst|spwlink:link_inst|r.timercnt[7]                                           ; |spacewire|spwstream:inst|spwlink:link_inst|r.timercnt[7]                                           ; regout           ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|linko.rxchar                                            ; |spacewire|spwstream:inst|spwlink:link_inst|linko.rxchar                                            ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|txen~0                                                  ; |spacewire|spwstream:inst|spwlink:link_inst|txen~0                                                  ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|r.timerdone                                             ; |spacewire|spwstream:inst|spwlink:link_inst|r.timerdone                                             ; regout           ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|xmiti.txen                                              ; |spacewire|spwstream:inst|spwlink:link_inst|xmiti.txen                                              ; out0             ;
-; |spacewire|spwstream:inst|spwlink:link_inst|r.xmit_fct_in                                           ; |spacewire|spwstream:inst|spwlink:link_inst|r.xmit_fct_in                                           ; regout           ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|xmiti.txwrite                                           ; |spacewire|spwstream:inst|spwlink:link_inst|xmiti.txwrite                                           ; out0             ;
-; |spacewire|spwstream:inst|spwlink:link_inst|r.state.S_ErrorWait                                     ; |spacewire|spwstream:inst|spwlink:link_inst|r.state.S_ErrorWait                                     ; regout           ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|r.state.S_ErrorReset                                    ; |spacewire|spwstream:inst|spwlink:link_inst|r.state.S_ErrorReset                                    ; regout           ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|rxen~0                                                  ; |spacewire|spwstream:inst|spwlink:link_inst|rxen~0                                                  ; out0             ;
-; |spacewire|spwstream:inst|spwlink:link_inst|v~129                                                   ; |spacewire|spwstream:inst|spwlink:link_inst|v~129                                                   ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~131                                                   ; |spacewire|spwstream:inst|spwlink:link_inst|v~131                                                   ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|xmiti.stnull                                            ; |spacewire|spwstream:inst|spwlink:link_inst|xmiti.stnull                                            ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|xmiti.stfct                                             ; |spacewire|spwstream:inst|spwlink:link_inst|xmiti.stfct                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|linko.running                                           ; |spacewire|spwstream:inst|spwlink:link_inst|linko.running                                           ; out0             ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|Selector0~0                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector0~0                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector0~1                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector0~1                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector0~2                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector0~2                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector0~3                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector0~3                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector0~4                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector0~4                                            ; out0             ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|Selector0~5                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector0~5                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector0~6                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector0~6                                            ; out0             ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|Selector1~0                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector1~0                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector1~1                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector1~1                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector1~2                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector1~2                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector1~3                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector1~3                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector1~4                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector1~4                                            ; out0             ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|Selector1~5                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector1~5                                            ; out0             ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|Selector1~6                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector1~6                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector2~0                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector2~0                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector2~1                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector2~1                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector2~2                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector2~2                                            ; out0             ;
@@ -1530,27 +1515,20 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector5~4                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector5~4                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector5~5                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector5~5                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector5~6                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector5~6                                            ; out0             ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|Selector6~0                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector6~0                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector6~1                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector6~1                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector6~2                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector6~2                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector6~3                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector6~3                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector6~4                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector6~4                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector6~5                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector6~5                                            ; out0             ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|Selector6~6                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector6~6                                            ; out0             ;
-; |spacewire|spwstream:inst|spwlink:link_inst|Selector0~0                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector0~0                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector0~1                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector0~1                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector0~2                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector0~2                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector0~3                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector0~3                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector0~4                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector0~4                                             ; out0             ;
-; |spacewire|spwstream:inst|spwlink:link_inst|Selector0~5                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector0~5                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector0~6                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector0~6                                             ; out0             ;
-; |spacewire|spwstream:inst|spwlink:link_inst|Selector1~0                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector1~0                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector1~1                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector1~1                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector1~2                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector1~2                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector1~3                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector1~3                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector1~4                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector1~4                                             ; out0             ;
-; |spacewire|spwstream:inst|spwlink:link_inst|Selector1~5                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector1~5                                             ; out0             ;
-; |spacewire|spwstream:inst|spwlink:link_inst|Selector1~6                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector1~6                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector2~0                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector2~0                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector2~1                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector2~1                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector2~2                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector2~2                                             ; out0             ;
@@ -1579,13 +1557,11 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector5~4                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector5~4                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector5~5                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector5~5                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector5~6                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector5~6                                             ; out0             ;
-; |spacewire|spwstream:inst|spwlink:link_inst|Selector6~0                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector6~0                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector6~1                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector6~1                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector6~2                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector6~2                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector6~3                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector6~3                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector6~4                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector6~4                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector6~5                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector6~5                                             ; out0             ;
-; |spacewire|spwstream:inst|spwlink:link_inst|Selector6~6                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector6~6                                             ; out0             ;
 ; |spacewire|spwstream:inst1|LessThan0~0                                                              ; |spacewire|spwstream:inst1|LessThan0~0                                                              ; out0             ;
 ; |spacewire|spwstream:inst1|LessThan0~1                                                              ; |spacewire|spwstream:inst1|LessThan0~1                                                              ; out0             ;
 ; |spacewire|spwstream:inst1|LessThan0~2                                                              ; |spacewire|spwstream:inst1|LessThan0~2                                                              ; out0             ;
@@ -2191,7 +2167,6 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |spacewire|spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|Equal1~0                                    ; |spacewire|spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|Equal1~0                                    ; out0             ;
 ; |spacewire|spwstream:inst1|spwrecv:recv_inst|Equal0~0                                               ; |spacewire|spwstream:inst1|spwrecv:recv_inst|Equal0~0                                               ; out0             ;
 ; |spacewire|spwstream:inst1|spwrecv:recv_inst|Equal1~0                                               ; |spacewire|spwstream:inst1|spwrecv:recv_inst|Equal1~0                                               ; out0             ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|Equal0~0                                               ; |spacewire|spwstream:inst1|spwlink:link_inst|Equal0~0                                               ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Equal1~0                                               ; |spacewire|spwstream:inst1|spwlink:link_inst|Equal1~0                                               ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Equal2~0                                               ; |spacewire|spwstream:inst1|spwlink:link_inst|Equal2~0                                               ; out0             ;
 ; |spacewire|spwstream:inst|Equal1~0                                                                  ; |spacewire|spwstream:inst|Equal1~0                                                                  ; out0             ;
@@ -2211,7 +2186,6 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |spacewire|spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|Equal1~0                                     ; |spacewire|spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|Equal1~0                                     ; out0             ;
 ; |spacewire|spwstream:inst|spwrecv:recv_inst|Equal0~0                                                ; |spacewire|spwstream:inst|spwrecv:recv_inst|Equal0~0                                                ; out0             ;
 ; |spacewire|spwstream:inst|spwrecv:recv_inst|Equal1~0                                                ; |spacewire|spwstream:inst|spwrecv:recv_inst|Equal1~0                                                ; out0             ;
-; |spacewire|spwstream:inst|spwlink:link_inst|Equal0~0                                                ; |spacewire|spwstream:inst|spwlink:link_inst|Equal0~0                                                ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Equal1~0                                                ; |spacewire|spwstream:inst|spwlink:link_inst|Equal1~0                                                ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Equal2~0                                                ; |spacewire|spwstream:inst|spwlink:link_inst|Equal2~0                                                ; out0             ;
 ; |spacewire|spwstream:inst|spwrecv:recv_inst|lpm_mux:Mux12|mux_7qc:auto_generated|_~0                ; |spacewire|spwstream:inst|spwrecv:recv_inst|lpm_mux:Mux12|mux_7qc:auto_generated|_~0                ; out0             ;
@@ -2433,11 +2407,9 @@ The following table displays output ports that do not toggle to 0 during simulat
 +-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+------------------+
 ; Node Name                                                                                           ; Output Port Name                                                                                    ; Output Port Type ;
 +-----------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------+------------------+
-; |spacewire|pin_name1                                                                                ; |spacewire|pin_name1                                                                                ; pin_out          ;
+; |spacewire|SpWT_started                                                                             ; |spacewire|SpWT_started                                                                             ; pin_out          ;
 ; |spacewire|SpWT_linkstart                                                                           ; |spacewire|SpWT_linkstart                                                                           ; out              ;
 ; |spacewire|SpWR_linkstart                                                                           ; |spacewire|SpWR_linkstart                                                                           ; out              ;
-; |spacewire|pin_name2                                                                                ; |spacewire|pin_name2                                                                                ; pin_out          ;
-; |spacewire|SpWT_started                                                                             ; |spacewire|SpWT_started                                                                             ; pin_out          ;
 ; |spacewire|SpWT_connecting                                                                          ; |spacewire|SpWT_connecting                                                                          ; pin_out          ;
 ; |spacewire|SpWT_running                                                                             ; |spacewire|SpWT_running                                                                             ; pin_out          ;
 ; |spacewire|SpWT_txrdy                                                                               ; |spacewire|SpWT_txrdy                                                                               ; pin_out          ;
@@ -2445,6 +2417,10 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |spacewire|SpWR_running                                                                             ; |spacewire|SpWR_running                                                                             ; pin_out          ;
 ; |spacewire|SpWR_connecting                                                                          ; |spacewire|SpWR_connecting                                                                          ; pin_out          ;
 ; |spacewire|SpWR_started                                                                             ; |spacewire|SpWR_started                                                                             ; pin_out          ;
+; |spacewire|SpWT_do                                                                                  ; |spacewire|SpWT_do                                                                                  ; pin_out          ;
+; |spacewire|SpWT_so                                                                                  ; |spacewire|SpWT_so                                                                                  ; pin_out          ;
+; |spacewire|SpWR_do                                                                                  ; |spacewire|SpWR_do                                                                                  ; pin_out          ;
+; |spacewire|SpWR_so                                                                                  ; |spacewire|SpWR_so                                                                                  ; pin_out          ;
 ; |spacewire|spwstream:inst1|r.txfifo_raddr[8]                                                        ; |spacewire|spwstream:inst1|r.txfifo_raddr[8]                                                        ; regout           ;
 ; |spacewire|spwstream:inst1|r.txfifo_raddr[7]                                                        ; |spacewire|spwstream:inst1|r.txfifo_raddr[7]                                                        ; regout           ;
 ; |spacewire|spwstream:inst1|r.txfifo_raddr[6]                                                        ; |spacewire|spwstream:inst1|r.txfifo_raddr[6]                                                        ; regout           ;
@@ -2892,7 +2868,6 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |spacewire|spwstream:inst1|spwlink:link_inst|r.state.S_Ready                                        ; |spacewire|spwstream:inst1|spwlink:link_inst|r.state.S_Ready                                        ; regout           ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|r.state.S_Started                                      ; |spacewire|spwstream:inst1|spwlink:link_inst|r.state.S_Started                                      ; regout           ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|r.state.S_Connecting                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|r.state.S_Connecting                                   ; regout           ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|v~0                                                    ; |spacewire|spwstream:inst1|spwlink:link_inst|v~0                                                    ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~1                                                    ; |spacewire|spwstream:inst1|spwlink:link_inst|v~1                                                    ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~2                                                    ; |spacewire|spwstream:inst1|spwlink:link_inst|v~2                                                    ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~3                                                    ; |spacewire|spwstream:inst1|spwlink:link_inst|v~3                                                    ; out              ;
@@ -2903,19 +2878,16 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |spacewire|spwstream:inst1|spwlink:link_inst|process_0~2                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|process_0~2                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|process_0~3                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|process_0~3                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|process_0~4                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|process_0~4                                            ; out0             ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|v~6                                                    ; |spacewire|spwstream:inst1|spwlink:link_inst|v~6                                                    ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~7                                                    ; |spacewire|spwstream:inst1|spwlink:link_inst|v~7                                                    ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~8                                                    ; |spacewire|spwstream:inst1|spwlink:link_inst|v~8                                                    ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~9                                                    ; |spacewire|spwstream:inst1|spwlink:link_inst|v~9                                                    ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~10                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~10                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~11                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~11                                                   ; out              ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|v~12                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~12                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~13                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~13                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~14                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~14                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~15                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~15                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~16                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~16                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~17                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~17                                                   ; out              ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|v~18                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~18                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~19                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~19                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~20                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~20                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~21                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~21                                                   ; out              ;
@@ -2924,14 +2896,10 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v_timerrst~0                                           ; |spacewire|spwstream:inst1|spwlink:link_inst|v_timerrst~0                                           ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v_timerrst~1                                           ; |spacewire|spwstream:inst1|spwlink:link_inst|v_timerrst~1                                           ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|process_0~8                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|process_0~8                                            ; out0             ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|v~24                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~24                                                   ; out              ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|v~25                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~25                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~26                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~26                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~27                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~27                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~28                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~28                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~29                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~29                                                   ; out              ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|v~30                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~30                                                   ; out              ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|v~31                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~31                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~32                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~32                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~33                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~33                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~34                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~34                                                   ; out              ;
@@ -2939,13 +2907,11 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v_timerrst~2                                           ; |spacewire|spwstream:inst1|spwlink:link_inst|v_timerrst~2                                           ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|process_0~9                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|process_0~9                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|process_0~10                                           ; |spacewire|spwstream:inst1|spwlink:link_inst|process_0~10                                           ; out0             ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|v~36                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~36                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~37                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~37                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~38                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~38                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~39                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~39                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~40                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~40                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~41                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~41                                                   ; out              ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|v~42                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~42                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~43                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~43                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~44                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~44                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~45                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~45                                                   ; out              ;
@@ -2955,20 +2921,17 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |spacewire|spwstream:inst1|spwlink:link_inst|process_0~11                                           ; |spacewire|spwstream:inst1|spwlink:link_inst|process_0~11                                           ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|process_0~12                                           ; |spacewire|spwstream:inst1|spwlink:link_inst|process_0~12                                           ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|process_0~13                                           ; |spacewire|spwstream:inst1|spwlink:link_inst|process_0~13                                           ; out0             ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|v~48                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~48                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~49                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~49                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~50                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~50                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~51                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~51                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~52                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~52                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~53                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~53                                                   ; out              ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|v~54                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~54                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~55                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~55                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~56                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~56                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~57                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~57                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~58                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~58                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~59                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~59                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|process_0~14                                           ; |spacewire|spwstream:inst1|spwlink:link_inst|process_0~14                                           ; out0             ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|v~60                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~60                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~61                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~61                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~62                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~62                                                   ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~63                                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|v~63                                                   ; out              ;
@@ -3028,12 +2991,8 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~103                                                  ; |spacewire|spwstream:inst1|spwlink:link_inst|v~103                                                  ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|r.errcred                                              ; |spacewire|spwstream:inst1|spwlink:link_inst|r.errcred                                              ; regout           ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|r.timercnt[10]                                         ; |spacewire|spwstream:inst1|spwlink:link_inst|r.timercnt[10]                                         ; regout           ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|v~115                                                  ; |spacewire|spwstream:inst1|spwlink:link_inst|v~115                                                  ; out              ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|v~127                                                  ; |spacewire|spwstream:inst1|spwlink:link_inst|v~127                                                  ; out              ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|r.timercnt[9]                                          ; |spacewire|spwstream:inst1|spwlink:link_inst|r.timercnt[9]                                          ; regout           ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|r.timercnt[8]                                          ; |spacewire|spwstream:inst1|spwlink:link_inst|r.timercnt[8]                                          ; regout           ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|r.timercnt[6]                                          ; |spacewire|spwstream:inst1|spwlink:link_inst|r.timercnt[6]                                          ; regout           ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|r.timercnt[5]                                          ; |spacewire|spwstream:inst1|spwlink:link_inst|r.timercnt[5]                                          ; regout           ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|linko.rxchar                                           ; |spacewire|spwstream:inst1|spwlink:link_inst|linko.rxchar                                           ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|txen~0                                                 ; |spacewire|spwstream:inst1|spwlink:link_inst|txen~0                                                 ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|r.timerdone                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|r.timerdone                                            ; regout           ;
@@ -3041,8 +3000,6 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |spacewire|spwstream:inst1|spwlink:link_inst|r.xmit_fct_in                                          ; |spacewire|spwstream:inst1|spwlink:link_inst|r.xmit_fct_in                                          ; regout           ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|xmiti.txwrite                                          ; |spacewire|spwstream:inst1|spwlink:link_inst|xmiti.txwrite                                          ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|r.state.S_ErrorWait                                    ; |spacewire|spwstream:inst1|spwlink:link_inst|r.state.S_ErrorWait                                    ; regout           ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|r.state.S_ErrorReset                                   ; |spacewire|spwstream:inst1|spwlink:link_inst|r.state.S_ErrorReset                                   ; regout           ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|rxen~0                                                 ; |spacewire|spwstream:inst1|spwlink:link_inst|rxen~0                                                 ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~129                                                  ; |spacewire|spwstream:inst1|spwlink:link_inst|v~129                                                  ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|v~131                                                  ; |spacewire|spwstream:inst1|spwlink:link_inst|v~131                                                  ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|xmiti.stnull                                           ; |spacewire|spwstream:inst1|spwlink:link_inst|xmiti.stnull                                           ; out0             ;
@@ -3495,7 +3452,6 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |spacewire|spwstream:inst|spwlink:link_inst|r.state.S_Ready                                         ; |spacewire|spwstream:inst|spwlink:link_inst|r.state.S_Ready                                         ; regout           ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|r.state.S_Started                                       ; |spacewire|spwstream:inst|spwlink:link_inst|r.state.S_Started                                       ; regout           ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|r.state.S_Connecting                                    ; |spacewire|spwstream:inst|spwlink:link_inst|r.state.S_Connecting                                    ; regout           ;
-; |spacewire|spwstream:inst|spwlink:link_inst|v~0                                                     ; |spacewire|spwstream:inst|spwlink:link_inst|v~0                                                     ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~1                                                     ; |spacewire|spwstream:inst|spwlink:link_inst|v~1                                                     ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~2                                                     ; |spacewire|spwstream:inst|spwlink:link_inst|v~2                                                     ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~3                                                     ; |spacewire|spwstream:inst|spwlink:link_inst|v~3                                                     ; out              ;
@@ -3506,19 +3462,16 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |spacewire|spwstream:inst|spwlink:link_inst|process_0~2                                             ; |spacewire|spwstream:inst|spwlink:link_inst|process_0~2                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|process_0~3                                             ; |spacewire|spwstream:inst|spwlink:link_inst|process_0~3                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|process_0~4                                             ; |spacewire|spwstream:inst|spwlink:link_inst|process_0~4                                             ; out0             ;
-; |spacewire|spwstream:inst|spwlink:link_inst|v~6                                                     ; |spacewire|spwstream:inst|spwlink:link_inst|v~6                                                     ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~7                                                     ; |spacewire|spwstream:inst|spwlink:link_inst|v~7                                                     ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~8                                                     ; |spacewire|spwstream:inst|spwlink:link_inst|v~8                                                     ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~9                                                     ; |spacewire|spwstream:inst|spwlink:link_inst|v~9                                                     ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~10                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~10                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~11                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~11                                                    ; out              ;
-; |spacewire|spwstream:inst|spwlink:link_inst|v~12                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~12                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~13                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~13                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~14                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~14                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~15                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~15                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~16                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~16                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~17                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~17                                                    ; out              ;
-; |spacewire|spwstream:inst|spwlink:link_inst|v~18                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~18                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~19                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~19                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~20                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~20                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~21                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~21                                                    ; out              ;
@@ -3527,14 +3480,10 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |spacewire|spwstream:inst|spwlink:link_inst|v_timerrst~0                                            ; |spacewire|spwstream:inst|spwlink:link_inst|v_timerrst~0                                            ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v_timerrst~1                                            ; |spacewire|spwstream:inst|spwlink:link_inst|v_timerrst~1                                            ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|process_0~8                                             ; |spacewire|spwstream:inst|spwlink:link_inst|process_0~8                                             ; out0             ;
-; |spacewire|spwstream:inst|spwlink:link_inst|v~24                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~24                                                    ; out              ;
-; |spacewire|spwstream:inst|spwlink:link_inst|v~25                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~25                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~26                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~26                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~27                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~27                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~28                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~28                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~29                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~29                                                    ; out              ;
-; |spacewire|spwstream:inst|spwlink:link_inst|v~30                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~30                                                    ; out              ;
-; |spacewire|spwstream:inst|spwlink:link_inst|v~31                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~31                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~32                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~32                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~33                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~33                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~34                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~34                                                    ; out              ;
@@ -3542,13 +3491,11 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |spacewire|spwstream:inst|spwlink:link_inst|v_timerrst~2                                            ; |spacewire|spwstream:inst|spwlink:link_inst|v_timerrst~2                                            ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|process_0~9                                             ; |spacewire|spwstream:inst|spwlink:link_inst|process_0~9                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|process_0~10                                            ; |spacewire|spwstream:inst|spwlink:link_inst|process_0~10                                            ; out0             ;
-; |spacewire|spwstream:inst|spwlink:link_inst|v~36                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~36                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~37                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~37                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~38                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~38                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~39                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~39                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~40                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~40                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~41                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~41                                                    ; out              ;
-; |spacewire|spwstream:inst|spwlink:link_inst|v~42                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~42                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~43                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~43                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~44                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~44                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~45                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~45                                                    ; out              ;
@@ -3558,20 +3505,17 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |spacewire|spwstream:inst|spwlink:link_inst|process_0~11                                            ; |spacewire|spwstream:inst|spwlink:link_inst|process_0~11                                            ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|process_0~12                                            ; |spacewire|spwstream:inst|spwlink:link_inst|process_0~12                                            ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|process_0~13                                            ; |spacewire|spwstream:inst|spwlink:link_inst|process_0~13                                            ; out0             ;
-; |spacewire|spwstream:inst|spwlink:link_inst|v~48                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~48                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~49                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~49                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~50                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~50                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~51                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~51                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~52                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~52                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~53                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~53                                                    ; out              ;
-; |spacewire|spwstream:inst|spwlink:link_inst|v~54                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~54                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~55                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~55                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~56                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~56                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~57                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~57                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~58                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~58                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~59                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~59                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|process_0~14                                            ; |spacewire|spwstream:inst|spwlink:link_inst|process_0~14                                            ; out0             ;
-; |spacewire|spwstream:inst|spwlink:link_inst|v~60                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~60                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~61                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~61                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~62                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~62                                                    ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~63                                                    ; |spacewire|spwstream:inst|spwlink:link_inst|v~63                                                    ; out              ;
@@ -3631,12 +3575,8 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~103                                                   ; |spacewire|spwstream:inst|spwlink:link_inst|v~103                                                   ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|r.errcred                                               ; |spacewire|spwstream:inst|spwlink:link_inst|r.errcred                                               ; regout           ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|r.timercnt[10]                                          ; |spacewire|spwstream:inst|spwlink:link_inst|r.timercnt[10]                                          ; regout           ;
-; |spacewire|spwstream:inst|spwlink:link_inst|v~115                                                   ; |spacewire|spwstream:inst|spwlink:link_inst|v~115                                                   ; out              ;
-; |spacewire|spwstream:inst|spwlink:link_inst|v~127                                                   ; |spacewire|spwstream:inst|spwlink:link_inst|v~127                                                   ; out              ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|r.timercnt[9]                                           ; |spacewire|spwstream:inst|spwlink:link_inst|r.timercnt[9]                                           ; regout           ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|r.timercnt[8]                                           ; |spacewire|spwstream:inst|spwlink:link_inst|r.timercnt[8]                                           ; regout           ;
-; |spacewire|spwstream:inst|spwlink:link_inst|r.timercnt[6]                                           ; |spacewire|spwstream:inst|spwlink:link_inst|r.timercnt[6]                                           ; regout           ;
-; |spacewire|spwstream:inst|spwlink:link_inst|r.timercnt[5]                                           ; |spacewire|spwstream:inst|spwlink:link_inst|r.timercnt[5]                                           ; regout           ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|linko.rxchar                                            ; |spacewire|spwstream:inst|spwlink:link_inst|linko.rxchar                                            ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|txen~0                                                  ; |spacewire|spwstream:inst|spwlink:link_inst|txen~0                                                  ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|r.timerdone                                             ; |spacewire|spwstream:inst|spwlink:link_inst|r.timerdone                                             ; regout           ;
@@ -3644,27 +3584,20 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |spacewire|spwstream:inst|spwlink:link_inst|r.xmit_fct_in                                           ; |spacewire|spwstream:inst|spwlink:link_inst|r.xmit_fct_in                                           ; regout           ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|xmiti.txwrite                                           ; |spacewire|spwstream:inst|spwlink:link_inst|xmiti.txwrite                                           ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|r.state.S_ErrorWait                                     ; |spacewire|spwstream:inst|spwlink:link_inst|r.state.S_ErrorWait                                     ; regout           ;
-; |spacewire|spwstream:inst|spwlink:link_inst|r.state.S_ErrorReset                                    ; |spacewire|spwstream:inst|spwlink:link_inst|r.state.S_ErrorReset                                    ; regout           ;
-; |spacewire|spwstream:inst|spwlink:link_inst|rxen~0                                                  ; |spacewire|spwstream:inst|spwlink:link_inst|rxen~0                                                  ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~129                                                   ; |spacewire|spwstream:inst|spwlink:link_inst|v~129                                                   ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|v~131                                                   ; |spacewire|spwstream:inst|spwlink:link_inst|v~131                                                   ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|xmiti.stnull                                            ; |spacewire|spwstream:inst|spwlink:link_inst|xmiti.stnull                                            ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|xmiti.stfct                                             ; |spacewire|spwstream:inst|spwlink:link_inst|xmiti.stfct                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|linko.running                                           ; |spacewire|spwstream:inst|spwlink:link_inst|linko.running                                           ; out0             ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|Selector0~0                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector0~0                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector0~1                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector0~1                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector0~2                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector0~2                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector0~3                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector0~3                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector0~4                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector0~4                                            ; out0             ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|Selector0~5                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector0~5                                            ; out0             ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|Selector0~6                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector0~6                                            ; out0             ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|Selector1~0                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector1~0                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector1~1                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector1~1                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector1~2                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector1~2                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector1~3                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector1~3                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector1~4                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector1~4                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector1~5                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector1~5                                            ; out0             ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|Selector1~6                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector1~6                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector2~0                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector2~0                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector2~1                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector2~1                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector2~2                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector2~2                                            ; out0             ;
@@ -3693,27 +3626,20 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector5~4                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector5~4                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector5~5                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector5~5                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector5~6                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector5~6                                            ; out0             ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|Selector6~0                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector6~0                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector6~1                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector6~1                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector6~2                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector6~2                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector6~3                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector6~3                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector6~4                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector6~4                                            ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector6~5                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector6~5                                            ; out0             ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|Selector6~6                                            ; |spacewire|spwstream:inst1|spwlink:link_inst|Selector6~6                                            ; out0             ;
-; |spacewire|spwstream:inst|spwlink:link_inst|Selector0~0                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector0~0                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector0~1                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector0~1                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector0~2                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector0~2                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector0~3                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector0~3                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector0~4                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector0~4                                             ; out0             ;
-; |spacewire|spwstream:inst|spwlink:link_inst|Selector0~5                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector0~5                                             ; out0             ;
-; |spacewire|spwstream:inst|spwlink:link_inst|Selector0~6                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector0~6                                             ; out0             ;
-; |spacewire|spwstream:inst|spwlink:link_inst|Selector1~0                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector1~0                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector1~1                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector1~1                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector1~2                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector1~2                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector1~3                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector1~3                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector1~4                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector1~4                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector1~5                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector1~5                                             ; out0             ;
-; |spacewire|spwstream:inst|spwlink:link_inst|Selector1~6                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector1~6                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector2~0                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector2~0                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector2~1                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector2~1                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector2~2                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector2~2                                             ; out0             ;
@@ -3742,13 +3668,11 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector5~4                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector5~4                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector5~5                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector5~5                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector5~6                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector5~6                                             ; out0             ;
-; |spacewire|spwstream:inst|spwlink:link_inst|Selector6~0                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector6~0                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector6~1                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector6~1                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector6~2                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector6~2                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector6~3                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector6~3                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector6~4                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector6~4                                             ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Selector6~5                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector6~5                                             ; out0             ;
-; |spacewire|spwstream:inst|spwlink:link_inst|Selector6~6                                             ; |spacewire|spwstream:inst|spwlink:link_inst|Selector6~6                                             ; out0             ;
 ; |spacewire|spwstream:inst1|LessThan0~0                                                              ; |spacewire|spwstream:inst1|LessThan0~0                                                              ; out0             ;
 ; |spacewire|spwstream:inst1|LessThan0~1                                                              ; |spacewire|spwstream:inst1|LessThan0~1                                                              ; out0             ;
 ; |spacewire|spwstream:inst1|LessThan0~2                                                              ; |spacewire|spwstream:inst1|LessThan0~2                                                              ; out0             ;
@@ -4094,9 +4018,6 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Add4~10                                                ; |spacewire|spwstream:inst1|spwlink:link_inst|Add4~10                                                ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Add4~11                                                ; |spacewire|spwstream:inst1|spwlink:link_inst|Add4~11                                                ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Add4~12                                                ; |spacewire|spwstream:inst1|spwlink:link_inst|Add4~12                                                ; out0             ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|Add5~13                                                ; |spacewire|spwstream:inst1|spwlink:link_inst|Add5~13                                                ; out0             ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|Add5~16                                                ; |spacewire|spwstream:inst1|spwlink:link_inst|Add5~16                                                ; out0             ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|Add5~17                                                ; |spacewire|spwstream:inst1|spwlink:link_inst|Add5~17                                                ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Add5~20                                                ; |spacewire|spwstream:inst1|spwlink:link_inst|Add5~20                                                ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Add5~23                                                ; |spacewire|spwstream:inst1|spwlink:link_inst|Add5~23                                                ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Add5~26                                                ; |spacewire|spwstream:inst1|spwlink:link_inst|Add5~26                                                ; out0             ;
@@ -4359,9 +4280,6 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |spacewire|spwstream:inst|spwlink:link_inst|Add4~10                                                 ; |spacewire|spwstream:inst|spwlink:link_inst|Add4~10                                                 ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Add4~11                                                 ; |spacewire|spwstream:inst|spwlink:link_inst|Add4~11                                                 ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Add4~12                                                 ; |spacewire|spwstream:inst|spwlink:link_inst|Add4~12                                                 ; out0             ;
-; |spacewire|spwstream:inst|spwlink:link_inst|Add5~13                                                 ; |spacewire|spwstream:inst|spwlink:link_inst|Add5~13                                                 ; out0             ;
-; |spacewire|spwstream:inst|spwlink:link_inst|Add5~16                                                 ; |spacewire|spwstream:inst|spwlink:link_inst|Add5~16                                                 ; out0             ;
-; |spacewire|spwstream:inst|spwlink:link_inst|Add5~17                                                 ; |spacewire|spwstream:inst|spwlink:link_inst|Add5~17                                                 ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Add5~20                                                 ; |spacewire|spwstream:inst|spwlink:link_inst|Add5~20                                                 ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Add5~23                                                 ; |spacewire|spwstream:inst|spwlink:link_inst|Add5~23                                                 ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Add5~26                                                 ; |spacewire|spwstream:inst|spwlink:link_inst|Add5~26                                                 ; out0             ;
@@ -4382,7 +4300,6 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |spacewire|spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|Equal1~0                                    ; |spacewire|spwstream:inst1|spwxmit:\xmit_sel0:xmit_inst|Equal1~0                                    ; out0             ;
 ; |spacewire|spwstream:inst1|spwrecv:recv_inst|Equal0~0                                               ; |spacewire|spwstream:inst1|spwrecv:recv_inst|Equal0~0                                               ; out0             ;
 ; |spacewire|spwstream:inst1|spwrecv:recv_inst|Equal1~0                                               ; |spacewire|spwstream:inst1|spwrecv:recv_inst|Equal1~0                                               ; out0             ;
-; |spacewire|spwstream:inst1|spwlink:link_inst|Equal0~0                                               ; |spacewire|spwstream:inst1|spwlink:link_inst|Equal0~0                                               ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Equal1~0                                               ; |spacewire|spwstream:inst1|spwlink:link_inst|Equal1~0                                               ; out0             ;
 ; |spacewire|spwstream:inst1|spwlink:link_inst|Equal2~0                                               ; |spacewire|spwstream:inst1|spwlink:link_inst|Equal2~0                                               ; out0             ;
 ; |spacewire|spwstream:inst|Equal1~0                                                                  ; |spacewire|spwstream:inst|Equal1~0                                                                  ; out0             ;
@@ -4402,7 +4319,6 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |spacewire|spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|Equal1~0                                     ; |spacewire|spwstream:inst|spwxmit:\xmit_sel0:xmit_inst|Equal1~0                                     ; out0             ;
 ; |spacewire|spwstream:inst|spwrecv:recv_inst|Equal0~0                                                ; |spacewire|spwstream:inst|spwrecv:recv_inst|Equal0~0                                                ; out0             ;
 ; |spacewire|spwstream:inst|spwrecv:recv_inst|Equal1~0                                                ; |spacewire|spwstream:inst|spwrecv:recv_inst|Equal1~0                                                ; out0             ;
-; |spacewire|spwstream:inst|spwlink:link_inst|Equal0~0                                                ; |spacewire|spwstream:inst|spwlink:link_inst|Equal0~0                                                ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Equal1~0                                                ; |spacewire|spwstream:inst|spwlink:link_inst|Equal1~0                                                ; out0             ;
 ; |spacewire|spwstream:inst|spwlink:link_inst|Equal2~0                                                ; |spacewire|spwstream:inst|spwlink:link_inst|Equal2~0                                                ; out0             ;
 ; |spacewire|spwstream:inst|spwrecv:recv_inst|lpm_mux:Mux12|mux_7qc:auto_generated|_~0                ; |spacewire|spwstream:inst|spwrecv:recv_inst|lpm_mux:Mux12|mux_7qc:auto_generated|_~0                ; out0             ;
@@ -4631,19 +4547,19 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Simulator
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Jun  2 18:36:49 2023
+    Info: Processing started: Sun Jun  4 16:28:32 2023
 Info: Command: quartus_sim --simulation_results_format=VWF spacewire -c spacewire_qsim
-Info (324025): Using vector source file "/home/quartus/spacewire/signal_test.vwf"
+Info (324025): Using vector source file "/home/quartus/spacewire/spacewire.vwf"
 Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info (310002): Simulation partitioned into 1 sub-simulations
-Info (328053): Simulation coverage is       7.01 %
-Info (328052): Number of transitions in simulation is 2289
+Info (328053): Simulation coverage is       8.44 %
+Info (328052): Number of transitions in simulation is 22739
 Info (324045): Vector file spacewire_qsim.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
 Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 672 megabytes
-    Info: Processing ended: Fri Jun  2 18:36:50 2023
+    Info: Processing ended: Sun Jun  4 16:28:33 2023
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
 
 

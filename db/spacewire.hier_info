@@ -1,11 +1,9 @@
 |spacewire
-pin_name1 <= spwstream:inst.spw_do
+SpWT_started <= spwstream:inst.started
 CLK => spwstream:inst.clk
 CLK => spwstream:inst1.clk
 SpWT_linkstart => spwstream:inst.linkstart
 SpWR_linkstart => spwstream:inst1.linkstart
-pin_name2 <= spwstream:inst.spw_so
-SpWT_started <= spwstream:inst.started
 SpWT_connecting <= spwstream:inst.connecting
 SpWT_running <= spwstream:inst.running
 SpWT_txrdy <= spwstream:inst.txrdy
@@ -13,6 +11,10 @@ SpWR_txrdy <= spwstream:inst1.txrdy
 SpWR_running <= spwstream:inst1.running
 SpWR_connecting <= spwstream:inst1.connecting
 SpWR_started <= spwstream:inst1.started
+SpWT_do <= spwstream:inst.spw_do
+SpWT_so <= spwstream:inst.spw_so
+SpWR_do <= spwstream:inst1.spw_so
+SpWR_so <= spwstream:inst1.spw_so
 
 
 |spacewire|spwstream:inst
@@ -2011,7 +2013,7 @@ wdata[8] => s_mem~11.DATAIN
 wdata[8] => s_mem.DATAIN8
 
 
-|spacewire|lpm_constant0:inst5
+|spacewire|lpm_constant0:inst3
 result[0] <= lpm_constant:LPM_CONSTANT_component.result[0]
 result[1] <= lpm_constant:LPM_CONSTANT_component.result[1]
 result[2] <= lpm_constant:LPM_CONSTANT_component.result[2]
@@ -2022,7 +2024,7 @@ result[6] <= lpm_constant:LPM_CONSTANT_component.result[6]
 result[7] <= lpm_constant:LPM_CONSTANT_component.result[7]
 
 
-|spacewire|lpm_constant0:inst5|lpm_constant:LPM_CONSTANT_component
+|spacewire|lpm_constant0:inst3|lpm_constant:LPM_CONSTANT_component
 result[0] <= <VCC>
 result[1] <= <GND>
 result[2] <= <GND>
@@ -2033,7 +2035,7 @@ result[6] <= <GND>
 result[7] <= <GND>
 
 
-|spacewire|lpm_constant0:inst4
+|spacewire|lpm_constant0:inst2
 result[0] <= lpm_constant:LPM_CONSTANT_component.result[0]
 result[1] <= lpm_constant:LPM_CONSTANT_component.result[1]
 result[2] <= lpm_constant:LPM_CONSTANT_component.result[2]
@@ -2044,7 +2046,7 @@ result[6] <= lpm_constant:LPM_CONSTANT_component.result[6]
 result[7] <= lpm_constant:LPM_CONSTANT_component.result[7]
 
 
-|spacewire|lpm_constant0:inst4|lpm_constant:LPM_CONSTANT_component
+|spacewire|lpm_constant0:inst2|lpm_constant:LPM_CONSTANT_component
 result[0] <= <VCC>
 result[1] <= <GND>
 result[2] <= <GND>
