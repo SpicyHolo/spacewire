@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Sun Jun  4 16:47:27 2023
+Analysis & Synthesis Status : Successful - Mon Sep 11 20:27:42 2023
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : spacewire
 Top-level Entity Name : spacewire
 Family : Cyclone IV E
-Total logic elements : 539
-    Total combinational functions : 521
-    Dedicated logic registers : 269
-Total registers : 269
-Total pins : 15
+Total logic elements : 608
+    Total combinational functions : 590
+    Dedicated logic registers : 304
+Total registers : 304
+Total pins : 36
 Total virtual pins : 0
-Total memory bits : 0
+Total memory bits : 36,864
 Embedded Multiplier 9-bit elements : 0
 Total PLLs : 0

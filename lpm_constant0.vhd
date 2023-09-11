@@ -104,6 +104,6 @@ END SYN;
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_constant0.vhd TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_constant0.inc FALSE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_constant0.cmp TRUE
--- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_constant0.bsf TRUE FALSE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_constant0.bsf TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL lpm_constant0_inst.vhd TRUE
 -- Retrieval info: LIB_FILE: lpm
