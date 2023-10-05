@@ -1,0 +1,33 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "transmitter_spw_do",
+					"strict" : false
+				},
+				{
+					"name" : "receiver_spw_do",
+					"strict" : false
+				},
+				{
+					"name" : "transmitter_spw_so",
+					"strict" : false
+				},
+				{
+					"name" : "receiver_spw_so",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "linkstart",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

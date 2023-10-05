@@ -1,0 +1,73 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity WriteController is
+    Port (
+        i_Clk : in STD_LOGIC;
+        i_Key : in STD_LOGIC;
+        i_Rst : in STD_LOGIC;
+        o_rxWrite : out STD_LOGIC
+    );
+end WriteController;
+
+architecture Behavioral of WriteController is
+    type StateType is (Idle, Waiting, Active);
+    signal CurrentState, NextState : StateType := Idle;
+    signal KeyRisingEdge, ClkFallingEdge, OutputActive: std_logic := '0';
+    
+begin
+    -- reset, edge detection on clk, key
+    process(i_Clk, i_Rst)
+    begin
+        if i_Rst = '1' then
+            CurrentState <= Idle;
+        elsif rising_edge(clk) then
+            KeyRisingEdge <= key;
+            ClkFallingEdge <= '0';
+        elsif falling_edge(clk) then
+            ClkFallingEdge <= '1';
+            KeyRisingEdge <= '0';
+        end if;
+    end process;
+    
+    -- Update State logic
+    process(CurrentState, Key_Rising_edge, ClkFallingEdge)
+    begin
+        case CurrenState is
+            when Idle =>
+                if KeyRisingEdge = '1' then
+                    NextState <= Waiting;
+                else
+                    NextState <= Idle;
+                end if;
+                
+            when Waiting =>
+                if ClkFallingEdge = '1' then
+                    NextState <= Active;
+                else
+                    NextState <= Waiting;
+                end if;
+                
+            when Active =>
+                if ClkFallingEdge = '1' then
+                    NextState <= Idle;
+                else
+                    NextState <= Active;
+                end if;
+        end case;
+    end process;
+
+    -- Update Output
+   process(CurrentState)
+    begin
+        CurrentState <= NextState;
+        case CurrentState is
+            when Idle =>
+                o_rxWrite <= '0';
+            when Waiting =>
+                o_rxWrite <= '0';
+            when Active =>
+                o_rxWrite <= '1';
+        end case;
+          
+end Behavioral;
