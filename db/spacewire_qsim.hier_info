@@ -2,6 +2,7 @@
 SpWT_started <= spwstream:inst.started
 CLK => spwstream:inst.clk
 CLK => spwstream:inst1.clk
+CLK => FallingEdgeLatch:inst4.clk
 SpWT_linkstart => spwstream:inst.linkstart
 SpWT_txWrite => spwstream:inst.txwrite
 SpWT_txFlag => spwstream:inst.txflag
@@ -28,14 +29,22 @@ SpWR_do <= spwstream:inst1.spw_do
 SpWR_so <= spwstream:inst1.spw_so
 SpWR_rxValid <= spwstream:inst1.rxvalid
 SpWR_rxFlag <= spwstream:inst1.rxflag
-DataRecv[0] <= spwstream:inst1.rxdata[0]
-DataRecv[1] <= spwstream:inst1.rxdata[1]
-DataRecv[2] <= spwstream:inst1.rxdata[2]
-DataRecv[3] <= spwstream:inst1.rxdata[3]
-DataRecv[4] <= spwstream:inst1.rxdata[4]
-DataRecv[5] <= spwstream:inst1.rxdata[5]
-DataRecv[6] <= spwstream:inst1.rxdata[6]
-DataRecv[7] <= spwstream:inst1.rxdata[7]
+DataRecv5[0] <= FallingEdgeLatch:inst4.Q[0]
+DataRecv5[1] <= FallingEdgeLatch:inst4.Q[1]
+DataRecv5[2] <= FallingEdgeLatch:inst4.Q[2]
+DataRecv5[3] <= FallingEdgeLatch:inst4.Q[3]
+DataRecv5[4] <= FallingEdgeLatch:inst4.Q[4]
+DataRecv5[5] <= FallingEdgeLatch:inst4.Q[5]
+DataRecv5[6] <= FallingEdgeLatch:inst4.Q[6]
+DataRecv5[7] <= FallingEdgeLatch:inst4.Q[7]
+rxdata[0] <= spwstream:inst1.rxdata[0]
+rxdata[1] <= spwstream:inst1.rxdata[1]
+rxdata[2] <= spwstream:inst1.rxdata[2]
+rxdata[3] <= spwstream:inst1.rxdata[3]
+rxdata[4] <= spwstream:inst1.rxdata[4]
+rxdata[5] <= spwstream:inst1.rxdata[5]
+rxdata[6] <= spwstream:inst1.rxdata[6]
+rxdata[7] <= spwstream:inst1.rxdata[7]
 
 
 |spacewire|spwstream:inst
@@ -2076,5 +2085,40 @@ result[4] <= <GND>
 result[5] <= <GND>
 result[6] <= <GND>
 result[7] <= <GND>
+
+
+|spacewire|FallingEdgeLatch:inst4
+D[0] => s_register[0].DATAIN
+D[1] => s_register[1].DATAIN
+D[2] => s_register[2].DATAIN
+D[3] => s_register[3].DATAIN
+D[4] => s_register[4].DATAIN
+D[5] => s_register[5].DATAIN
+D[6] => s_register[6].DATAIN
+D[7] => s_register[7].DATAIN
+rxvalid => s_register[0].ENA
+rxvalid => s_register[1].ENA
+rxvalid => s_register[2].ENA
+rxvalid => s_register[3].ENA
+rxvalid => s_register[4].ENA
+rxvalid => s_register[5].ENA
+rxvalid => s_register[6].ENA
+rxvalid => s_register[7].ENA
+clk => s_register[0].CLK
+clk => s_register[1].CLK
+clk => s_register[2].CLK
+clk => s_register[3].CLK
+clk => s_register[4].CLK
+clk => s_register[5].CLK
+clk => s_register[6].CLK
+clk => s_register[7].CLK
+Q[0] <= s_register[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= s_register[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= s_register[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= s_register[3].DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= s_register[4].DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= s_register[5].DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= s_register[6].DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= s_register[7].DB_MAX_OUTPUT_PORT_TYPE
 
 

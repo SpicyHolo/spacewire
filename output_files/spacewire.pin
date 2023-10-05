@@ -69,62 +69,62 @@ CHIP  "spacewire"  ASSIGNED TO AN: EP4CE22F17C6
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
 VCCIO8                       : A1        : power  :                   : 2.5V    : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A2        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A3        :        :                   :         : 8         :                
-DataSend[3]                  : A4        : input  : 2.5 V             :         : 8         : N              
-DataSend[0]                  : A5        : input  : 2.5 V             :         : 8         : N              
-DataSend[6]                  : A6        : input  : 2.5 V             :         : 8         : N              
-SpWT_do                      : A7        : output : 2.5 V             :         : 8         : N              
+SpWR_do                      : A2        : output : 2.5 V             :         : 8         : N              
+DataRecv5[7]                 : A3        : output : 2.5 V             :         : 8         : N              
+SpWR_txrdy                   : A4        : output : 2.5 V             :         : 8         : N              
+DataRecv5[4]                 : A5        : output : 2.5 V             :         : 8         : N              
+DataRecv5[2]                 : A6        : output : 2.5 V             :         : 8         : N              
+rxdata[1]                    : A7        : output : 2.5 V             :         : 8         : N              
 GND+                         : A8        :        :                   :         : 8         :                
 GND+                         : A9        :        :                   :         : 7         :                
-SpWR_running                 : A10       : output : 2.5 V             :         : 7         : N              
-DataRecv[7]                  : A11       : output : 2.5 V             :         : 7         : N              
-SpWR_linkstart               : A12       : input  : 2.5 V             :         : 7         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : A13       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A14       :        :                   :         : 7         :                
-DataRecv[3]                  : A15       : output : 2.5 V             :         : 7         : N              
+DataSend[2]                  : A10       : input  : 2.5 V             :         : 7         : N              
+rxdata[0]                    : A11       : output : 2.5 V             :         : 7         : N              
+SpWT_txrdy                   : A12       : output : 2.5 V             :         : 7         : N              
+SpWT_connecting              : A13       : output : 2.5 V             :         : 7         : N              
+DataSend[6]                  : A14       : input  : 2.5 V             :         : 7         : N              
+DataSend[0]                  : A15       : input  : 2.5 V             :         : 7         : N              
 VCCIO7                       : A16       : power  :                   : 2.5V    : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B1        :        :                   :         : 1         :                
 GND                          : B2        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B3        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B4        :        :                   :         : 8         :                
-DataSend[4]                  : B5        : input  : 2.5 V             :         : 8         : N              
-SpWT_txrdy                   : B6        : output : 2.5 V             :         : 8         : N              
-SpWT_txFlag                  : B7        : input  : 2.5 V             :         : 8         : N              
+SpWR_rxFlag                  : B3        : output : 2.5 V             :         : 8         : N              
+rxdata[6]                    : B4        : output : 2.5 V             :         : 8         : N              
+SpWR_rxRead                  : B5        : input  : 2.5 V             :         : 8         : N              
+DataRecv5[6]                 : B6        : output : 2.5 V             :         : 8         : N              
+DataRecv5[0]                 : B7        : output : 2.5 V             :         : 8         : N              
 GND+                         : B8        :        :                   :         : 8         :                
 GND+                         : B9        :        :                   :         : 7         :                
-SpWR_connecting              : B10       : output : 2.5 V             :         : 7         : N              
-SpWR_rxFlag                  : B11       : output : 2.5 V             :         : 7         : N              
-DataRecv[0]                  : B12       : output : 2.5 V             :         : 7         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : B13       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B14       :        :                   :         : 7         :                
+DataSend[4]                  : B10       : input  : 2.5 V             :         : 7         : N              
+DataSend[1]                  : B11       : input  : 2.5 V             :         : 7         : N              
+DataSend[5]                  : B12       : input  : 2.5 V             :         : 7         : N              
+rxdata[3]                    : B13       : output : 2.5 V             :         : 7         : N              
+SpWR_started                 : B14       : output : 2.5 V             :         : 7         : N              
 GND                          : B15       : gnd    :                   :         :           :                
-SpWR_rxRead                  : B16       : input  : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B16       :        :                   :         : 6         :                
 ~ALTERA_ASDO_DATA1~ / RESERVED_INPUT_WITH_WEAK_PULLUP : C1        : input  : 2.5 V             :         : 1         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : C2        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C3        :        :                   :         : 8         :                
 VCCIO8                       : C4        : power  :                   : 2.5V    : 8         :                
 GND                          : C5        : gnd    :                   :         :           :                
-DataSend[5]                  : C6        : input  : 2.5 V             :         : 8         : N              
+rxdata[2]                    : C6        : output : 2.5 V             :         : 8         : N              
 VCCIO8                       : C7        : power  :                   : 2.5V    : 8         :                
-SpWT_started                 : C8        : output : 2.5 V             :         : 8         : N              
-SpWR_do                      : C9        : output : 2.5 V             :         : 7         : N              
+SpWR_connecting              : C8        : output : 2.5 V             :         : 8         : N              
+SpWT_started                 : C9        : output : 2.5 V             :         : 7         : N              
 VCCIO7                       : C10       : power  :                   : 2.5V    : 7         :                
-DataRecv[6]                  : C11       : output : 2.5 V             :         : 7         : N              
+DataSend[7]                  : C11       : input  : 2.5 V             :         : 7         : N              
 GND                          : C12       : gnd    :                   :         :           :                
 VCCIO7                       : C13       : power  :                   : 2.5V    : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : C14       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : C15       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : C16       :        :                   :         : 6         :                
+SpWR_rxValid                 : C14       : output : 2.5 V             :         : 7         : N              
+SpWR_linkstart               : C15       : input  : 2.5 V             :         : 6         : N              
+SpWT_do                      : C16       : output : 2.5 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : D1        :        :                   :         : 1         :                
 ~ALTERA_FLASH_nCE_nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : D2        : input  : 2.5 V             :         : 1         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : D3        :        :                   :         : 8         :                
 VCCD_PLL3                    : D4        : power  :                   : 1.2V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : D5        :        :                   :         : 8         :                
-SpWT_so                      : D6        : output : 2.5 V             :         : 8         : N              
+rxdata[5]                    : D5        : output : 2.5 V             :         : 8         : N              
+DataRecv5[3]                 : D6        : output : 2.5 V             :         : 8         : N              
 GND                          : D7        : gnd    :                   :         :           :                
-SpWT_running                 : D8        : output : 2.5 V             :         : 8         : N              
-SpWR_so                      : D9        : output : 2.5 V             :         : 7         : N              
+SpWR_running                 : D8        : output : 2.5 V             :         : 8         : N              
+SpWT_running                 : D9        : output : 2.5 V             :         : 7         : N              
 GND                          : D10       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D11       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D12       :        :                   :         : 7         :                
@@ -137,12 +137,12 @@ GND                          : E2        : gnd    :                   :         
 VCCIO1                       : E3        : power  :                   : 2.5V    : 1         :                
 GND                          : E4        : gnd    :                   :         :           :                
 GNDA3                        : E5        : gnd    :                   :         :           :                
-DataSend[1]                  : E6        : input  : 2.5 V             :         : 8         : N              
-DataSend[2]                  : E7        : input  : 2.5 V             :         : 8         : N              
-SpWT_connecting              : E8        : output : 2.5 V             :         : 8         : N              
-SpWR_txrdy                   : E9        : output : 2.5 V             :         : 7         : N              
-DataRecv[5]                  : E10       : output : 2.5 V             :         : 7         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : E11       :        :                   :         : 7         :                
+rxdata[7]                    : E6        : output : 2.5 V             :         : 8         : N              
+rxdata[4]                    : E7        : output : 2.5 V             :         : 8         : N              
+DataRecv5[5]                 : E8        : output : 2.5 V             :         : 8         : N              
+SpWR_so                      : E9        : output : 2.5 V             :         : 7         : N              
+DataSend[3]                  : E10       : input  : 2.5 V             :         : 7         : N              
+SpWT_txFlag                  : E11       : input  : 2.5 V             :         : 7         : N              
 GNDA2                        : E12       : gnd    :                   :         :           :                
 GND                          : E13       : gnd    :                   :         :           :                
 VCCIO6                       : E14       : power  :                   : 2.5V    : 6         :                
@@ -155,14 +155,14 @@ nSTATUS                      : F4        :        :                   :         
 VCCA3                        : F5        : power  :                   : 2.5V    :           :                
 GND                          : F6        : gnd    :                   :         :           :                
 VCCINT                       : F7        : power  :                   : 1.2V    :           :                
-DataSend[7]                  : F8        : input  : 2.5 V             :         : 8         : N              
-SpWR_started                 : F9        : output : 2.5 V             :         : 7         : N              
+DataRecv5[1]                 : F8        : output : 2.5 V             :         : 8         : N              
+SpWT_so                      : F9        : output : 2.5 V             :         : 7         : N              
 GND                          : F10       : gnd    :                   :         :           :                
 VCCINT                       : F11       : power  :                   : 1.2V    :           :                
 VCCA2                        : F12       : power  :                   : 2.5V    :           :                
-DataRecv[2]                  : F13       : output : 2.5 V             :         : 6         : N              
-DataRecv[4]                  : F14       : output : 2.5 V             :         : 6         : N              
-SpWR_rxValid                 : F15       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F13       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F14       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F15       :        :                   :         : 6         :                
 ~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN : F16       : output : 2.5 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : G1        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G2        :        :                   :         : 1         :                
@@ -178,7 +178,7 @@ GND                          : G11       : gnd    :                   :         
 MSEL2                        : G12       :        :                   :         : 6         :                
 GND                          : G13       : gnd    :                   :         :           :                
 VCCIO6                       : G14       : power  :                   : 2.5V    : 6         :                
-DataRecv[1]                  : G15       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G15       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G16       :        :                   :         : 6         :                
 ~ALTERA_DCLK~                : H1        : output : 2.5 V             :         : 1         : N              
 ~ALTERA_DATA0~ / RESERVED_INPUT_WITH_WEAK_PULLUP : H2        : input  : 2.5 V             :         : 1         : N              

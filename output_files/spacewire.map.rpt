@@ -1,5 +1,5 @@
 Analysis & Synthesis report for spacewire
-Mon Sep 11 20:27:42 2023
+Thu Oct  5 11:24:30 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -69,16 +69,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Sep 11 20:27:42 2023           ;
+; Analysis & Synthesis Status        ; Successful - Thu Oct  5 11:24:30 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; spacewire                                       ;
 ; Top-level Entity Name              ; spacewire                                       ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 608                                             ;
+; Total logic elements               ; 616                                             ;
 ;     Total combinational functions  ; 590                                             ;
-;     Dedicated logic registers      ; 304                                             ;
-; Total registers                    ; 304                                             ;
-; Total pins                         ; 36                                              ;
+;     Dedicated logic registers      ; 312                                             ;
+; Total registers                    ; 312                                             ;
+; Total pins                         ; 44                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 36,864                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -173,15 +173,21 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
-+-------------------------------------+
-; Parallel Compilation                ;
-+----------------------------+--------+
-; Processors                 ; Number ;
-+----------------------------+--------+
-; Number detected on machine ; 5      ;
-; Maximum allowed            ; 1      ;
-+----------------------------+--------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ; < 0.1%      ;
++----------------------------+-------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -189,15 +195,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                      ; Library ;
 +----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------+---------+
-; spwpkg.vhd                       ; yes             ; User VHDL File                     ; /home/quartus/SpaceWire/spwpkg.vhd                                                ;         ;
-; spwlink.vhd                      ; yes             ; User VHDL File                     ; /home/quartus/SpaceWire/spwlink.vhd                                               ;         ;
-; spwrecvfront_generic.vhd         ; yes             ; User VHDL File                     ; /home/quartus/SpaceWire/spwrecvfront_generic.vhd                                  ;         ;
-; spwxmit.vhd                      ; yes             ; User VHDL File                     ; /home/quartus/SpaceWire/spwxmit.vhd                                               ;         ;
-; spwram.vhd                       ; yes             ; User VHDL File                     ; /home/quartus/SpaceWire/spwram.vhd                                                ;         ;
-; spwstream.vhd                    ; yes             ; User VHDL File                     ; /home/quartus/SpaceWire/spwstream.vhd                                             ;         ;
-; spwrecv.vhd                      ; yes             ; User VHDL File                     ; /home/quartus/SpaceWire/spwrecv.vhd                                               ;         ;
-; spacewire.bdf                    ; yes             ; User Block Diagram/Schematic File  ; /home/quartus/SpaceWire/spacewire.bdf                                             ;         ;
-; lpm_constant0.vhd                ; yes             ; User Wizard-Generated File         ; /home/quartus/SpaceWire/lpm_constant0.vhd                                         ;         ;
+; FallingEdgeLatch.vhd             ; yes             ; User VHDL File                     ; /home/quartus/spacewire/FallingEdgeLatch.vhd                                      ;         ;
+; spwpkg.vhd                       ; yes             ; User VHDL File                     ; /home/quartus/spacewire/spwpkg.vhd                                                ;         ;
+; spwlink.vhd                      ; yes             ; User VHDL File                     ; /home/quartus/spacewire/spwlink.vhd                                               ;         ;
+; spwrecvfront_generic.vhd         ; yes             ; User VHDL File                     ; /home/quartus/spacewire/spwrecvfront_generic.vhd                                  ;         ;
+; spwxmit.vhd                      ; yes             ; User VHDL File                     ; /home/quartus/spacewire/spwxmit.vhd                                               ;         ;
+; spwram.vhd                       ; yes             ; User VHDL File                     ; /home/quartus/spacewire/spwram.vhd                                                ;         ;
+; spwstream.vhd                    ; yes             ; User VHDL File                     ; /home/quartus/spacewire/spwstream.vhd                                             ;         ;
+; spwrecv.vhd                      ; yes             ; User VHDL File                     ; /home/quartus/spacewire/spwrecv.vhd                                               ;         ;
+; spacewire.bdf                    ; yes             ; User Block Diagram/Schematic File  ; /home/quartus/spacewire/spacewire.bdf                                             ;         ;
+; lpm_constant0.vhd                ; yes             ; Auto-Found Wizard-Generated File   ; /home/quartus/spacewire/lpm_constant0.vhd                                         ;         ;
 ; lpm_constant.tdf                 ; yes             ; Megafunction                       ; /opt/quartus/altera/13.0sp1/quartus/libraries/megafunctions/lpm_constant.tdf      ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                       ; /opt/quartus/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                       ; /opt/quartus/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
@@ -208,7 +215,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; altrom.inc                       ; yes             ; Megafunction                       ; /opt/quartus/altera/13.0sp1/quartus/libraries/megafunctions/altrom.inc            ;         ;
 ; altram.inc                       ; yes             ; Megafunction                       ; /opt/quartus/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc            ;         ;
 ; altdpram.inc                     ; yes             ; Megafunction                       ; /opt/quartus/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_23h1.tdf           ; yes             ; Auto-Generated Megafunction        ; /home/quartus/SpaceWire/db/altsyncram_23h1.tdf                                    ;         ;
+; db/altsyncram_23h1.tdf           ; yes             ; Auto-Generated Megafunction        ; /home/quartus/spacewire/db/altsyncram_23h1.tdf                                    ;         ;
 +----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------------------+---------+
 
 
@@ -217,7 +224,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 608       ;
+; Estimated Total logic elements              ; 616       ;
 ;                                             ;           ;
 ; Total combinational functions               ; 590       ;
 ; Logic element usage by number of LUT inputs ;           ;
@@ -229,17 +236,17 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;     -- normal mode                          ; 429       ;
 ;     -- arithmetic mode                      ; 161       ;
 ;                                             ;           ;
-; Total registers                             ; 304       ;
-;     -- Dedicated logic registers            ; 304       ;
+; Total registers                             ; 312       ;
+;     -- Dedicated logic registers            ; 312       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 36        ;
+; I/O pins                                    ; 44        ;
 ; Total memory bits                           ; 36864     ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ; Maximum fan-out node                        ; CLK~input ;
-; Maximum fan-out                             ; 322       ;
-; Total fan-out                               ; 3071      ;
-; Average fan-out                             ; 3.12      ;
+; Maximum fan-out                             ; 330       ;
+; Total fan-out                               ; 3111      ;
+; Average fan-out                             ; 3.09      ;
 +---------------------------------------------+-----------+
 
 
@@ -248,7 +255,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                          ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                           ; Library Name ;
 +---------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------+--------------+
-; |spacewire                                                          ; 590 (1)           ; 304 (0)      ; 36864       ; 0            ; 0       ; 0         ; 36   ; 0            ; |spacewire                                                                                    ; work         ;
+; |spacewire                                                          ; 590 (1)           ; 312 (0)      ; 36864       ; 0            ; 0       ; 0         ; 44   ; 0            ; |spacewire                                                                                    ; work         ;
+;    |FallingEdgeLatch:inst4|                                         ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spacewire|FallingEdgeLatch:inst4                                                             ; work         ;
 ;    |spwstream:inst1|                                                ; 317 (98)          ; 159 (47)     ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |spacewire|spwstream:inst1                                                                    ; work         ;
 ;       |spwlink:link_inst|                                           ; 102 (102)         ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spacewire|spwstream:inst1|spwlink:link_inst                                                  ; work         ;
 ;       |spwram:rxmem|                                                ; 0 (0)             ; 0 (0)        ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |spacewire|spwstream:inst1|spwram:rxmem                                                       ; work         ;
@@ -284,8 +292,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+--------------------------------+-------------------------------------------+
 ; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                ; IP Include File                           ;
 +--------+--------------+---------+--------------+--------------+--------------------------------+-------------------------------------------+
-; Altera ; LPM_CONSTANT ; 13.0    ; N/A          ; N/A          ; |spacewire|lpm_constant0:inst2 ; /home/quartus/SpaceWire/lpm_constant0.vhd ;
-; Altera ; LPM_CONSTANT ; 13.0    ; N/A          ; N/A          ; |spacewire|lpm_constant0:inst3 ; /home/quartus/SpaceWire/lpm_constant0.vhd ;
+; Altera ; LPM_CONSTANT ; N/A     ; N/A          ; N/A          ; |spacewire|lpm_constant0:inst2 ; /home/quartus/spacewire/lpm_constant0.vhd ;
+; Altera ; LPM_CONSTANT ; N/A     ; N/A          ; N/A          ; |spacewire|lpm_constant0:inst3 ; /home/quartus/spacewire/lpm_constant0.vhd ;
 +--------+--------------+---------+--------------+--------------+--------------------------------+-------------------------------------------+
 
 
@@ -411,12 +419,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 304   ;
+; Total registers                              ; 312   ;
 ; Number of registers using Synchronous Clear  ; 39    ;
 ; Number of registers using Synchronous Load   ; 20    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 104   ;
+; Number of registers using Clock Enable       ; 112   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -830,7 +838,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:06     ;
 +----------------+--------------+
 
 
@@ -840,9 +848,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Sep 11 20:27:37 2023
+    Info: Processing started: Thu Oct  5 11:24:18 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off spacewire -c spacewire
-Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file FallingEdgeLatch.vhd
+    Info (12022): Found design unit 1: FallingEdgeLatch-Behavioral
+    Info (12023): Found entity 1: FallingEdgeLatch
+Info (12021): Found 2 design units, including 1 entities, in source file WriteController.vhd
+    Info (12022): Found design unit 1: WriteController-Behavioral
+    Info (12023): Found entity 1: WriteController
 Info (12021): Found 1 design units, including 0 entities, in source file spwpkg.vhd
     Info (12022): Found design unit 1: spwpkg
 Info (12021): Found 2 design units, including 1 entities, in source file spwlink.vhd
@@ -879,9 +893,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file spwrecv
     Info (12023): Found entity 1: spwrecv
 Info (12021): Found 1 design units, including 1 entities, in source file spacewire.bdf
     Info (12023): Found entity 1: spacewire
-Info (12021): Found 2 design units, including 1 entities, in source file lpm_constant0.vhd
-    Info (12022): Found design unit 1: lpm_constant0-SYN
-    Info (12023): Found entity 1: lpm_constant0
 Info (12127): Elaborating entity "spacewire" for the top level hierarchy
 Info (12128): Elaborating entity "spwstream" for hierarchy "spwstream:inst"
 Info (12128): Elaborating entity "spwlink" for hierarchy "spwstream:inst|spwlink:link_inst"
@@ -889,6 +900,9 @@ Info (12128): Elaborating entity "spwrecv" for hierarchy "spwstream:inst|spwrecv
 Info (12128): Elaborating entity "spwxmit" for hierarchy "spwstream:inst|spwxmit:\xmit_sel0:xmit_inst"
 Info (12128): Elaborating entity "spwrecvfront_generic" for hierarchy "spwstream:inst|spwrecvfront_generic:\recvfront_sel0:recvfront_generic_inst"
 Info (12128): Elaborating entity "spwram" for hierarchy "spwstream:inst|spwram:rxmem"
+Warning (12125): Using design file lpm_constant0.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: lpm_constant0-SYN
+    Info (12023): Found entity 1: lpm_constant0
 Info (12128): Elaborating entity "lpm_constant0" for hierarchy "lpm_constant0:inst3"
 Info (12128): Elaborating entity "lpm_constant" for hierarchy "lpm_constant0:inst3|lpm_constant:LPM_CONSTANT_component"
 Info (12130): Elaborated megafunction instantiation "lpm_constant0:inst3|lpm_constant:LPM_CONSTANT_component"
@@ -897,6 +911,8 @@ Info (12133): Instantiated megafunction "lpm_constant0:inst3|lpm_constant:LPM_CO
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "LPM_CONSTANT"
     Info (12134): Parameter "lpm_width" = "8"
+Info (12128): Elaborating entity "FallingEdgeLatch" for hierarchy "FallingEdgeLatch:inst4"
+Warning (10492): VHDL Process Statement warning at FallingEdgeLatch.vhd(18): signal "rxvalid" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (19000): Inferred 2 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "spwstream:inst1|spwram:rxmem|s_mem_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
@@ -953,15 +969,15 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 732 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 748 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 14 input pins
-    Info (21059): Implemented 22 output pins
-    Info (21061): Implemented 678 logic cells
+    Info (21059): Implemented 30 output pins
+    Info (21061): Implemented 686 logic cells
     Info (21064): Implemented 18 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 667 megabytes
-    Info: Processing ended: Mon Sep 11 20:27:42 2023
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:05
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 713 megabytes
+    Info: Processing ended: Thu Oct  5 11:24:30 2023
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:13
 
 

@@ -1,5 +1,5 @@
 Simulator report for spacewire_qsim
-Mon Sep 11 21:08:37 2023
+Thu Oct  5 11:30:15 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -47,9 +47,9 @@ applicable agreement for further details.
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
 ; Simulation End Time         ; 100.0 us     ;
-; Simulation Netlist Size     ; 2771 nodes   ;
-; Simulation Coverage         ;      61.80 % ;
-; Total Number of Transitions ; 558497       ;
+; Simulation Netlist Size     ; 2787 nodes   ;
+; Simulation Coverage         ;      61.84 % ;
+; Total Number of Transitions ; 560231       ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; Cyclone III  ;
 +-----------------------------+--------------+
@@ -63,7 +63,7 @@ applicable agreement for further details.
 ; Simulation mode                                                                            ; Functional                            ; Timing        ;
 ; Start time                                                                                 ; 0 ns                                  ; 0 ns          ;
 ; Simulation results format                                                                  ; VWF                                   ;               ;
-; Vector input source                                                                        ; /home/quartus/SpaceWire/spacewire.vwf ;               ;
+; Vector input source                                                                        ; /home/quartus/spacewire/spacewire.vwf ;               ;
 ; Add pins automatically to simulation output waveforms                                      ; On                                    ; On            ;
 ; Check outputs                                                                              ; Off                                   ; Off           ;
 ; Report simulation coverage                                                                 ; On                                    ; On            ;
@@ -110,13 +110,13 @@ Please refer to fitter text-based report (*.fit.rpt) to view logical memory repo
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      61.80 % ;
-; Total nodes checked                                 ; 2771         ;
-; Total output ports checked                          ; 2749         ;
-; Total output ports with complete 1/0-value coverage ; 1699         ;
-; Total output ports with no 1/0-value coverage       ; 896          ;
-; Total output ports with no 1-value coverage         ; 932          ;
-; Total output ports with no 0-value coverage         ; 1014         ;
+; Total coverage as a percentage                      ;      61.84 % ;
+; Total nodes checked                                 ; 2787         ;
+; Total output ports checked                          ; 2765         ;
+; Total output ports with complete 1/0-value coverage ; 1710         ;
+; Total output ports with no 1/0-value coverage       ; 899          ;
+; Total output ports with no 1-value coverage         ; 935          ;
+; Total output ports with no 0-value coverage         ; 1019         ;
 +-----------------------------------------------------+--------------+
 
 
@@ -146,12 +146,22 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |spacewire|SpWR_do                                                                                         ; |spacewire|SpWR_do                                                                                         ; pin_out          ;
 ; |spacewire|SpWR_so                                                                                         ; |spacewire|SpWR_so                                                                                         ; pin_out          ;
 ; |spacewire|SpWR_rxValid                                                                                    ; |spacewire|SpWR_rxValid                                                                                    ; pin_out          ;
-; |spacewire|DataRecv[5]                                                                                     ; |spacewire|DataRecv[5]                                                                                     ; pin_out          ;
-; |spacewire|DataRecv[4]                                                                                     ; |spacewire|DataRecv[4]                                                                                     ; pin_out          ;
-; |spacewire|DataRecv[3]                                                                                     ; |spacewire|DataRecv[3]                                                                                     ; pin_out          ;
-; |spacewire|DataRecv[2]                                                                                     ; |spacewire|DataRecv[2]                                                                                     ; pin_out          ;
-; |spacewire|DataRecv[1]                                                                                     ; |spacewire|DataRecv[1]                                                                                     ; pin_out          ;
-; |spacewire|DataRecv[0]                                                                                     ; |spacewire|DataRecv[0]                                                                                     ; pin_out          ;
+; |spacewire|DataRecv5[4]                                                                                    ; |spacewire|DataRecv5[4]                                                                                    ; pin_out          ;
+; |spacewire|DataRecv5[3]                                                                                    ; |spacewire|DataRecv5[3]                                                                                    ; pin_out          ;
+; |spacewire|DataRecv5[2]                                                                                    ; |spacewire|DataRecv5[2]                                                                                    ; pin_out          ;
+; |spacewire|DataRecv5[1]                                                                                    ; |spacewire|DataRecv5[1]                                                                                    ; pin_out          ;
+; |spacewire|DataRecv5[0]                                                                                    ; |spacewire|DataRecv5[0]                                                                                    ; pin_out          ;
+; |spacewire|rxdata[5]                                                                                       ; |spacewire|rxdata[5]                                                                                       ; pin_out          ;
+; |spacewire|rxdata[4]                                                                                       ; |spacewire|rxdata[4]                                                                                       ; pin_out          ;
+; |spacewire|rxdata[3]                                                                                       ; |spacewire|rxdata[3]                                                                                       ; pin_out          ;
+; |spacewire|rxdata[2]                                                                                       ; |spacewire|rxdata[2]                                                                                       ; pin_out          ;
+; |spacewire|rxdata[1]                                                                                       ; |spacewire|rxdata[1]                                                                                       ; pin_out          ;
+; |spacewire|rxdata[0]                                                                                       ; |spacewire|rxdata[0]                                                                                       ; pin_out          ;
+; |spacewire|FallingEdgeLatch:inst4|s_register[0]                                                            ; |spacewire|FallingEdgeLatch:inst4|s_register[0]                                                            ; regout           ;
+; |spacewire|FallingEdgeLatch:inst4|s_register[1]                                                            ; |spacewire|FallingEdgeLatch:inst4|s_register[1]                                                            ; regout           ;
+; |spacewire|FallingEdgeLatch:inst4|s_register[2]                                                            ; |spacewire|FallingEdgeLatch:inst4|s_register[2]                                                            ; regout           ;
+; |spacewire|FallingEdgeLatch:inst4|s_register[3]                                                            ; |spacewire|FallingEdgeLatch:inst4|s_register[3]                                                            ; regout           ;
+; |spacewire|FallingEdgeLatch:inst4|s_register[4]                                                            ; |spacewire|FallingEdgeLatch:inst4|s_register[4]                                                            ; regout           ;
 ; |spacewire|spwstream:inst1|process_0~0                                                                     ; |spacewire|spwstream:inst1|process_0~0                                                                     ; out0             ;
 ; |spacewire|spwstream:inst1|s_rxfifo_raddr[4]                                                               ; |spacewire|spwstream:inst1|s_rxfifo_raddr[4]                                                               ; out              ;
 ; |spacewire|spwstream:inst1|s_rxfifo_raddr[3]                                                               ; |spacewire|spwstream:inst1|s_rxfifo_raddr[3]                                                               ; out              ;
@@ -169,7 +179,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |spacewire|spwstream:inst1|v~22                                                                            ; |spacewire|spwstream:inst1|v~22                                                                            ; out              ;
 ; |spacewire|spwstream:inst1|v~23                                                                            ; |spacewire|spwstream:inst1|v~23                                                                            ; out              ;
 ; |spacewire|spwstream:inst1|v~24                                                                            ; |spacewire|spwstream:inst1|v~24                                                                            ; out              ;
-; |spacewire|spwstream:inst1|v.rxroom[4]                                                                     ; |spacewire|spwstream:inst1|v.rxroom[4]                                                                     ; out              ;
+; |spacewire|spwstream:inst1|v.rxroom[3]                                                                     ; |spacewire|spwstream:inst1|v.rxroom[3]                                                                     ; out              ;
 ; |spacewire|spwstream:inst1|v.rxroom[1]                                                                     ; |spacewire|spwstream:inst1|v.rxroom[1]                                                                     ; out              ;
 ; |spacewire|spwstream:inst1|v.rxroom[0]                                                                     ; |spacewire|spwstream:inst1|v.rxroom[0]                                                                     ; out              ;
 ; |spacewire|spwstream:inst1|r.rxfifo_rvalid                                                                 ; |spacewire|spwstream:inst1|r.rxfifo_rvalid                                                                 ; regout           ;
@@ -1185,6 +1195,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |spacewire|spwstream:inst1|Add2~18                                                                         ; |spacewire|spwstream:inst1|Add2~18                                                                         ; out0             ;
 ; |spacewire|spwstream:inst1|Add2~19                                                                         ; |spacewire|spwstream:inst1|Add2~19                                                                         ; out0             ;
 ; |spacewire|spwstream:inst1|Add2~20                                                                         ; |spacewire|spwstream:inst1|Add2~20                                                                         ; out0             ;
+; |spacewire|spwstream:inst1|Add2~21                                                                         ; |spacewire|spwstream:inst1|Add2~21                                                                         ; out0             ;
 ; |spacewire|spwstream:inst1|Add2~22                                                                         ; |spacewire|spwstream:inst1|Add2~22                                                                         ; out0             ;
 ; |spacewire|spwstream:inst1|Add2~23                                                                         ; |spacewire|spwstream:inst1|Add2~23                                                                         ; out0             ;
 ; |spacewire|spwstream:inst1|Add2~24                                                                         ; |spacewire|spwstream:inst1|Add2~24                                                                         ; out0             ;
@@ -1839,8 +1850,12 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |spacewire|SpWT_txrdy                                                                                      ; |spacewire|SpWT_txrdy                                                                                      ; pin_out          ;
 ; |spacewire|SpWR_txrdy                                                                                      ; |spacewire|SpWR_txrdy                                                                                      ; pin_out          ;
 ; |spacewire|SpWR_rxFlag                                                                                     ; |spacewire|SpWR_rxFlag                                                                                     ; pin_out          ;
-; |spacewire|DataRecv[7]                                                                                     ; |spacewire|DataRecv[7]                                                                                     ; pin_out          ;
-; |spacewire|DataRecv[6]                                                                                     ; |spacewire|DataRecv[6]                                                                                     ; pin_out          ;
+; |spacewire|DataRecv5[7]                                                                                    ; |spacewire|DataRecv5[7]                                                                                    ; pin_out          ;
+; |spacewire|DataRecv5[6]                                                                                    ; |spacewire|DataRecv5[6]                                                                                    ; pin_out          ;
+; |spacewire|rxdata[7]                                                                                       ; |spacewire|rxdata[7]                                                                                       ; pin_out          ;
+; |spacewire|rxdata[6]                                                                                       ; |spacewire|rxdata[6]                                                                                       ; pin_out          ;
+; |spacewire|FallingEdgeLatch:inst4|s_register[6]                                                            ; |spacewire|FallingEdgeLatch:inst4|s_register[6]                                                            ; regout           ;
+; |spacewire|FallingEdgeLatch:inst4|s_register[7]                                                            ; |spacewire|FallingEdgeLatch:inst4|s_register[7]                                                            ; regout           ;
 ; |spacewire|spwstream:inst1|r.txfifo_raddr[8]                                                               ; |spacewire|spwstream:inst1|r.txfifo_raddr[8]                                                               ; regout           ;
 ; |spacewire|spwstream:inst1|r.txfifo_raddr[7]                                                               ; |spacewire|spwstream:inst1|r.txfifo_raddr[7]                                                               ; regout           ;
 ; |spacewire|spwstream:inst1|r.txfifo_raddr[6]                                                               ; |spacewire|spwstream:inst1|r.txfifo_raddr[6]                                                               ; regout           ;
@@ -1868,7 +1883,7 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |spacewire|spwstream:inst1|r.txfifo_raddr[1]                                                               ; |spacewire|spwstream:inst1|r.txfifo_raddr[1]                                                               ; regout           ;
 ; |spacewire|spwstream:inst1|r.txfifo_raddr[0]                                                               ; |spacewire|spwstream:inst1|r.txfifo_raddr[0]                                                               ; regout           ;
 ; |spacewire|spwstream:inst1|v.rxroom[5]                                                                     ; |spacewire|spwstream:inst1|v.rxroom[5]                                                                     ; out              ;
-; |spacewire|spwstream:inst1|v.rxroom[3]                                                                     ; |spacewire|spwstream:inst1|v.rxroom[3]                                                                     ; out              ;
+; |spacewire|spwstream:inst1|v.rxroom[4]                                                                     ; |spacewire|spwstream:inst1|v.rxroom[4]                                                                     ; out              ;
 ; |spacewire|spwstream:inst1|v.rxroom[2]                                                                     ; |spacewire|spwstream:inst1|v.rxroom[2]                                                                     ; out              ;
 ; |spacewire|spwstream:inst1|process_0~2                                                                     ; |spacewire|spwstream:inst1|process_0~2                                                                     ; out0             ;
 ; |spacewire|spwstream:inst1|process_0~3                                                                     ; |spacewire|spwstream:inst1|process_0~3                                                                     ; out0             ;
@@ -2383,7 +2398,6 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |spacewire|spwstream:inst1|Add1~16                                                                         ; |spacewire|spwstream:inst1|Add1~16                                                                         ; out0             ;
 ; |spacewire|spwstream:inst1|Add1~17                                                                         ; |spacewire|spwstream:inst1|Add1~17                                                                         ; out0             ;
 ; |spacewire|spwstream:inst1|Add1~18                                                                         ; |spacewire|spwstream:inst1|Add1~18                                                                         ; out0             ;
-; |spacewire|spwstream:inst1|Add2~21                                                                         ; |spacewire|spwstream:inst1|Add2~21                                                                         ; out0             ;
 ; |spacewire|spwstream:inst1|Add2~26                                                                         ; |spacewire|spwstream:inst1|Add2~26                                                                         ; out0             ;
 ; |spacewire|spwstream:inst1|Add2~30                                                                         ; |spacewire|spwstream:inst1|Add2~30                                                                         ; out0             ;
 ; |spacewire|spwstream:inst1|Add2~31                                                                         ; |spacewire|spwstream:inst1|Add2~31                                                                         ; out0             ;
@@ -2783,8 +2797,14 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |spacewire|SpWR_txrdy                                                                                      ; |spacewire|SpWR_txrdy                                                                                      ; pin_out          ;
 ; |spacewire|SpWR_running                                                                                    ; |spacewire|SpWR_running                                                                                    ; pin_out          ;
 ; |spacewire|SpWR_rxFlag                                                                                     ; |spacewire|SpWR_rxFlag                                                                                     ; pin_out          ;
-; |spacewire|DataRecv[7]                                                                                     ; |spacewire|DataRecv[7]                                                                                     ; pin_out          ;
-; |spacewire|DataRecv[6]                                                                                     ; |spacewire|DataRecv[6]                                                                                     ; pin_out          ;
+; |spacewire|DataRecv5[7]                                                                                    ; |spacewire|DataRecv5[7]                                                                                    ; pin_out          ;
+; |spacewire|DataRecv5[6]                                                                                    ; |spacewire|DataRecv5[6]                                                                                    ; pin_out          ;
+; |spacewire|DataRecv5[5]                                                                                    ; |spacewire|DataRecv5[5]                                                                                    ; pin_out          ;
+; |spacewire|rxdata[7]                                                                                       ; |spacewire|rxdata[7]                                                                                       ; pin_out          ;
+; |spacewire|rxdata[6]                                                                                       ; |spacewire|rxdata[6]                                                                                       ; pin_out          ;
+; |spacewire|FallingEdgeLatch:inst4|s_register[5]                                                            ; |spacewire|FallingEdgeLatch:inst4|s_register[5]                                                            ; regout           ;
+; |spacewire|FallingEdgeLatch:inst4|s_register[6]                                                            ; |spacewire|FallingEdgeLatch:inst4|s_register[6]                                                            ; regout           ;
+; |spacewire|FallingEdgeLatch:inst4|s_register[7]                                                            ; |spacewire|FallingEdgeLatch:inst4|s_register[7]                                                            ; regout           ;
 ; |spacewire|spwstream:inst1|r.txfifo_raddr[8]                                                               ; |spacewire|spwstream:inst1|r.txfifo_raddr[8]                                                               ; regout           ;
 ; |spacewire|spwstream:inst1|r.txfifo_raddr[7]                                                               ; |spacewire|spwstream:inst1|r.txfifo_raddr[7]                                                               ; regout           ;
 ; |spacewire|spwstream:inst1|r.txfifo_raddr[6]                                                               ; |spacewire|spwstream:inst1|r.txfifo_raddr[6]                                                               ; regout           ;
@@ -2816,7 +2836,7 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |spacewire|spwstream:inst1|r.txfifo_raddr[1]                                                               ; |spacewire|spwstream:inst1|r.txfifo_raddr[1]                                                               ; regout           ;
 ; |spacewire|spwstream:inst1|r.txfifo_raddr[0]                                                               ; |spacewire|spwstream:inst1|r.txfifo_raddr[0]                                                               ; regout           ;
 ; |spacewire|spwstream:inst1|v.rxroom[5]                                                                     ; |spacewire|spwstream:inst1|v.rxroom[5]                                                                     ; out              ;
-; |spacewire|spwstream:inst1|v.rxroom[3]                                                                     ; |spacewire|spwstream:inst1|v.rxroom[3]                                                                     ; out              ;
+; |spacewire|spwstream:inst1|v.rxroom[4]                                                                     ; |spacewire|spwstream:inst1|v.rxroom[4]                                                                     ; out              ;
 ; |spacewire|spwstream:inst1|v.rxroom[2]                                                                     ; |spacewire|spwstream:inst1|v.rxroom[2]                                                                     ; out              ;
 ; |spacewire|spwstream:inst1|process_0~2                                                                     ; |spacewire|spwstream:inst1|process_0~2                                                                     ; out0             ;
 ; |spacewire|spwstream:inst1|process_0~3                                                                     ; |spacewire|spwstream:inst1|process_0~3                                                                     ; out0             ;
@@ -3412,7 +3432,6 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |spacewire|spwstream:inst1|Add1~16                                                                         ; |spacewire|spwstream:inst1|Add1~16                                                                         ; out0             ;
 ; |spacewire|spwstream:inst1|Add1~17                                                                         ; |spacewire|spwstream:inst1|Add1~17                                                                         ; out0             ;
 ; |spacewire|spwstream:inst1|Add1~18                                                                         ; |spacewire|spwstream:inst1|Add1~18                                                                         ; out0             ;
-; |spacewire|spwstream:inst1|Add2~21                                                                         ; |spacewire|spwstream:inst1|Add2~21                                                                         ; out0             ;
 ; |spacewire|spwstream:inst1|Add2~26                                                                         ; |spacewire|spwstream:inst1|Add2~26                                                                         ; out0             ;
 ; |spacewire|spwstream:inst1|Add2~30                                                                         ; |spacewire|spwstream:inst1|Add2~30                                                                         ; out0             ;
 ; |spacewire|spwstream:inst1|Add2~31                                                                         ; |spacewire|spwstream:inst1|Add2~31                                                                         ; out0             ;
@@ -3805,19 +3824,27 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Simulator
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Sep 11 21:08:32 2023
+    Info: Processing started: Thu Oct  5 11:30:05 2023
 Info: Command: quartus_sim --simulation_results_format=VWF spacewire -c spacewire_qsim
-Info (324025): Using vector source file "/home/quartus/SpaceWire/spacewire.vwf"
+Info (324025): Using vector source file "/home/quartus/spacewire/spacewire.vwf"
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "DataRecv[7]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "DataRecv[6]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "DataRecv[5]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "DataRecv[4]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "DataRecv[3]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "DataRecv[2]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "DataRecv[1]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "DataRecv[0]" in design.
 Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info (310002): Simulation partitioned into 1 sub-simulations
-Info (328053): Simulation coverage is      61.80 %
-Info (328052): Number of transitions in simulation is 558497
+Info (328053): Simulation coverage is      61.84 %
+Info (328052): Number of transitions in simulation is 560231
 Info (324045): Vector file spacewire_qsim.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
-Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 669 megabytes
-    Info: Processing ended: Mon Sep 11 21:08:37 2023
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:05
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 684 megabytes
+    Info: Processing ended: Thu Oct  5 11:30:16 2023
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:11
 
 
