@@ -8,6 +8,12 @@ r.state.S_Started 0 0 1 0 0 1
 r.state.S_Connecting 0 1 0 0 0 1 
 r.state.S_Run 1 0 0 0 0 1 
 
+State Machine - |spacewire|WriteController:inst5|NextState
+Name NextState.Sending NextState.Primed NextState.Idle 
+NextState.Idle 0 0 0 
+NextState.Primed 0 1 1 
+NextState.Sending 1 0 1 
+
 State Machine - |spacewire|spwstream:inst|spwlink:link_inst|r.state
 Name r.state.S_Run r.state.S_Connecting r.state.S_Started r.state.S_Ready r.state.S_ErrorWait r.state.S_ErrorReset 
 r.state.S_ErrorReset 0 0 0 0 0 0 

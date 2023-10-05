@@ -5,69 +5,52 @@ entity WriteController is
     Port (
         clk : in STD_LOGIC;
         key : in STD_LOGIC;
-        rst : in STD_LOGIC;
+     --   rst : in STD_LOGIC;
         rxWrite : out STD_LOGIC
     );
 end WriteController;
 
 architecture Behavioral of WriteController is
-    type StateType is (Idle, Waiting, Active);
+    type StateType is (Idle, Primed, Sending);
     signal CurrentState, NextState : StateType := Idle;
     signal KeyRisingEdge, ClkFallingEdge, OutputActive: std_logic := '0';
     
-begin
-    -- reset, edge detection on clk, key
-    process(clk, rst)
-    begin
-        if rst = '1' then
-            CurrentState <= Idle;
-        elsif rising_edge(clk) then
-            KeyRisingEdge <= key;
-            ClkFallingEdge <= '0';
-        elsif falling_edge(clk) then
-            ClkFallingEdge <= '1';
-            KeyRisingEdge <= '0';
-        end if;
-    end process;
-    
+begin    
     -- Update State logic
-    process(CurrentState, KeyRisingEdge, ClkFallingEdge)
+    process(CurrentState, clk, key)
     begin
+		if falling_edge(clk) then
         case CurrentState is
             when Idle =>
-                if KeyRisingEdge = '1' then
-                    NextState <= Waiting;
+                if key = '1' then
+                    NextState <= Primed;
                 else
                     NextState <= Idle;
                 end if;
                 
-            when Waiting =>
-                if ClkFallingEdge = '1' then
-                    NextState <= Active;
+            when Primed =>
+                if key = '0' then
+                    NextState <= Sending;
                 else
-                    NextState <= Waiting;
+                    NextState <= Primed;
                 end if;
                 
-            when Active =>
-                if ClkFallingEdge = '1' then
+            when Sending =>
                     NextState <= Idle;
-                else
-                    NextState <= Active;
-                end if;
+        end case;
+		 end if;
+		 
+		 
+		  CurrentState <= NextState;
+        case CurrentState is
+            when Idle =>
+                rxWrite <= '0';
+            when Primed =>
+                rxWrite <= '0';
+            when Sending =>
+                rxWrite <= '1';
         end case;
     end process;
 
-    -- Update Output
-   process(CurrentState)
-   begin
-        CurrentState <= NextState;
-        case CurrentState is
-            when Idle =>
-                rxWrite <= '0';
-            when Waiting =>
-                rxWrite <= '0';
-            when Active =>
-                rxWrite <= '1';
-        end case;
-	end process;
+
 end Behavioral;

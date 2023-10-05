@@ -1,21 +1,12 @@
 |spacewire
 SpWT_started <= spwstream:inst.started
 CLK => spwstream:inst.clk
+CLK => WriteController:inst5.clk
 CLK => spwstream:inst1.clk
 CLK => FallingEdgeLatch:inst4.clk
-SpWT_linkstart => spwstream:inst.linkstart
-SpWT_txWrite => spwstream:inst.txwrite
+isKeyPressed => inst8.IN0
 SpWT_txFlag => spwstream:inst.txflag
-SpWR_linkstart => spwstream:inst1.linkstart
 SpWR_rxRead => spwstream:inst1.rxread
-DataSend[0] => spwstream:inst.txdata[0]
-DataSend[1] => spwstream:inst.txdata[1]
-DataSend[2] => spwstream:inst.txdata[2]
-DataSend[3] => spwstream:inst.txdata[3]
-DataSend[4] => spwstream:inst.txdata[4]
-DataSend[5] => spwstream:inst.txdata[5]
-DataSend[6] => spwstream:inst.txdata[6]
-DataSend[7] => spwstream:inst.txdata[7]
 SpWT_connecting <= spwstream:inst.connecting
 SpWT_running <= spwstream:inst.running
 SpWT_txrdy <= spwstream:inst.txrdy
@@ -29,14 +20,15 @@ SpWR_do <= spwstream:inst1.spw_do
 SpWR_so <= spwstream:inst1.spw_so
 SpWR_rxValid <= spwstream:inst1.rxvalid
 SpWR_rxFlag <= spwstream:inst1.rxflag
-DataRecv5[0] <= FallingEdgeLatch:inst4.Q[0]
-DataRecv5[1] <= FallingEdgeLatch:inst4.Q[1]
-DataRecv5[2] <= FallingEdgeLatch:inst4.Q[2]
-DataRecv5[3] <= FallingEdgeLatch:inst4.Q[3]
-DataRecv5[4] <= FallingEdgeLatch:inst4.Q[4]
-DataRecv5[5] <= FallingEdgeLatch:inst4.Q[5]
-DataRecv5[6] <= FallingEdgeLatch:inst4.Q[6]
-DataRecv5[7] <= FallingEdgeLatch:inst4.Q[7]
+txwrite <= WriteController:inst5.rxWrite
+DataRecv[0] <= FallingEdgeLatch:inst4.Q[0]
+DataRecv[1] <= FallingEdgeLatch:inst4.Q[1]
+DataRecv[2] <= FallingEdgeLatch:inst4.Q[2]
+DataRecv[3] <= FallingEdgeLatch:inst4.Q[3]
+DataRecv[4] <= FallingEdgeLatch:inst4.Q[4]
+DataRecv[5] <= FallingEdgeLatch:inst4.Q[5]
+DataRecv[6] <= FallingEdgeLatch:inst4.Q[6]
+DataRecv[7] <= FallingEdgeLatch:inst4.Q[7]
 rxdata[0] <= spwstream:inst1.rxdata[0]
 rxdata[1] <= spwstream:inst1.rxdata[1]
 rxdata[2] <= spwstream:inst1.rxdata[2]
@@ -1043,6 +1035,14 @@ wdata[7] => s_mem~12.DATAIN
 wdata[7] => s_mem.DATAIN7
 wdata[8] => s_mem~11.DATAIN
 wdata[8] => s_mem.DATAIN8
+
+
+|spacewire|WriteController:inst5
+clk => NextState~1.DATAIN
+key => NextState.DATAA
+key => Selector0.IN2
+key => NextState.DATAB
+rxWrite <= rxWrite.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |spacewire|spwstream:inst1
@@ -2063,6 +2063,160 @@ result[4] <= <GND>
 result[5] <= <GND>
 result[6] <= <GND>
 result[7] <= <GND>
+
+
+|spacewire|lpm_constant1:instance54
+result[0] <= lpm_constant:LPM_CONSTANT_component.result[0]
+result[1] <= lpm_constant:LPM_CONSTANT_component.result[1]
+result[2] <= lpm_constant:LPM_CONSTANT_component.result[2]
+result[3] <= lpm_constant:LPM_CONSTANT_component.result[3]
+result[4] <= lpm_constant:LPM_CONSTANT_component.result[4]
+result[5] <= lpm_constant:LPM_CONSTANT_component.result[5]
+result[6] <= lpm_constant:LPM_CONSTANT_component.result[6]
+result[7] <= lpm_constant:LPM_CONSTANT_component.result[7]
+
+
+|spacewire|lpm_constant1:instance54|lpm_constant:LPM_CONSTANT_component
+result[0] <= lpm_constant_mg8:ag.result[0]
+result[1] <= lpm_constant_mg8:ag.result[1]
+result[2] <= lpm_constant_mg8:ag.result[2]
+result[3] <= lpm_constant_mg8:ag.result[3]
+result[4] <= lpm_constant_mg8:ag.result[4]
+result[5] <= lpm_constant_mg8:ag.result[5]
+result[6] <= lpm_constant_mg8:ag.result[6]
+result[7] <= lpm_constant_mg8:ag.result[7]
+
+
+|spacewire|lpm_constant1:instance54|lpm_constant:LPM_CONSTANT_component|lpm_constant_mg8:ag
+result[0] <= sld_mod_ram_rom:mgl_prim1.data_write[0]
+result[1] <= sld_mod_ram_rom:mgl_prim1.data_write[1]
+result[2] <= sld_mod_ram_rom:mgl_prim1.data_write[2]
+result[3] <= sld_mod_ram_rom:mgl_prim1.data_write[3]
+result[4] <= sld_mod_ram_rom:mgl_prim1.data_write[4]
+result[5] <= sld_mod_ram_rom:mgl_prim1.data_write[5]
+result[6] <= sld_mod_ram_rom:mgl_prim1.data_write[6]
+result[7] <= sld_mod_ram_rom:mgl_prim1.data_write[7]
+
+
+|spacewire|lpm_constant1:instance54|lpm_constant:LPM_CONSTANT_component|lpm_constant_mg8:ag|sld_mod_ram_rom:mgl_prim1
+tck_usr <= <GND>
+address[0] <= <GND>
+enable_write <= <GND>
+data_write[0] <= constant_update_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+data_write[1] <= constant_update_reg[1].DB_MAX_OUTPUT_PORT_TYPE
+data_write[2] <= constant_update_reg[2].DB_MAX_OUTPUT_PORT_TYPE
+data_write[3] <= constant_update_reg[3].DB_MAX_OUTPUT_PORT_TYPE
+data_write[4] <= constant_update_reg[4].DB_MAX_OUTPUT_PORT_TYPE
+data_write[5] <= constant_update_reg[5].DB_MAX_OUTPUT_PORT_TYPE
+data_write[6] <= constant_update_reg[6].DB_MAX_OUTPUT_PORT_TYPE
+data_write[7] <= constant_update_reg[7].DB_MAX_OUTPUT_PORT_TYPE
+data_read[0] => ~NO_FANOUT~
+data_read[1] => ~NO_FANOUT~
+data_read[2] => ~NO_FANOUT~
+data_read[3] => ~NO_FANOUT~
+data_read[4] => ~NO_FANOUT~
+data_read[5] => ~NO_FANOUT~
+data_read[6] => ~NO_FANOUT~
+data_read[7] => ~NO_FANOUT~
+raw_tck => is_in_use_reg.CLK
+raw_tck => bypass_reg_out.CLK
+raw_tck => ir_loaded_address_reg[0].CLK
+raw_tck => constant_update_reg[0].CLK
+raw_tck => constant_update_reg[1].CLK
+raw_tck => constant_update_reg[2].CLK
+raw_tck => constant_update_reg[3].CLK
+raw_tck => constant_update_reg[4].CLK
+raw_tck => constant_update_reg[5].CLK
+raw_tck => constant_update_reg[6].CLK
+raw_tck => constant_update_reg[7].CLK
+raw_tck => constant_shift_reg[0].CLK
+raw_tck => constant_shift_reg[1].CLK
+raw_tck => constant_shift_reg[2].CLK
+raw_tck => constant_shift_reg[3].CLK
+raw_tck => constant_shift_reg[4].CLK
+raw_tck => constant_shift_reg[5].CLK
+raw_tck => constant_shift_reg[6].CLK
+raw_tck => constant_shift_reg[7].CLK
+raw_tck => sld_rom_sr:constant_logic_gen:no_name_gen:info_rom_sr.TCK
+tdi => constant_shift_reg.DATAB
+tdi => sld_rom_sr:constant_logic_gen:no_name_gen:info_rom_sr.TDI
+tdi => bypass_reg_out.DATAIN
+usr1 => sld_rom_sr:constant_logic_gen:no_name_gen:info_rom_sr.USR1
+usr1 => dr_scan.IN0
+usr1 => no_name_gen.IN0
+jtag_state_cdr => cdr.IN1
+jtag_state_cdr => no_name_gen.IN0
+jtag_state_sdr => sdr.IN1
+jtag_state_sdr => no_name_gen.IN1
+jtag_state_sdr => sld_rom_sr:constant_logic_gen:no_name_gen:info_rom_sr.SHIFT
+jtag_state_e1dr => e1dr.IN1
+jtag_state_udr => sld_rom_sr:constant_logic_gen:no_name_gen:info_rom_sr.UPDATE
+jtag_state_uir => ~NO_FANOUT~
+clr => is_in_use_reg.ACLR
+clr => bypass_reg_out.ACLR
+ena => dr_scan.IN1
+ena => no_name_gen.IN1
+ena => bypass_reg_out.ENA
+ir_in[0] => process_1.IN0
+ir_in[0] => tdo.OUTPUTSELECT
+ir_in[0] => is_in_use_reg.OUTPUTSELECT
+ir_in[1] => process_0.IN1
+ir_in[1] => process_1.IN0
+ir_in[2] => process_0.IN1
+ir_in[2] => process_1.IN1
+ir_in[3] => ~NO_FANOUT~
+ir_in[4] => process_1.IN1
+ir_in[4] => is_in_use_reg.OUTPUTSELECT
+ir_out[0] <= is_in_use_reg.DB_MAX_OUTPUT_PORT_TYPE
+ir_out[1] <= ir_loaded_address_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+ir_out[2] <= <GND>
+ir_out[3] <= <GND>
+ir_out[4] <= <GND>
+tdo <= tdo.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|spacewire|lpm_constant1:instance54|lpm_constant:LPM_CONSTANT_component|lpm_constant_mg8:ag|sld_mod_ram_rom:mgl_prim1|sld_rom_sr:\constant_logic_gen:no_name_gen:info_rom_sr
+ROM_DATA[0] => Mux3.IN33
+ROM_DATA[1] => Mux2.IN33
+ROM_DATA[2] => Mux1.IN33
+ROM_DATA[3] => Mux0.IN33
+ROM_DATA[4] => Mux3.IN29
+ROM_DATA[5] => Mux2.IN29
+ROM_DATA[6] => Mux1.IN29
+ROM_DATA[7] => Mux0.IN29
+ROM_DATA[8] => Mux3.IN25
+ROM_DATA[9] => Mux2.IN25
+ROM_DATA[10] => Mux1.IN25
+ROM_DATA[11] => Mux0.IN25
+ROM_DATA[12] => Mux3.IN21
+ROM_DATA[13] => Mux2.IN21
+ROM_DATA[14] => Mux1.IN21
+ROM_DATA[15] => Mux0.IN21
+TCK => WORD_SR[0].CLK
+TCK => WORD_SR[1].CLK
+TCK => WORD_SR[2].CLK
+TCK => WORD_SR[3].CLK
+TCK => word_counter[0].CLK
+TCK => word_counter[1].CLK
+TCK => word_counter[2].CLK
+SHIFT => word_counter.OUTPUTSELECT
+SHIFT => word_counter.OUTPUTSELECT
+SHIFT => word_counter.OUTPUTSELECT
+SHIFT => WORD_SR.OUTPUTSELECT
+SHIFT => WORD_SR.OUTPUTSELECT
+SHIFT => WORD_SR.OUTPUTSELECT
+SHIFT => WORD_SR.OUTPUTSELECT
+UPDATE => clear_signal.IN0
+USR1 => clear_signal.IN1
+ENA => word_counter.OUTPUTSELECT
+ENA => word_counter.OUTPUTSELECT
+ENA => word_counter.OUTPUTSELECT
+ENA => WORD_SR.OUTPUTSELECT
+ENA => WORD_SR.OUTPUTSELECT
+ENA => WORD_SR.OUTPUTSELECT
+ENA => WORD_SR.OUTPUTSELECT
+TDI => WORD_SR.DATAA
+TDO <= WORD_SR[0].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |spacewire|lpm_constant0:inst2

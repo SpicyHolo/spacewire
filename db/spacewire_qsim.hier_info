@@ -1,21 +1,12 @@
 |spacewire
 SpWT_started <= spwstream:inst.started
 CLK => spwstream:inst.clk
+CLK => WriteController:inst5.clk
 CLK => spwstream:inst1.clk
 CLK => FallingEdgeLatch:inst4.clk
-SpWT_linkstart => spwstream:inst.linkstart
-SpWT_txWrite => spwstream:inst.txwrite
+isKeyPressed => inst8.IN0
 SpWT_txFlag => spwstream:inst.txflag
-SpWR_linkstart => spwstream:inst1.linkstart
 SpWR_rxRead => spwstream:inst1.rxread
-DataSend[0] => spwstream:inst.txdata[0]
-DataSend[1] => spwstream:inst.txdata[1]
-DataSend[2] => spwstream:inst.txdata[2]
-DataSend[3] => spwstream:inst.txdata[3]
-DataSend[4] => spwstream:inst.txdata[4]
-DataSend[5] => spwstream:inst.txdata[5]
-DataSend[6] => spwstream:inst.txdata[6]
-DataSend[7] => spwstream:inst.txdata[7]
 SpWT_connecting <= spwstream:inst.connecting
 SpWT_running <= spwstream:inst.running
 SpWT_txrdy <= spwstream:inst.txrdy
@@ -29,14 +20,15 @@ SpWR_do <= spwstream:inst1.spw_do
 SpWR_so <= spwstream:inst1.spw_so
 SpWR_rxValid <= spwstream:inst1.rxvalid
 SpWR_rxFlag <= spwstream:inst1.rxflag
-DataRecv5[0] <= FallingEdgeLatch:inst4.Q[0]
-DataRecv5[1] <= FallingEdgeLatch:inst4.Q[1]
-DataRecv5[2] <= FallingEdgeLatch:inst4.Q[2]
-DataRecv5[3] <= FallingEdgeLatch:inst4.Q[3]
-DataRecv5[4] <= FallingEdgeLatch:inst4.Q[4]
-DataRecv5[5] <= FallingEdgeLatch:inst4.Q[5]
-DataRecv5[6] <= FallingEdgeLatch:inst4.Q[6]
-DataRecv5[7] <= FallingEdgeLatch:inst4.Q[7]
+txwrite <= WriteController:inst5.rxWrite
+DataRecv[0] <= FallingEdgeLatch:inst4.Q[0]
+DataRecv[1] <= FallingEdgeLatch:inst4.Q[1]
+DataRecv[2] <= FallingEdgeLatch:inst4.Q[2]
+DataRecv[3] <= FallingEdgeLatch:inst4.Q[3]
+DataRecv[4] <= FallingEdgeLatch:inst4.Q[4]
+DataRecv[5] <= FallingEdgeLatch:inst4.Q[5]
+DataRecv[6] <= FallingEdgeLatch:inst4.Q[6]
+DataRecv[7] <= FallingEdgeLatch:inst4.Q[7]
 rxdata[0] <= spwstream:inst1.rxdata[0]
 rxdata[1] <= spwstream:inst1.rxdata[1]
 rxdata[2] <= spwstream:inst1.rxdata[2]
@@ -1043,6 +1035,14 @@ wdata[7] => s_mem~12.DATAIN
 wdata[7] => s_mem.DATAIN7
 wdata[8] => s_mem~11.DATAIN
 wdata[8] => s_mem.DATAIN8
+
+
+|spacewire|WriteController:inst5
+clk => NextState~6.DATAIN
+key => NextState~0.DATAA
+key => Selector0.IN2
+key => NextState~1.DATAB
+rxWrite <= rxWrite~0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |spacewire|spwstream:inst1
@@ -2058,6 +2058,28 @@ result[7] <= lpm_constant:LPM_CONSTANT_component.result[7]
 result[0] <= <VCC>
 result[1] <= <GND>
 result[2] <= <GND>
+result[3] <= <GND>
+result[4] <= <GND>
+result[5] <= <GND>
+result[6] <= <GND>
+result[7] <= <GND>
+
+
+|spacewire|lpm_constant1:instance54
+result[0] <= lpm_constant:LPM_CONSTANT_component.result[0]
+result[1] <= lpm_constant:LPM_CONSTANT_component.result[1]
+result[2] <= lpm_constant:LPM_CONSTANT_component.result[2]
+result[3] <= lpm_constant:LPM_CONSTANT_component.result[3]
+result[4] <= lpm_constant:LPM_CONSTANT_component.result[4]
+result[5] <= lpm_constant:LPM_CONSTANT_component.result[5]
+result[6] <= lpm_constant:LPM_CONSTANT_component.result[6]
+result[7] <= lpm_constant:LPM_CONSTANT_component.result[7]
+
+
+|spacewire|lpm_constant1:instance54|lpm_constant:LPM_CONSTANT_component
+result[0] <= <VCC>
+result[1] <= <VCC>
+result[2] <= <VCC>
 result[3] <= <GND>
 result[4] <= <GND>
 result[5] <= <GND>
